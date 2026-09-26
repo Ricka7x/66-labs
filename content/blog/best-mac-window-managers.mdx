@@ -1,9 +1,9 @@
 ---
 title: "Best Mac Window Managers in 2026, Compared"
-description: "A hands-on comparison of the top Mac window managers: Rectangle, Magnet, BetterTouchTool, Amethyst, yabai, and Snapback. Which one fits your workflow?"
+description: "A hands-on comparison of the top Mac window managers: Rectangle, Magnet, BetterTouchTool, Amethyst, AeroSpace, yabai, and Snapback. Which one fits your workflow?"
 date: "2026-05-22"
 author: "Snapback Team"
-tags: ["window manager", "macOS", "comparison", "productivity", "rectangle", "magnet", "fancyzones", "powertoys"]
+tags: ["window manager", "macOS", "comparison", "productivity", "rectangle", "magnet", "aerospace", "yabai"]
 app: "snapback"
 published: true
 ---
@@ -56,6 +56,14 @@ Read the [full Snapback vs Rectangle comparison](/blog/snapback-vs-rectangle) if
 
 **Limitations:** The automatic layout approach does not work for everyone. Designers, writers, and anyone who needs specific window positions will find it frustrating. Configuration is done through a config file, not a GUI.
 
+### AeroSpace
+
+[AeroSpace](https://github.com/nikitabobko/AeroSpace) is a newer, keyboard-first tiling window manager built around i3-style workspaces. It has picked up strong momentum with developers through 2025 and 2026 as an alternative to yabai, mainly because it does not require disabling System Integrity Protection.
+
+**Best for:** Keyboard-first developers who want declarative, i3-style workspace layouts without touching SIP.
+
+**Limitations:** Pre-1.0 as of this writing, so expect occasional breaking changes between minor versions. Like Amethyst and yabai, it tiles automatically and has no concept of saving a layout to restore later; closing the app or restarting your Mac starts you back at its default tiling behavior.
+
 ### yabai
 
 [yabai](https://github.com/koekeishiya/yabai) is another tiling window manager, more advanced than Amethyst. It uses a scripting-first approach and can be extended with shell scripts. It requires disabling System Integrity Protection (SIP) for some features, which is a dealbreaker for many users.
@@ -84,33 +92,34 @@ None of this is a one-to-one port of FancyZones. macOS window management works d
 
 ## Comparison Table
 
-| Feature | Rectangle | Magnet | BetterTouchTool | Amethyst | yabai | Snapback |
-|:---|:---|:---|:---|:---|:---|:---|
-| Window snapping | Yes | Yes | Yes | Auto-tiling | Auto-tiling | Yes |
-| Drag to snap | Yes | Yes | Yes | No | No | Yes |
-| Save workspace layouts | No | No | No | No | No | Yes |
-| Restore layouts on demand | No | No | No | No | No | Yes |
-| Reopen closed apps | No | No | No | No | No | Yes |
-| Multi-display aware | Partial | Partial | Yes | Yes | Yes | Yes |
-| Layouts survive restarts | No | No | No | No | No | Yes |
-| Price | Free | ~$3 | ~$10 | Free | Free | Free |
-| GUI configuration | Yes | Yes | Yes | No | No | Yes |
+| Feature | Rectangle | Magnet | BetterTouchTool | Amethyst | AeroSpace | yabai | Snapback |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| Window snapping | Yes | Yes | Yes | Auto-tiling | Auto-tiling | Auto-tiling | Yes |
+| Drag to snap | Yes | Yes | Yes | No | No | No | Yes |
+| Save workspace layouts | No | No | No | No | No | No | Yes |
+| Restore layouts on demand | No | No | No | No | No | No | Yes |
+| Reopen closed apps | No | No | No | No | No | No | Yes |
+| Multi-display aware | Partial | Partial | Yes | Yes | Yes | Yes | Yes |
+| Layouts survive restarts | No | No | No | No | No | No | Yes |
+| Requires disabling SIP | No | No | No | No | No | Yes (full features) | No |
+| Price | Free | ~$3 | ~$10 | Free | Free | Free | Free |
+| GUI configuration | Yes | Yes | Yes | No | No | No | Yes |
 
 ## Which One Should You Use?
 
 **If you just want basic snapping:** Rectangle. It is free, simple, and reliable. You cannot go wrong.
 
-**If you want automatic tiling:** Amethyst if you want something approachable. yabai if you want full control and do not mind disabling SIP.
+**If you want automatic tiling:** Amethyst for something approachable, AeroSpace if you want i3-style keyboard-first workspaces without disabling SIP, or yabai if you want full BSP control and do not mind disabling it.
 
 **If you want to customize everything:** BetterTouchTool. It does more than window management, but that is the point.
 
-**If you want to save and restore full layouts:** [Snapback](/apps/snapback). No other tool on this list does this. You can also run Snapback alongside any of the others without conflicts.
+**If you want to save and restore full layouts:** [Snapback](/apps/snapback). No other tool on this list does this, including AeroSpace and yabai, which both forget everything on restart. You can also run Snapback alongside any of the others without conflicts.
 
 ## Can You Use Multiple Window Managers Together?
 
 Yes. Snapback works alongside Rectangle, Magnet, BetterTouchTool, and others without conflicts. You can use one tool for snapping and Snapback for workspace restoration. Many people do exactly this.
 
-The only combination I would avoid is running two tiling window managers at the same time. Amethyst and yabai will fight each other for control.
+The only combination to avoid is running two tiling window managers at the same time. Amethyst, AeroSpace, and yabai will fight each other for control.
 
 ## The Real Question
 
