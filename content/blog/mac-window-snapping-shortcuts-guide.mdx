@@ -1,0 +1,170 @@
+---
+title: "Mac Window Snapping Shortcuts (Complete Guide)"
+description: "Every keyboard shortcut for snapping windows on Mac. Built-in macOS tiling, third-party tools, and how to set up custom shortcuts for your workflow."
+date: "2026-06-07"
+author: "Snapback Team"
+tags: ["keyboard shortcuts", "window snapping", "macOS", "productivity", "window manager"]
+app: "snapback"
+published: true
+---
+
+## macOS Built-In Window Snapping
+
+macOS has had [basic window tiling](https://support.apple.com/guide/mac-help/use-tiled-windows-on-your-mac-mchlef287e5d/mac) since macOS Sequoia (macOS 15). Before that, the only built-in option was the green full-screen button. Here is what macOS offers natively:
+
+**Green button (hold):** Hover over the green button in the title bar. A menu appears with options to tile the window to the left or right half of the screen.
+
+**Drag to edge (Sequoia only):** In macOS 15+, you can drag a window to the left or right edge of the screen to snap it to that half.
+
+That is it. No thirds, no quarters, no keyboard shortcuts. For anything beyond basic left-right splitting, you need a third-party tool.
+
+![Drag a window to snap it into place](/blog/snapback/snaps.webp)
+
+## Why You Need Keyboard Shortcuts
+
+Dragging windows to screen edges works, but it is slow. You have to grab the title bar, drag across the screen, wait for the snap indicator, and release. Doing this dozens of times a day adds up.
+
+Keyboard shortcuts are faster. You press a key combination and the window snaps instantly. No dragging, no waiting, no imprecise positioning. Your hands stay on the keyboard.
+
+## Snapback Window Snapping Shortcuts
+
+Snapback provides a full set of [window snapping shortcuts](/apps/snapback/help#shortcuts) that you can customize. Here are the defaults:
+
+### Halves
+
+| Action | Default Shortcut |
+|:---|:---|
+| Snap to left half | Customizable |
+| Snap to right half | Customizable |
+| Snap to top half | Customizable |
+| Snap to bottom half | Customizable |
+
+### Thirds
+
+| Action | Default Shortcut |
+|:---|:---|
+| Snap to left third | Customizable |
+| Snap to center third | Customizable |
+| Snap to right third | Customizable |
+
+### Quarters
+
+| Action | Default Shortcut |
+|:---|:---|
+| Snap to top-left quarter | Customizable |
+| Snap to top-right quarter | Customizable |
+| Snap to bottom-left quarter | Customizable |
+| Snap to bottom-right quarter | Customizable |
+
+### Other Positions
+
+| Action | Default Shortcut |
+|:---|:---|
+| Maximize window | Customizable |
+| Center window | Customizable |
+| Move to next display | Customizable |
+| Restore workspace | Customizable |
+
+All shortcuts are configurable in Snapback Settings under the Hotkeys section. Pick combinations that do not conflict with your other apps.
+
+If you work across more than one screen, pair these with the [guide to managing multiple monitors on Mac](/blog/manage-multiple-monitors-on-mac) for how displays and shortcuts work together.
+
+## Drag to Snap
+
+If you prefer mouse input for some actions, Snapback supports drag-to-snap:
+
+![Drag to snap window positioning](/blog/snapback/drag-snap.webp)
+
+1. Hold the Command key
+2. Drag any window toward a screen edge or corner
+3. A snap indicator appears showing where the window will land
+4. Release to snap
+
+This works for halves (edges), quarters (corners), and thirds (when dragging to the top or bottom edge).
+
+Drag-to-snap is useful when you want to reposition a window quickly without remembering a shortcut. The keyboard shortcuts are faster for windows you snap to the same position repeatedly.
+
+## Layout Shortcuts
+
+Beyond individual window snapping, Snapback supports layout shortcuts that arrange all open windows at once:
+
+| Layout | What It Does |
+|:---|:---|
+| Halves | Two columns, equal width |
+| Thirds | Three columns, equal width |
+| Full | One window fills the display |
+
+Hit a layout shortcut and every open window jumps into a predefined grid. No dragging. No resizing. Useful when you open a fresh set of apps and want them organized instantly.
+
+![Predefined window layouts](/blog/snapback/layouts.webp)
+
+## Choosing Your Shortcuts
+
+Here are some principles for picking shortcuts that stick:
+
+**Use modifier combinations you do not already use.** If you use Command+Tab for app switching and Command+Space for Spotlight, avoid those. Common choices are Control+Option+Arrow keys or Command+Control+Arrow keys.
+
+**Make related actions use related shortcuts.** If left half is Control+Option+Left, make right half Control+Option+Right. Consistency reduces cognitive load.
+
+**Put your most-used actions on the easiest shortcuts.** If you snap to left half fifty times a day, that shortcut should be easy to hit without looking.
+
+**Avoid conflicts with your IDE.** [VS Code](https://code.visualstudio.com/docs/getstarted/keybindings), IntelliJ, and other editors use many shortcuts. Check your editor's keymap before assigning Snapback shortcuts to avoid collisions.
+
+## Shortcuts for Common Workflows
+
+Here are shortcut setups that work well for specific workflows:
+
+### Software Development
+
+- **Left half:** IDE (your primary workspace)
+- **Right third:** Terminal
+- **Maximize:** For focused coding sessions
+- **Restore workspace:** One shortcut to bring back your entire dev setup
+
+### Writing
+
+- **Center:** Text editor, slightly narrower than full width
+- **Maximize:** For distraction-free writing
+- **Left third:** Research browser
+
+### Design
+
+- **Full screen:** Figma or Sketch
+- **Right half:** Browser with design references
+- **Left half:** Color picker, inspector, or asset browser
+
+## How Snapback Shortcuts Compare to Other Tools
+
+| Tool | Snapping Shortcuts | Customizable | Layout Shortcuts | Workspace Restore |
+|:---|:---|:---|:---|:---|
+| macOS native | None (drag only) | No | No | No |
+| [Rectangle](https://github.com/rxhanson/Rectangle) | Yes | Yes | No | No |
+| Magnet | Yes | Limited | No | No |
+| BetterTouchTool | Yes | Yes | No | No |
+| Snapback | Yes | Yes | Yes | Yes |
+
+The main difference is that Snapback shortcuts do more than move windows. They also save and restore entire workspace layouts, which no other tool offers through keyboard shortcuts.
+
+For a full breakdown of how Snapback stacks up against Rectangle, Magnet, and the rest, see the [complete Mac window manager comparison](/blog/best-mac-window-managers), or read the [detailed Snapback vs Rectangle comparison](/blog/snapback-vs-rectangle) if Rectangle is what you are currently using.
+
+## Setting Up Your First Shortcuts
+
+1. Open Snapback from the menu bar
+2. Go to Settings, then Hotkeys
+3. Click on any action to assign a shortcut
+4. Press your desired key combination
+5. Test it by focusing a window and pressing the shortcut
+
+If a shortcut conflicts with another app, Snapback will warn you. You can also check the [shortcuts help page](/apps/snapback/help#shortcuts) for more details on customization.
+
+## Tips and Tricks
+
+**Use shortcuts for your top three positions.** You probably snap most windows to the same two or three positions. Assign shortcuts to those and use drag-to-snap for everything else.
+
+**Combine with workspace shortcuts.** Individual snapping is useful, but workspace shortcuts are more powerful. Save your ideal layout once, then restore it with one shortcut instead of snapping each window individually.
+
+**Practice for a day.** The first day with new shortcuts feels awkward. By the second day, they become muscle memory. Give it 48 hours before deciding if a shortcut works for you.
+
+---
+
+Download Snapback from the [homepage](/apps/snapback) to start customizing your window snapping shortcuts, or read the [full shortcut documentation](/apps/snapback/help#shortcuts).

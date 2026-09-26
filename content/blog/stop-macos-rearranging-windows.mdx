@@ -1,0 +1,94 @@
+---
+title: "Why macOS Rearranges My Windows (And How to Stop It)"
+description: "macOS moves, resizes, and scatters your windows when you close your laptop, restart, or unplug a monitor. Here is why it happens and how to make your layout stick."
+date: "2026-07-20"
+author: "Snapback Team"
+tags: ["macOS", "window management", "troubleshooting", "workspace", "layout"]
+app: "snapback"
+published: true
+---
+
+## The Problem
+
+You close your MacBook for a meeting. You open it on the couch to check something. Every window is somewhere it should not be. The terminal is half off screen. The browser is stacked on top of your editor. Your carefully arranged layout is gone.
+
+Or you restart for a macOS update. Or you unplug an external monitor. Same result: your windows scattered, resized, piled into corners.
+
+This is not you doing something wrong. It is how macOS behaves on its own. The good news is you can stop rebuilding your layout by hand.
+
+## Why macOS Scrambles Your Windows
+
+macOS does not save window positions by default. When a change happens that it has to react to, it moves windows to the nearest safe spot and calls it done.
+
+There are three main triggers:
+
+### 1. Closing and reopening your laptop
+
+Sleep and wake is the most common culprit. When your Mac wakes up, macOS does not always remember exactly where each window was. Windows that were on the external display get pulled onto the built-in screen. Sizes get re-fitted to whatever display is ready first. The result is a pile.
+
+### 2. Restarting your Mac
+
+On reboot, macOS reopens your apps but does not restore their placement. Apps come back wherever the system lands them, often full screen, in a stack, or scattered across displays.
+
+### 3. Unplugging a monitor
+
+When a display disconnects, macOS moved all of that display's windows to the remaining screen to avoid stranding them. When you reconnect the monitor, macOS does not move them back. They stay piled on your laptop screen.
+
+None of these are bugs you can fix in System Settings. Apple has not built in a "remember my window layout" toggle, because the window management APIs are limited. macOS expects you either to arrange windows yourself or to use a third-party tool.
+
+## The Manual Workarounds (And Why They Wear Out)
+
+**Drag everything back by hand.** Works, but it is minutes of your day every time your layout breaks.
+
+**Mission Control.** You can assign apps to specific Spaces or displays, but only for apps that are already open, and the assignment does not reliably survive restarts.
+
+**macOS Spaces.** You can group apps by Space, but this is fragile. Space behavior changes across macOS updates, and it does not restore exact window positions within a Space.
+
+**Stage Manager.** It groups the windows you are actively using, but it does not remember positions or display assignments. Disconnect a monitor and Stage Manager groups get scrambled too.
+
+These all treat the symptom. None of them save your actual layout: which apps are open, where each window sits, and which display it belongs to.
+
+## The Fix: Let Something Remember
+
+The reliable fix is a window manager that saves and restores window positions automatically, rather than expecting the OS to get it right.
+
+A tool with workspace memory captures your layout once, then puts it back on command, no matter what macOS did in between. Close the laptop, restart, unplug a monitor: one shortcut brings everything back.
+
+## How Snapback Keeps Your Layout
+
+[Snapback](/apps/snapback) is a free macOS app that saves your entire workspace: every app, every window position, every display. It works like this.
+
+### Save once
+
+Arrange your windows the way you want them. Open Snapback from the menu bar and save that arrangement as a workspace. Name it "Desk Setup" or "Coding" or whatever matches how you work.
+
+### Restore on demand
+
+Assign the workspace a keyboard shortcut. Press it and every window goes back to its saved position. Apps that were closed get reopened. Size and place come back exactly as saved.
+
+### It survives the triggers above
+
+- **Wake from close:** restore after you open the laptop, and windows go back to their correct displays.
+- **Restart:** restore your workspace after reboot, full layout intact.
+- **Monitor disconnect:** windows saved on a missing display are skipped, so nothing piles up. Reconnect the display and windows go back to their assigned screens.
+
+This is the part other window managers do not do. Rectangle, Magnet, and the rest snap windows that are already open. They do not remember your layout. Snapback remembers.
+
+## What Stays Different
+
+| Trigger | Without Snapback | With Snapback |
+|:---|:---|:---|
+| Close and reopen laptop | Windows scattered | One shortcut restores everything |
+| Restart Mac | Apps reopen, layout lost | Full layout restored |
+| Unplug a monitor | Windows piled on one screen | Position memory keeps displays assigned |
+| Work in multiple setups | Rebuild each time | Named workspaces switch instantly |
+
+## Try It
+
+Snapback is free, so testing costs nothing. Save one workspace, close your laptop, open it, and hit your restore shortcut. If your layout does not snap back, uninstall it and stop there.
+
+Most people do not go back. Once your Mac remembers where everything goes, rebuilding layouts by hand feels like a step backward.
+
+---
+
+Download Snapback from the [homepage](/apps/snapback) or see the [troubleshooting guide](/apps/snapback/help#troubleshooting) if a specific app is not cooperating.
