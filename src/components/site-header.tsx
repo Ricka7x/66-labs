@@ -17,7 +17,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   // App pages open on a dark hero, so the header reads light until you scroll past it
-  const onDark = /^\/apps\/[^/]+$/.test(usePathname()) && !scrolled;
+  const onDark = /^\/apps\/[^/]+\/?$/.test(usePathname()) && !scrolled;
 
   useEffect(() => {
     function onScroll() {
