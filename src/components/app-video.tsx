@@ -172,7 +172,7 @@ function WindowBar({ title }: { title: string }) {
         <i className="h-3 w-3 rounded-full bg-[#febc2e] not-italic" />
         <i className="h-3 w-3 rounded-full bg-[#28c840] not-italic" />
       </span>
-      <span className="absolute inset-x-0 text-center font-mono text-[10.5px] uppercase tracking-[0.12em] text-[rgba(244,242,234,0.45)]">
+      <span className="absolute inset-x-0 text-center font-mono text-[10.5px] uppercase tracking-[0.12em] text-[rgba(243,245,249,0.45)]">
         {title}
       </span>
     </div>
@@ -199,7 +199,7 @@ export function VideoPlaceholder({ app }: { app: Pick<App, "slug" | "name" | "ic
           <div className="relative h-24 w-24 animate-[bob_4s_ease-in-out_infinite] md:h-32 md:w-32">
             <AppIcon app={app} className="h-full w-full" sizes="128px" />
           </div>
-          <span className="relative inline-flex items-center gap-2 rounded-full border border-line-invert px-4 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(244,242,234,0.7)]">
+          <span className="relative inline-flex items-center gap-2 rounded-full border border-line-invert px-4 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(243,245,249,0.7)]">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" style={{ background: app.accent }} />
               <span className="relative inline-flex h-2 w-2 rounded-full" style={{ background: app.accent }} />

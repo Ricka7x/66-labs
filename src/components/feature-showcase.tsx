@@ -148,7 +148,7 @@ function Shot({
       />
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-[0.18em] -right-[0.04em] font-display text-[clamp(160px,22vw,320px)] font-extrabold leading-none tracking-tight text-transparent [-webkit-text-stroke:1px_rgba(244,242,234,0.14)]"
+        className="pointer-events-none absolute -bottom-[0.18em] -right-[0.04em] font-display text-[clamp(160px,22vw,320px)] font-extrabold leading-none tracking-tight text-transparent [-webkit-text-stroke:1px_rgba(243,245,249,0.14)]"
       >
         {String(index + 1).padStart(2, "0")}
       </span>
@@ -163,12 +163,12 @@ function Shot({
           </span>
         )}
         {feature.body && !inline && (
-          <em className="mt-3 block max-w-[34ch] font-serif text-xl leading-snug text-[rgba(244,242,234,0.65)]">
+          <em className="mt-3 block max-w-[34ch] font-sans text-xl leading-snug text-[rgba(243,245,249,0.65)]">
             {feature.body}
           </em>
         )}
       </div>
-      <span className="absolute left-5 top-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(244,242,234,0.45)]">
+      <span className="absolute left-5 top-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(243,245,249,0.45)]">
         <span className="h-1.5 w-1.5 rounded-full" style={{ background: app.accent }} />
         Screenshot soon
       </span>

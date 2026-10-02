@@ -50,7 +50,7 @@ export function KineticHeadline({ lines, className = "" }: { lines: Line[]; clas
           mask.style.transform = `translateY(${-8 * v}px)`;
         } else {
           mask.style.transform = `translateY(${-14 * v}px) rotate(${(i % 2 ? 1 : -1) * 8 * v}deg)`;
-          c.style.color = v > 0.02 ? `color-mix(in oklab, var(--coral) ${Math.round(v * 100)}%, currentColor)` : "";
+          c.style.color = v > 0.02 ? `color-mix(in oklab, var(--blue) ${Math.round(v * 100)}%, currentColor)` : "";
         }
       });
       if (moving) raf = requestAnimationFrame(frame);
@@ -103,7 +103,7 @@ export function KineticHeadline({ lines, className = "" }: { lines: Line[]; clas
     <h1 ref={ref} className={className} aria-label={lines.map((l) => l.text).join(" ")}>
       {lines.map((line) => (
         <span key={line.text} className="kline" aria-hidden="true">
-          {line.serif ? <em className="inline-block">{renderLine(line)}</em> : renderLine(line)}
+          {line.serif ? <span className="accent-serif inline-block">{renderLine(line)}</span> : renderLine(line)}
         </span>
       ))}
     </h1>

@@ -37,8 +37,8 @@ export default function HomePage() {
             style={{ "--d": "0.1s" } as React.CSSProperties}
           >
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-coral" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-blue" />
             </span>
             66 labs: independent software
           </span>
@@ -62,12 +62,12 @@ export default function HomePage() {
                 className="group inline-flex items-center gap-3 rounded-full bg-ink py-2.5 pl-6 pr-2.5 font-mono text-[13px] uppercase tracking-[0.05em] text-paper"
               >
                 Meet the apps
-                <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-paper text-ink transition-colors duration-300 group-hover:bg-coral group-hover:text-paper">
+                <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-paper text-ink transition-colors duration-300 group-hover:bg-blue group-hover:text-paper">
                   <IconSwap icon={ArrowDown} direction="down" className="h-[46%] w-[46%]" />
                 </span>
               </a>
             </MagneticButton>
-            <span className="font-serif text-lg text-ink-soft">
+            <span className="font-sans text-lg text-ink-soft">
               <em>
                 {apps.length} apps. {shipped} shipped. More on the way.
               </em>
@@ -88,7 +88,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1280px] px-5 md:px-14">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-[0.9fr_1.6fr] md:gap-15">
             <Reveal className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft">
-              02: The lab
+              The lab
             </Reveal>
             <div>
               <SplitReveal as="p" stagger={0.018} className="text-2xl leading-[1.28] tracking-tight md:text-4xl">
@@ -101,7 +101,7 @@ export default function HomePage() {
               </p>
               <div className="mt-11 grid grid-cols-1 gap-4 border-t border-line pt-6 md:grid-cols-3 md:gap-6">
                 <Reveal>
-                  <b className="block font-display text-[44px] font-extrabold leading-none text-coral">
+                  <b className="block font-display text-[44px] font-extrabold leading-none text-blue">
                     <CountUp to={shipped} />
                   </b>
                   <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
@@ -134,7 +134,7 @@ export default function HomePage() {
 
       {/* ---------- Contact ---------- */}
       <section id="contact" className="relative overflow-hidden bg-ink pt-35 text-paper">
-        <PointerGlow color="var(--violet)" size={620} />
+        <PointerGlow color="var(--teal)" size={620} />
         <div className="relative z-2 mx-auto max-w-[1280px] px-5 md:px-14">
           <Reveal>
             <span className="inline-flex items-center rounded-full border border-line-invert px-3.5 py-1.5 font-mono text-xs uppercase tracking-[0.16em]">
@@ -149,7 +149,7 @@ export default function HomePage() {
             REAL HUMANS _read_ _these._
           </SplitReveal>
           <Reveal delay={0.12}>
-            <p className="mt-6 max-w-120 text-[rgba(244,242,234,0.72)]">
+            <p className="mt-6 max-w-120 text-[rgba(243,245,249,0.72)]">
               Bug reports, feature wishes, or an annoyance that deserves to become app no.{" "}
               {apps.length + 1}: send it over. It lands in the same inbox the apps are built from,
               and we read every single one.
@@ -165,7 +165,7 @@ export default function HomePage() {
                 hello@66labs.dev
                 <span
                   aria-hidden="true"
-                  className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-ink text-paper transition-colors duration-300 group-hover:bg-coral"
+                  className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-ink text-paper transition-colors duration-300 group-hover:bg-blue"
                 >
                   <IconSwap icon={ArrowUpRight} direction="diagonal" />
                 </span>

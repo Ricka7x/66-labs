@@ -49,7 +49,7 @@ export function Marquee({ items, className = "bg-ink text-paper" }: { items: str
           className="inline-flex items-center gap-5.5 px-5.5 font-display text-xl font-extrabold uppercase tracking-tight md:text-3xl"
         >
           {i % 2 ? <em className="normal-case">{item.toLowerCase()}</em> : item}
-          <i aria-hidden="true" className="inline-block h-1.5 w-1.5 rounded-full bg-coral not-italic md:h-2 md:w-2" />
+          <i aria-hidden="true" className="inline-block h-1.5 w-1.5 rounded-full bg-blue not-italic md:h-2 md:w-2" />
         </span>
       ))}
     </span>

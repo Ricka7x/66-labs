@@ -9,7 +9,7 @@ import type { HelpItem, HelpSection } from "@/lib/help";
  * Searchable FAQ: live filter with highlighted matches, a sticky section index
  * that follows your scroll, and answers that open with a smooth height ease.
  */
-export function HelpCenter({ sections, accent = "var(--coral)" }: { sections: HelpSection[]; accent?: string }) {
+export function HelpCenter({ sections, accent = "var(--blue)" }: { sections: HelpSection[]; accent?: string }) {
   const [query, setQuery] = useState("");
   const q = useDeferredValue(query.trim().toLowerCase());
   const [current, setCurrent] = useState(sections[0]?.id);
@@ -88,7 +88,7 @@ export function HelpCenter({ sections, accent = "var(--coral)" }: { sections: He
             <p className="font-display text-2xl font-extrabold tracking-tight">Nothing on “{query}” yet.</p>
             <p className="mt-2 text-ink-soft">
               Ask us directly:{" "}
-              <a href="mailto:hello@66labs.dev" className="text-ink underline decoration-coral decoration-2 underline-offset-4">
+              <a href="mailto:hello@66labs.dev" className="text-ink underline decoration-blue decoration-2 underline-offset-4">
                 hello@66labs.dev
               </a>
             </p>
@@ -154,7 +154,7 @@ function Question({ item, query, accent }: { item: HelpItem; query: string; acce
             {item.link && (
               <Link
                 href={item.link.href}
-                className="mt-3 block w-fit font-mono text-xs uppercase tracking-[0.08em] text-ink underline decoration-coral decoration-2 underline-offset-4"
+                className="mt-3 block w-fit font-mono text-xs uppercase tracking-[0.08em] text-ink underline decoration-blue decoration-2 underline-offset-4"
               >
                 {item.link.label} →
               </Link>

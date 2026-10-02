@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import Script from "next/script";
 import "lenis/dist/lenis.css";
 import "./globals.css";
@@ -15,14 +16,6 @@ const bricolage = Bricolage_Grotesque({
   // Width + optical size power the hero's cursor-reactive lettering.
   axes: ["wdth", "opsz"],
   variable: "--font-bricolage",
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
   display: "swap",
 });
 
@@ -55,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${bricolage.variable} ${instrumentSerif.variable} ${jbMono.variable}`}
+      className={`${bricolage.variable} ${GeistSans.variable} ${jbMono.variable}`}
       // The inline script below adds classes before hydration.
       suppressHydrationWarning
     >

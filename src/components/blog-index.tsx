@@ -168,7 +168,7 @@ export function BlogIndex({ posts, apps }: { posts: (PostSummary & { dateLabel: 
             ))}
           </span>
         ) : (
-          <span className="flex h-full w-full items-center justify-center rounded-[26px] bg-coral font-display text-4xl font-extrabold text-ink shadow-xl">
+          <span className="flex h-full w-full items-center justify-center rounded-[26px] bg-blue font-display text-4xl font-extrabold text-ink shadow-xl">
             66
           </span>
         )}

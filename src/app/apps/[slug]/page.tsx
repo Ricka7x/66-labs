@@ -64,7 +64,7 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
             <Link
               href="/apps"
               transitionTypes={["nav-back"]}
-              className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] text-[rgba(244,242,234,0.6)] hover:text-paper"
+              className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] text-[rgba(243,245,249,0.6)] hover:text-paper"
             >
               ← All apps
             </Link>
@@ -77,12 +77,12 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                     {app.name}
                   </h1>
                 </ViewTransition>
-                <p className="mt-2 font-serif text-2xl text-[rgba(244,242,234,0.7)] md:text-3xl">
+                <p className="mt-2 font-sans text-2xl text-[rgba(243,245,249,0.7)] md:text-3xl">
                   <em>
                     a {app.kind.toLowerCase()} for {app.platforms.join(" & ")}
                   </em>
                 </p>
-                <SplitReveal as="p" stagger={0.025} delay={0.15} className="mt-6 block max-w-140 text-lg text-[rgba(244,242,234,0.78)] md:text-xl">
+                <SplitReveal as="p" stagger={0.025} delay={0.15} className="mt-6 block max-w-140 text-lg text-[rgba(243,245,249,0.78)] md:text-xl">
                   {app.tagline}
                 </SplitReveal>
 
@@ -93,24 +93,24 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                   {app.pricing.pro && app.links.purchase && (
                     <a
                       href={app.links.purchase}
-                      className="font-mono text-xs uppercase tracking-[0.08em] text-[rgba(244,242,234,0.7)] underline decoration-line-invert underline-offset-4 hover:text-paper"
+                      className="font-mono text-xs uppercase tracking-[0.08em] text-[rgba(243,245,249,0.7)] underline decoration-line-invert underline-offset-4 hover:text-paper"
                     >
                       Get Pro{app.pricing.pro.price ? `: ${app.pricing.pro.price}` : ""}
                     </a>
                   )}
                 </div>
-                <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(244,242,234,0.5)]">
+                <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(243,245,249,0.5)]">
                   {app.requires} · {app.pricing.free}
                 </p>
               </div>
 
-              <TiltBox className="mx-auto flex aspect-square w-full max-w-90 items-center justify-center rounded-[32px] border border-line-invert bg-[rgba(244,242,234,0.04)] md:max-w-105">
-                <span className="absolute left-5 top-4 font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(244,242,234,0.4)]">
+              <TiltBox className="mx-auto flex aspect-square w-full max-w-90 items-center justify-center rounded-[32px] border border-line-invert bg-[rgba(243,245,249,0.04)] md:max-w-105">
+                <span className="absolute left-5 top-4 font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(243,245,249,0.4)]">
                   fig. {String(apps.indexOf(app) + 1).padStart(2, "0")}
                 </span>
                 <OrbitText
                   text={`${app.name} · ${app.kind} · ${app.platforms.join(" + ")} · `}
-                  className="tilt-layer absolute inset-[8%] text-[rgba(244,242,234,0.32)]"
+                  className="tilt-layer absolute inset-[8%] text-[rgba(243,245,249,0.32)]"
                 />
                 <ViewTransition name={`app-icon-${app.slug}`}>
                   <div
@@ -130,7 +130,7 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
           <div className="relative mx-auto max-w-[1280px] px-5 md:px-14">
             {/* The hero's ink carries on behind the top half of the frame, so it straddles the two. */}
             <div aria-hidden="true" className="absolute -inset-x-[100vw] top-0 bottom-1/2 bg-ink" />
-            <span className="relative block pt-2 pb-6 font-mono text-xs uppercase tracking-[0.14em] text-[rgba(244,242,234,0.5)]">
+            <span className="relative block pt-2 pb-6 font-mono text-xs uppercase tracking-[0.14em] text-[rgba(243,245,249,0.5)]">
               See it in action
             </span>
             <div className="relative">
@@ -208,20 +208,20 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                     style={{ width: 200, height: 200, top: -60, right: -40, background: app.accent }}
                   />
                   <div className="relative z-2">
-                    <span className="font-mono text-xs uppercase tracking-[0.14em] text-[rgba(244,242,234,0.6)]">
+                    <span className="font-mono text-xs uppercase tracking-[0.14em] text-[rgba(243,245,249,0.6)]">
                       Pro
                     </span>
                     <p className="mt-3 font-display text-5xl font-extrabold tracking-tight">
                       {app.pricing.pro.price ?? <em className="text-4xl">soon</em>}
                       {app.pricing.pro.note && (
-                        <span className="ml-2 font-mono text-xs font-normal uppercase tracking-[0.08em] text-[rgba(244,242,234,0.6)]">
+                        <span className="ml-2 font-mono text-xs font-normal uppercase tracking-[0.08em] text-[rgba(243,245,249,0.6)]">
                           {app.pricing.pro.note}
                         </span>
                       )}
                     </p>
                     <ul className="mt-5 flex flex-col gap-2.5">
                       {app.pricing.pro.perks.map((p) => (
-                        <li key={p} className="flex items-start gap-3 text-[15px] text-[rgba(244,242,234,0.86)]">
+                        <li key={p} className="flex items-start gap-3 text-[15px] text-[rgba(243,245,249,0.86)]">
                           <i
                             aria-hidden="true"
                             className="mt-1.75 h-2 w-2 shrink-0 rounded-full not-italic"
@@ -239,7 +239,7 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                   delay={0.06}
                   className="flex items-center rounded-[22px] border-2 border-dashed border-line p-8"
                 >
-                  <p className="font-serif text-2xl text-ink-soft">
+                  <p className="font-sans text-2xl text-ink-soft">
                     <em>That&apos;s it. That&apos;s the pricing.</em>
                   </p>
                 </Reveal>

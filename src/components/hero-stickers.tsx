@@ -179,7 +179,7 @@ export function HeroStickers({ apps: all }: { apps: Sticker[] }) {
         </div>
       ))}
       <span
-        className={`sticker-hint pointer-events-none absolute right-[27%] top-[9%] hidden font-serif text-xl text-ink-soft transition-opacity duration-500 md:block ${
+        className={`sticker-hint pointer-events-none absolute right-[27%] top-[9%] hidden font-sans text-xl text-ink-soft transition-opacity duration-500 md:block ${
           touched ? "opacity-0" : ""
         }`}
       >

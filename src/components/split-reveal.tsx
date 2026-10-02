@@ -6,7 +6,7 @@ import { useReveal } from "@/components/reveal";
 /**
  * Word-by-word masked reveal: each word rises out of its own clip as the
  * heading scrolls into view. Wrap words in _underscores_ to set them in the
- * italic serif, e.g. "What it _costs._"
+ * roman serif accent color (not italic, which reads as an AI-generated-UI tell).
  */
 export function SplitReveal({
   children,
@@ -23,12 +23,12 @@ export function SplitReveal({
 }) {
   const [ref, reveal] = useReveal<HTMLElement>(delay);
   // Resolve which words sit inside _underscores_ before rendering.
-  const words: { text: string; italic: boolean }[] = [];
-  let italic = false;
+  const words: { text: string; accent: boolean }[] = [];
+  let accent = false;
   for (const raw of children.split(/\s+/)) {
-    if (raw.startsWith("_")) italic = true;
-    words.push({ text: raw.replace(/_/g, ""), italic });
-    if (/_[.,!?]?$/.test(raw)) italic = false;
+    if (raw.startsWith("_")) accent = true;
+    words.push({ text: raw.replace(/_/g, ""), accent });
+    if (/_[.,!?]?$/.test(raw)) accent = false;
   }
 
   return (
@@ -38,7 +38,7 @@ export function SplitReveal({
       className={`split ${reveal.className.includes(" in") ? "in" : ""} ${className}`}
       style={reveal.style}
     >
-      {words.map(({ text: word, italic: isItalic }, i) => {
+      {words.map(({ text: word, accent: isAccent }, i) => {
         const inner = (
           <span className="split-word" style={{ "--i": i, "--s": `${stagger}s` } as CSSProperties}>
             {word}
@@ -46,7 +46,7 @@ export function SplitReveal({
         );
         return (
           <span key={i} aria-hidden="true">
-            <span className="split-mask">{isItalic ? <em>{inner}</em> : inner}</span>
+            <span className="split-mask">{isAccent ? <span className="accent-serif">{inner}</span> : inner}</span>
             {i < words.length - 1 ? " " : ""}
           </span>
         );

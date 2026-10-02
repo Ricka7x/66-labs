@@ -42,11 +42,11 @@ export function LegalPage({
         <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
           {summary.map((s) => (
             <div key={s.label} className="rounded-[22px] bg-ink p-7 text-paper">
-              <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-[rgba(244,242,234,0.55)]">
+              <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-[rgba(243,245,249,0.55)]">
                 {s.label}
               </span>
-              <p className="mt-3 font-serif text-2xl leading-snug">
-                <em>{s.text}</em>
+              <p className="mt-3 font-sans text-2xl leading-snug">
+                <span className="accent-serif">{s.text}</span>
               </p>
             </div>
           ))}

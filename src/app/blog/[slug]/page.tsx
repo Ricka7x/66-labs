@@ -98,7 +98,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
             </h1>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="mt-6 max-w-[52ch] font-serif text-2xl leading-snug text-ink-soft md:text-3xl">
+            <p className="mt-6 max-w-[52ch] font-sans text-2xl leading-snug text-ink-soft md:text-3xl">
               <em>{post.description}</em>
             </p>
           </Reveal>

@@ -53,16 +53,16 @@ export function AppCard({ app, delay = 0, size = "md" }: { app: App; delay?: num
             {app.name}
           </h3>
         </ViewTransition>
-        <p className={`relative z-2 mt-1 font-serif text-[rgba(244,242,234,0.7)] ${lg ? "text-2xl md:text-3xl" : "text-xl"}`}>
+        <p className={`relative z-2 mt-1 font-sans text-[rgba(243,245,249,0.7)] ${lg ? "text-2xl md:text-3xl" : "text-xl"}`}>
           <em>{app.kind.toLowerCase()}</em>
         </p>
-        <p className={`relative z-2 mt-4 text-[rgba(244,242,234,0.72)] ${lg ? "max-w-120 text-lg" : "max-w-105 text-[15px]"}`}>
+        <p className={`relative z-2 mt-4 text-[rgba(243,245,249,0.72)] ${lg ? "max-w-120 text-lg" : "max-w-105 text-[15px]"}`}>
           {app.tagline}
         </p>
       </div>
 
       <div className={`relative z-2 flex items-end justify-between gap-4 pt-8 ${lg ? "" : "mt-auto"}`}>
-        <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(244,242,234,0.55)]">
+        <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(243,245,249,0.55)]">
           {app.platforms.join(" + ")}
           <span className="mx-2 opacity-40">·</span>
           {getPriceLabel(app)}
@@ -75,7 +75,7 @@ export function AppCard({ app, delay = 0, size = "md" }: { app: App; delay?: num
               e.stopPropagation();
               window.location.href = `mailto:hello@66labs.dev?subject=${encodeURIComponent(`Tell me when ${app.name} launches`)}`;
             }}
-            className="relative z-10 hidden cursor-pointer font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(244,242,234,0.75)] underline decoration-[rgba(244,242,234,0.35)] underline-offset-4 hover:text-paper hover:decoration-paper sm:inline"
+            className="relative z-10 hidden cursor-pointer font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(243,245,249,0.75)] underline decoration-[rgba(243,245,249,0.35)] underline-offset-4 hover:text-paper hover:decoration-paper sm:inline"
           >
             Notify me
           </button>
@@ -112,7 +112,7 @@ export function StatusSticker({ status, className = "" }: { status: App["status"
       } ${className}`}
       style={{ transitionTimingFunction: "var(--spring)" }}
     >
-      <span aria-hidden="true" className={`h-1.5 w-1.5 rounded-full ${live ? "animate-pulse bg-ink" : "bg-coral"}`} />
+      <span aria-hidden="true" className={`h-1.5 w-1.5 rounded-full ${live ? "animate-pulse bg-ink" : "bg-blue"}`} />
       {STATUS_LABEL[status]}
     </span>
   );
@@ -145,10 +145,10 @@ export function AppStrip({ app }: { app: App }) {
         <div className="relative z-2 min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-3">
             <span className="font-display text-2xl font-extrabold tracking-tight">{app.name}</span>
-            <em className="font-serif text-lg text-[rgba(244,242,234,0.65)]">{app.kind.toLowerCase()}</em>
+            <em className="font-sans text-lg text-[rgba(243,245,249,0.65)]">{app.kind.toLowerCase()}</em>
           </div>
-          <p className="mt-1 line-clamp-2 text-[14px] leading-snug text-[rgba(244,242,234,0.7)]">{app.tagline}</p>
-          <span className="mt-2 block font-mono text-[10.5px] uppercase tracking-[0.1em] text-[rgba(244,242,234,0.5)]">
+          <p className="mt-1 line-clamp-2 text-[14px] leading-snug text-[rgba(243,245,249,0.7)]">{app.tagline}</p>
+          <span className="mt-2 block font-mono text-[10.5px] uppercase tracking-[0.1em] text-[rgba(243,245,249,0.5)]">
             {STATUS_LABEL[app.status]} · {app.platforms.join(" + ")} · {app.pricing.free}
           </span>
         </div>
@@ -179,14 +179,14 @@ export function NextAppCard({ number, delay = 0, size = "md" }: { number: number
       </div>
       <div>
         <p className="max-w-80 text-[15px] text-ink-soft">
-          <em className="text-2xl text-ink">On the workbench.</em>
+          <span className="accent-serif text-2xl text-ink">On the workbench.</span>
           <br />
           Something small for an annoyance we can&apos;t stop noticing. Got one? Tell us.
         </p>
         <span className="mt-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-coral" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-blue" />
           </span>
           Building
         </span>

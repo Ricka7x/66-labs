@@ -11,7 +11,7 @@ const LINKS = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line-invert bg-ink py-8 text-[rgba(244,242,234,0.55)]">
+    <footer className="border-t border-line-invert bg-ink py-8 text-[rgba(243,245,249,0.55)]">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-6 px-5 font-mono text-[11.5px] tracking-[0.04em] md:flex-row md:items-center md:justify-between md:px-14">
         <nav aria-label="Footer" className="flex flex-wrap gap-x-7 gap-y-3 uppercase">
           {LINKS.map((l) => (

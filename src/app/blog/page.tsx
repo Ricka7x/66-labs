@@ -35,7 +35,7 @@ export default function BlogPage() {
             href="/feed.xml"
             className="group inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 font-mono text-xs uppercase tracking-[0.08em] text-ink-soft transition-colors hover:border-ink hover:text-ink"
           >
-            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-coral" />
+            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-blue" />
             RSS feed
           </a>
         </div>

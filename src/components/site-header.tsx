@@ -50,7 +50,7 @@ export function SiteHeader() {
           href="/"
           className="font-display font-extrabold text-[22px] tracking-tight flex items-center gap-2"
         >
-          <span aria-hidden="true" className="w-2 h-2 rounded-full bg-coral inline-block" />
+          <span aria-hidden="true" className="w-2 h-2 rounded-full bg-blue inline-block" />
           66<span className="sr-only">labs</span>
         </Link>
         <nav aria-label="Primary" className="hidden md:flex gap-8">

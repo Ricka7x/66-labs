@@ -75,8 +75,8 @@ export const apps: App[] = [
     platforms: ["macOS"],
     requires: "macOS 12.4+",
     status: "available",
-    accent: "#1556db",
-    glow: ["#1556db", "#fe6445"],
+    accent: "#0b63e5",
+    glow: ["#0b63e5", "#4f8dff"],
     features: [
       {
         title: "Every layout, one shortcut away",
@@ -146,8 +146,8 @@ export const apps: App[] = [
     platforms: ["macOS"],
     requires: "macOS 14.6+",
     status: "coming-soon",
-    accent: "#22d3ee",
-    glow: ["#22d3ee", "#1556db"],
+    accent: "#0f9d8a",
+    glow: ["#0f9d8a", "#0b63e5"],
     features: [
       { title: "Your whole clipboard, one hotkey", body: "Hit the shortcut and everything you've copied is right there. Find it, pick it, paste it." },
       { title: "Not just text", body: "Images, video and audio clips get remembered too. Yes, even that screenshot from an hour ago." },
@@ -171,8 +171,8 @@ export const apps: App[] = [
     platforms: ["macOS", "iPhone"],
     requires: "macOS 14.6+",
     status: "coming-soon",
-    accent: "#bb7bff",
-    glow: ["#bb7bff", "#1556db"],
+    accent: "#e5890b",
+    glow: ["#e5890b", "#0b63e5"],
     features: [
       { title: "A palette, not a folder graveyard", body: "Search, add, open, pin, tag and delete, all from one keyboard-first palette." },
       { title: "Grab the tab you're on", body: "One shortcut saves the frontmost tab from Safari, Chrome, Arc, Brave or Edge, free, no Pro required. No window switching." },
