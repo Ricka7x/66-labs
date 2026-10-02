@@ -153,7 +153,7 @@ export default function HomePage() {
             stagger={0.08}
             className="mt-6.5 block max-w-[12ch] font-display text-[12vw] font-extrabold leading-[0.95] tracking-tight md:text-[7vw]"
           >
-            REAL HUMANS _read_ _these._
+            We actually _read_ _these._
           </SplitReveal>
           <Reveal delay={0.12}>
             <p className="mt-6 max-w-120 text-[rgba(243,245,249,0.72)]">
