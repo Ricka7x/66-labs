@@ -11,7 +11,7 @@ type Sticker = Pick<App, "slug" | "name" | "iconFullBleed">;
 // Room for up to five on wide screens and three on phones; extra apps simply don't get a sticker
 // (the shelf below lists every app).
 const SPOTS_WIDE = [
-  { x: 0.74, y: 0.2, r: -8 },
+  { x: 0.8, y: 0.28, r: -8 },
   { x: 0.87, y: 0.44, r: 10 },
   { x: 0.7, y: 0.56, r: 4 },
   { x: 0.9, y: 0.16, r: -12 },
@@ -179,14 +179,14 @@ export function HeroStickers({ apps: all }: { apps: Sticker[] }) {
         </div>
       ))}
       <span
-        className={`sticker-hint pointer-events-none absolute right-[27%] top-[9%] hidden font-sans text-xl text-ink-soft transition-opacity duration-500 md:block ${
+        className={`sticker-hint pointer-events-none absolute right-[21%] top-[12%] hidden font-sans text-xl text-ink-soft transition-opacity duration-500 md:block ${
           touched ? "opacity-0" : ""
         }`}
       >
         <em>psst, you can throw these</em>
         <svg viewBox="0 0 60 40" className="ml-auto mt-1 h-8 w-12" fill="none" aria-hidden="true">
-          <path d="M4 4c14 2 30 10 40 28" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-          <path d="M36 30l8 3 1-9" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M4 4c18 1 36 6 48 26" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+          <path d="M44 28l8 2 0-9" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </span>
     </div>
