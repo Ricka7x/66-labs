@@ -9,7 +9,7 @@ import { lockScroll } from "@/components/smooth-scroll";
 const LINKS = [
   { href: "/apps", label: "Apps" },
   { href: "/blog", label: "Blog" },
-  { href: "/#about", label: "Studio" },
+  { href: "/#about", label: "Lab" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -51,7 +51,7 @@ export function SiteHeader() {
           className="font-display font-extrabold text-[22px] tracking-tight flex items-center gap-2"
         >
           <span aria-hidden="true" className="w-2 h-2 rounded-full bg-coral inline-block" />
-          66<span className="sr-only">studio</span>
+          66<span className="sr-only">labs</span>
         </Link>
         <nav aria-label="Primary" className="hidden md:flex gap-8">
           {LINKS.map((l) => (

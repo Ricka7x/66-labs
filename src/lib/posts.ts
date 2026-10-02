@@ -14,7 +14,7 @@ export interface Post {
   date: string;
   author?: string;
   tags: string[];
-  /** The app this post is about. Omit for general posts (lists, studio news…). */
+  /** The app this post is about. Omit for general posts (lists, lab news…). */
   app?: App["slug"];
   /** Apps a general post covers: it's also listed on each of those apps' pages. */
   features: App["slug"][];

@@ -51,8 +51,8 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
     headline: post.title,
     description: post.description,
     datePublished: `${post.date}T00:00:00Z`,
-    author: { "@type": "Organization", name: post.author ?? "66 studio" },
-    publisher: { "@type": "Organization", name: "66 studio" },
+    author: { "@type": "Organization", name: post.author ?? "66 labs" },
+    publisher: { "@type": "Organization", name: "66 labs" },
     mainEntityOfPage: `https://66labs.dev/blog/${post.slug}`,
     keywords: post.tags.join(", "),
   };
@@ -141,7 +141,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
       {!app && featured.length > 0 && (
         <section className="mx-auto mt-24 max-w-[1280px] px-5 md:px-14" aria-label="Apps in this post">
           <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft">
-            From 66 studio, in this post
+            From 66 labs, in this post
           </span>
           <div className="mt-5 flex max-w-3xl flex-col gap-3">
             {featured.map((a) => (

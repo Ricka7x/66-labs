@@ -21,7 +21,7 @@ export function SiteFooter() {
           ))}
         </nav>
         <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 md:justify-end">
-          <span>© {new Date().getFullYear()} 66 studio. Independently run.</span>
+          <span>© {new Date().getFullYear()} 66 labs. Independently run.</span>
           <a href="#main" className="inline-flex items-center gap-1.5 hover:text-paper">
             Back to top ↑
           </a>

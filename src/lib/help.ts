@@ -15,7 +15,7 @@ export interface HelpSection {
 
 /**
  * Help content per app. Add a key for each new app; apps without one still get
- * a help page with the studio-wide questions and a contact link.
+ * a help page with the lab-wide questions and a contact link.
  */
 export const appHelp: Record<App["slug"], HelpSection[]> = {
   snapback: [
@@ -302,20 +302,20 @@ export const appHelp: Record<App["slug"], HelpSection[]> = {
 };
 
 /** Questions that apply to every app: shown on /help and at the bottom of each app's help page. */
-export const studioHelp: HelpSection = {
+export const labHelp: HelpSection = {
   id: "general",
   title: "General",
   items: [
     {
       q: "How do I get support?",
-      a: "Email hello@66labs.dev. Tell us which app, your macOS version and what happened, screenshots help. It's a small studio, so replies come from the people who build the apps.",
+      a: "Email hello@66labs.dev. Tell us which app, your macOS version and what happened, screenshots help. It's a small lab, so replies come from the people who build the apps.",
     },
     {
       q: "Who handles payments?",
       a: "Paid licenses are sold through Lemon Squeezy, which processes the payment and emails you your key and receipt. Your order history is at app.lemonsqueezy.com/my-orders.",
     },
     {
-      q: "Do I need a 66 studio account?",
+      q: "Do I need a 66 labs account?",
       a: "No. None of our apps ask you to create an account with us.",
     },
   ],

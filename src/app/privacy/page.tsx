@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/legal-page";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "What 66 studio apps and this website collect (very little), why, and who else is involved: app by app, in plain language.",
+    "What 66 labs apps and this website collect (very little), why, and who else is involved: app by app, in plain language.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           body: (
             <>
               <p>
-                66 studio (“we”, “us”) makes small apps for the Mac and iPhone. This policy explains what our apps
+                66 labs (“we”, “us”) makes small apps for the Mac and iPhone. This policy explains what our apps
                 and this website (66labs.dev) collect, why, and who else is involved. The short version: as little
                 as possible.
               </p>

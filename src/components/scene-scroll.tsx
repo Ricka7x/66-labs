@@ -45,7 +45,7 @@ function bandOpacity(p: number, [inStart, inEnd]: [number, number], [outStart, o
 /**
  * One pinned beat: a scattered field of tiles settles into a clean grid,
  * each picking up a brand color as it locks into place, while three lines
- * of copy cross-fade over the same scroll range. The studio's actual
+ * of copy cross-fade over the same scroll range. The lab's actual
  * annoyance-to-shipped-app loop, dramatized instead of declared.
  */
 export function SceneScroll() {

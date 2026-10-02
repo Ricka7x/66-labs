@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "The terms for using 66 studio apps and this website: licenses, purchases, and the fine print, in plain language.",
+  description: "The terms for using 66 labs apps and this website: licenses, purchases, and the fine print, in plain language.",
   alternates: { canonical: "/terms" },
 };
 
@@ -26,7 +26,7 @@ export default function TermsPage() {
           body: (
             <>
               <p>
-                These Terms &amp; Conditions (“Terms”) cover every app made by 66 studio (“we”, “us”), including
+                These Terms &amp; Conditions (“Terms”) cover every app made by 66 labs (“we”, “us”), including
                 the ones listed on our <Link href="/apps">apps page</Link>, and this website, 66labs.dev. By
                 downloading, installing or using one of our apps, you agree to these Terms.
               </p>
@@ -126,7 +126,7 @@ export default function TermsPage() {
                 to the fullest extent the law allows.
               </p>
               <p>
-                To the fullest extent the law allows, 66 studio isn&apos;t liable for indirect, incidental or
+                To the fullest extent the law allows, 66 labs isn&apos;t liable for indirect, incidental or
                 consequential damages, or for lost data or profits, arising from using or being unable to use our
                 apps. Nothing in these Terms limits rights you have under consumer protection laws that can&apos;t
                 be waived.

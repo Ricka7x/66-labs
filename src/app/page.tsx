@@ -39,7 +39,7 @@ export default function HomePage() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-coral" />
             </span>
-            66 studio: independent software
+            66 labs: independent software
           </span>
           <KineticHeadline
             className="mt-6.5 font-display text-[12.5vw] font-extrabold leading-[0.96] tracking-tight md:text-[7.5vw]"
@@ -49,7 +49,7 @@ export default function HomePage() {
             className="arrive mt-7.5 max-w-130 text-base text-ink-soft md:text-[19px]"
             style={{ "--d": "0.7s" } as React.CSSProperties}
           >
-            We&apos;re a tiny studio making native apps for the Mac and iPhone. Each one takes on a
+            We&apos;re a tiny lab making native apps for the Mac and iPhone. Each one takes on a
             single thing that makes you mutter at your screen, fixes it properly, and gets out of
             your way. Then we go find the next one.
           </p>
@@ -91,12 +91,17 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1280px] px-5 md:px-14">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-[0.9fr_1.6fr] md:gap-15">
             <Reveal className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft">
-              02: The studio
+              02: The lab
             </Reveal>
             <div>
               <SplitReveal as="p" stagger={0.018} className="text-2xl leading-[1.28] tracking-tight md:text-4xl">
-                We&apos;re a small studio with a long list of things that drive us up the wall, and the stubbornness to fix them _properly._ Every app starts as one of our own annoyances, and we price them fairly, so anyone with the same itch can have the fix.
+                We&apos;re a small lab with a long list of things that drive us up the wall, and the stubbornness to fix them _properly._ Every app starts as one of our own annoyances, and we price them fairly, so anyone with the same itch can have the fix.
               </SplitReveal>
+              <p className="mt-6 max-w-150 text-base text-ink-soft md:text-lg">
+                Our philosophy: one-time payment, cheap, useful. No subscriptions, no dark patterns, no
+                renting software you already paid for. Pay once, own it, get updates. If it&apos;s not worth
+                a one-time price, we don&apos;t ship it.
+              </p>
               <div className="mt-11 grid grid-cols-1 gap-4 border-t border-line pt-6 md:grid-cols-3 md:gap-6">
                 <Reveal>
                   <b className="block font-display text-[44px] font-extrabold leading-none text-coral">

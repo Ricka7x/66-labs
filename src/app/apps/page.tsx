@@ -4,7 +4,7 @@ import { apps } from "@/lib/apps";
 
 export const metadata: Metadata = {
   title: "Apps",
-  description: `Every app from 66 studio: ${apps.map((a) => a.name).join(", ")}. Small, native apps for the Mac and iPhone, each fixing one everyday annoyance.`,
+  description: `Every app from 66 labs: ${apps.map((a) => a.name).join(", ")}. Small, native apps for the Mac and iPhone, each fixing one everyday annoyance.`,
 };
 
 export default function AppsPage() {

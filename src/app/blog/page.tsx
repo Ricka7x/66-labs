@@ -7,7 +7,7 @@ import { formatDate, getPosts, summarize } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Notes from the 66 studio workbench: guides, release notes and behind-the-scenes on every app we make.",
+    "Notes from the 66 labs workbench: guides, release notes and behind-the-scenes on every app we make.",
   alternates: {
     canonical: "/blog",
     types: { "application/rss+xml": "/feed.xml" },

@@ -60,7 +60,7 @@ export interface App {
 }
 
 /**
- * Every app the studio ships. Add new entries here: the homepage shelf, the
+ * Every app the lab ships. Add new entries here: the homepage shelf, the
  * /apps index, and each /apps/[slug] page are all driven off this array.
  */
 export const apps: App[] = [

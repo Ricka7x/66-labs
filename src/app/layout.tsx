@@ -35,11 +35,11 @@ const jbMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://66labs.dev"),
   title: {
-    default: "66 Studio: Small apps for big annoyances",
-    template: "%s: 66 Studio",
+    default: "66 Labs: Small apps for big annoyances",
+    template: "%s: 66 Labs",
   },
   description:
-    "66 studio makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
+    "66 labs makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
 };
 
 /**

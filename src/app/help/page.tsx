@@ -5,11 +5,11 @@ import { HelpCenter } from "@/components/help-center";
 import { Reveal } from "@/components/reveal";
 import { SplitReveal } from "@/components/split-reveal";
 import { apps } from "@/lib/apps";
-import { appHelp, studioHelp } from "@/lib/help";
+import { appHelp, labHelp } from "@/lib/help";
 
 export const metadata: Metadata = {
   title: "Help",
-  description: "Help and answers for every 66 studio app: setup, shortcuts, licenses and troubleshooting.",
+  description: "Help and answers for every 66 labs app: setup, shortcuts, licenses and troubleshooting.",
   alternates: { canonical: "/help" },
 };
 
@@ -65,7 +65,7 @@ export default function HelpPage() {
         </div>
 
         <div className="mt-24">
-          <HelpCenter sections={[studioHelp]} />
+          <HelpCenter sections={[labHelp]} />
         </div>
       </div>
     </main>

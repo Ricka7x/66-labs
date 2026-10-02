@@ -1,6 +1,6 @@
-# 66 studio
+# 66 labs
 
-The studio's site: Next.js (App Router), Tailwind v4, native React `<ViewTransition>` for the
+The lab's site: Next.js (App Router), Tailwind v4, native React `<ViewTransition>` for the
 app-card → app-page morph.
 
 ```bash
@@ -35,7 +35,7 @@ Drop an `.mdx` file in `content/blog/`, the filename is the slug (`/blog/<slug>`
 title: "Post title"
 description: "One-sentence summary, used on cards, in the feed and as the meta description."
 date: "2026-09-26"
-author: "66 studio"
+author: "66 labs"
 tags: ["macOS", "productivity"]
 app: "boomark"        # app-specific post: listed under that app's filter and on its page
 # features: ["snapback", "peggo", "boomark"]   # general post (no `app`): shows on each featured app's page
@@ -44,7 +44,7 @@ published: true       # false keeps it out of every list, page and the feed
 ---
 ```
 
-- No `app` = a **General** post (lists, studio news). Add `features` to surface it on those apps' pages.
+- No `app` = a **General** post (lists, lab news). Add `features` to surface it on those apps' pages.
 - `<App slug="peggo" />` embeds an app card anywhere in a post; `<AllApps />` embeds the whole shelf.
 - `/blog?app=<slug>` (or `?app=general`) opens the blog pre-filtered.
 - Markdown + GFM tables work. `<Video src="/blog/<app>/clip.mp4" autoPlay />` embeds a demo
@@ -55,16 +55,16 @@ published: true       # false keeps it out of every list, page and the feed
 ## Help, terms & privacy
 
 - Help content lives in `src/lib/help.ts`: one list of sections per app (`appHelp[slug]`) plus
-  `studioHelp`, the questions shared by every app. Section `id`s are link anchors
+  `labHelp`, the questions shared by every app. Section `id`s are link anchors
   (`/apps/<slug>/help#displays`); blog posts use them, so don't rename them casually.
 - `/help` is the hub; `/apps/<slug>/help` is each app's searchable help page.
-- `/terms` and `/privacy` are studio-wide, with a section per app in the privacy policy. When you
+- `/terms` and `/privacy` are lab-wide, with a section per app in the privacy policy. When you
   add an app, or an app starts using a new service (analytics, sync, payments), add or update its
   section and bump the "Last updated" date.
 
 ## Structure
 
-- `src/app/page.tsx`: homepage (hero, app shelf, scene-scroll, studio note, house rules, contact)
+- `src/app/page.tsx`: homepage (hero, app shelf, scene-scroll, lab note, house rules, contact)
 - `src/app/apps/page.tsx`: every app
 - `src/app/apps/[slug]/page.tsx`: one app's page (hero, features, pricing)
 - `src/app/blog/`: blog index + post pages; `src/app/feed.xml/route.ts`: RSS
@@ -72,8 +72,6 @@ published: true       # false keeps it out of every list, page and the feed
 - `src/lib/posts.ts`: reads `content/blog/*.mdx`
 - `src/components/`: shared UI (header, footer, cursor, reveal/parallax hooks, cards)
 - `_reference/single-file-v1.html`: the original single-file HTML version, kept for reference
-
-Old `/work` and `/work/:slug` URLs redirect to `/apps` (see `next.config.ts`).
 
 ## Notes
 

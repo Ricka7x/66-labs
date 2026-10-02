@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { AppIcon } from "@/components/app-icon";
 import { HelpCenter } from "@/components/help-center";
 import { apps, getApp } from "@/lib/apps";
-import { appHelp, studioHelp } from "@/lib/help";
+import { appHelp, labHelp } from "@/lib/help";
 
 export const dynamicParams = false;
 
@@ -27,7 +27,7 @@ export default async function AppHelpPage({ params }: PageProps<"/apps/[slug]/he
   const { slug } = await params;
   const app = getApp(slug);
   if (!app) notFound();
-  const sections = [...(appHelp[app.slug] ?? []), studioHelp];
+  const sections = [...(appHelp[app.slug] ?? []), labHelp];
 
   const faqSchema = {
     "@context": "https://schema.org",

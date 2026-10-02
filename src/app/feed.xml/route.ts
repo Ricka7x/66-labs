@@ -27,9 +27,9 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>66 studio: Notes from the workbench</title>
+    <title>66 labs: Notes from the workbench</title>
     <link>${SITE}/blog</link>
-    <description>Guides, updates and behind-the-scenes on the apps from 66 studio.</description>
+    <description>Guides, updates and behind-the-scenes on the apps from 66 labs.</description>
     <language>en</language>
     <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml" />
 ${items}

@@ -42,7 +42,7 @@ function ImagePlaceholder({ label }: { label: string }) {
   );
 }
 
-/** `<App slug="peggo" />`, drop one of the studio's apps into a post. */
+/** `<App slug="peggo" />`, drop one of the lab's apps into a post. */
 function App({ slug }: { slug: string }) {
   const app = getApp(slug);
   if (!app) return null;
@@ -54,7 +54,7 @@ function App({ slug }: { slug: string }) {
 }
 
 /** `<AllApps />`, every app on the shelf, e.g. to close out a general post. */
-function AllApps({ title = "Made by 66 studio" }: { title?: string }) {
+function AllApps({ title = "Made by 66 labs" }: { title?: string }) {
   return (
     <div className="not-prose my-12">
       <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft">{title}</span>

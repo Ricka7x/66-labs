@@ -61,7 +61,7 @@ export function IntroLoader() {
     <div ref={panelRef} className="intro-panel" aria-hidden="true">
       <div className="flex w-full items-end justify-between px-5 pb-8 md:px-14 md:pb-12">
         <span className="font-mono text-xs uppercase tracking-[0.16em] text-[rgba(244,242,234,0.5)]">
-          66 studio: loading the shelf
+          66 labs: loading the shelf
         </span>
         <span ref={countRef} className="font-display text-[28vw] font-extrabold leading-[0.8] tracking-tight md:text-[18vw]">
           00
