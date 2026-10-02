@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { OrientKicker } from "@/components/orient-kicker";
 import { AppCard, NextAppCard } from "@/components/app-card";
 import { SplitReveal } from "@/components/split-reveal";
 import { clamp, pinProgress, prefersReducedMotion } from "@/lib/motion";
@@ -96,7 +97,9 @@ export function AppShowcase({ apps }: { apps: App[] }) {
 
         <div className="relative mx-auto mb-10 flex w-full max-w-[1280px] flex-wrap items-end justify-between gap-5 px-5 md:px-14">
           <div>
-            <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft">01: The shelf</span>
+            <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft">
+              <OrientKicker>The shelf</OrientKicker>
+            </span>
             <SplitReveal as="h2" className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
               Pick your _fix._
             </SplitReveal>

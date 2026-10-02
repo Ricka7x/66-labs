@@ -7,7 +7,9 @@ import { KineticHeadline } from "@/components/kinetic-headline";
 import { HeroStickers } from "@/components/hero-stickers";
 import { AppShowcase } from "@/components/app-showcase";
 import { SplitReveal } from "@/components/split-reveal";
-import { CountUp, PointerGlow } from "@/components/micro";
+import { ScrubCount, PointerGlow } from "@/components/micro";
+import { OrientKicker } from "@/components/orient-kicker";
+import { ScrubText } from "@/components/scrub-text";
 import { IconSwap } from "@/components/icon-swap";
 import { apps } from "@/lib/apps";
 import { getPosts } from "@/lib/posts";
@@ -88,21 +90,22 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1280px] px-5 md:px-14">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-[0.9fr_1.6fr] md:gap-15">
             <Reveal className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft">
-              The lab
+              <OrientKicker>The lab</OrientKicker>
             </Reveal>
             <div>
               <SplitReveal as="p" stagger={0.018} className="text-2xl leading-[1.28] tracking-tight md:text-4xl">
                 We&apos;re a small lab with a long list of things that drive us up the wall, and the stubbornness to fix them _properly._ Every app starts as one of our own annoyances, and we price them fairly, so anyone with the same itch can have the fix.
               </SplitReveal>
-              <p className="mt-6 max-w-150 text-base text-ink-soft md:text-lg">
-                Our philosophy: one-time payment, cheap, useful. No subscriptions, no dark patterns, no
-                renting software you already paid for. Pay once, own it, get updates. If it&apos;s not worth
-                a one-time price, we don&apos;t ship it.
-              </p>
-              <div className="mt-11 grid grid-cols-1 gap-4 border-t border-line pt-6 md:grid-cols-3 md:gap-6">
+              <ScrubText className="mt-6 max-w-150 text-base text-ink-soft md:text-lg">
+                Our philosophy: one-time payment, cheap, useful. No subscriptions, no dark patterns, no renting software you already paid for. Pay once, own it, get updates. If it's not worth a one-time price, we don't ship it.
+              </ScrubText>
+              <div
+                data-scrub-group
+                className="mt-11 grid grid-cols-1 gap-4 border-t border-line pt-6 md:grid-cols-3 md:gap-6"
+              >
                 <Reveal>
                   <b className="block font-display text-[44px] font-extrabold leading-none text-blue">
-                    <CountUp to={shipped} />
+                    <ScrubCount to={shipped} />
                   </b>
                   <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
                     Out in the wild
@@ -110,7 +113,7 @@ export default function HomePage() {
                 </Reveal>
                 <Reveal delay={0.06}>
                   <b className="block font-display text-[44px] font-extrabold leading-none">
-                    <CountUp to={apps.length} />
+                    <ScrubCount to={apps.length} />
                   </b>
                   <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
                     Apps and counting
@@ -118,7 +121,7 @@ export default function HomePage() {
                 </Reveal>
                 <Reveal delay={0.12}>
                   <b className="block font-display text-[44px] font-extrabold leading-none">
-                    <CountUp to={postCount} />
+                    <ScrubCount to={postCount} />
                   </b>
                   <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
                     Notes on the blog
@@ -130,7 +133,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <LatestPosts posts={posts.slice(0, 3)} eyebrow="03: The blog" title="Notes from _the_ _workbench._" />
+      <LatestPosts
+        posts={posts.slice(0, 3)}
+        eyebrow={<OrientKicker>The blog</OrientKicker>}
+        title="Notes from _the_ _workbench._"
+      />
 
       {/* ---------- Contact ---------- */}
       <section id="contact" className="relative overflow-hidden bg-ink pt-35 text-paper">

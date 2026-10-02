@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type CSSProperties } from "react";
-import { easeOutExpo, hasFinePointer, lerp, prefersReducedMotion } from "@/lib/motion";
+import { clamp, easeOutExpo, hasFinePointer, lerp, prefersReducedMotion } from "@/lib/motion";
 
 /** Counts up from zero the first time it scrolls into view. */
 export function CountUp({ to, pad = 2, duration = 1400 }: { to: number; pad?: number; duration?: number }) {
@@ -29,6 +29,51 @@ export function CountUp({ to, pad = 2, duration = 1400 }: { to: number; pad?: nu
       cancelAnimationFrame(raf);
     };
   }, [to, pad, duration]);
+
+  return <span ref={ref}>{String(to).padStart(pad, "0")}</span>;
+}
+
+/**
+ * Like CountUp, but scrubbed directly to scroll position instead of firing
+ * once: the number ticks up and down live as its container crosses the
+ * middle band of the viewport, like a dial rather than a one-shot reveal.
+ */
+export function ScrubCount({ to, pad = 2 }: { to: number; pad?: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    const container = el?.closest("[data-scrub-group]") as HTMLElement | null;
+    const target = container ?? el?.parentElement;
+    if (!el || !target || prefersReducedMotion()) {
+      if (el) el.textContent = String(to).padStart(pad, "0");
+      return;
+    }
+    el.textContent = "0".padStart(pad, "0");
+    let raf = 0;
+
+    function update() {
+      raf = 0;
+      const r = target!.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // 0 once the block's top reaches 80% down the screen, 1 once its center passes the middle.
+      const t = clamp((vh * 0.8 - r.top) / (vh * 0.8 - vh * 0.45));
+      el!.textContent = String(Math.round(easeOutExpo(t) * to)).padStart(pad, "0");
+    }
+
+    function onScroll() {
+      if (!raf) raf = requestAnimationFrame(update);
+    }
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [to, pad]);
 
   return <span ref={ref}>{String(to).padStart(pad, "0")}</span>;
 }

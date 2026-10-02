@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { AppIcon } from "@/components/app-icon";
 import { Reveal } from "@/components/reveal";
 import { SplitReveal } from "@/components/split-reveal";
@@ -13,8 +14,8 @@ export function LatestPosts({
   allHref = "/blog",
 }: {
   posts: Post[];
-  eyebrow: string;
-  /** SplitReveal syntax: wrap words in _underscores_ for the serif italic */
+  eyebrow: ReactNode;
+  /** SplitReveal syntax: wrap words in _underscores_ for the accent color */
   title: string;
   allHref?: string;
 }) {
