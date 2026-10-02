@@ -204,7 +204,7 @@ export function VideoPlaceholder({ app }: { app: Pick<App, "slug" | "name" | "ic
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" style={{ background: app.accent }} />
               <span className="relative inline-flex h-2 w-2 rounded-full" style={{ background: app.accent }} />
             </span>
-            Demo video on the way
+            Still filming, hang tight
           </span>
         </div>
       </div>

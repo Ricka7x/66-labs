@@ -15,9 +15,9 @@ export default function PrivacyPage() {
       title="Privacy, _plainly._"
       updated="September 26, 2026"
       summary={[
-        { label: "Our apps", text: "Your data stays on your device unless you turn on a feature that syncs it." },
-        { label: "This website", text: "No analytics, no ads, no tracking cookies." },
-        { label: "Never", text: "We don't sell your data or use it for advertising." },
+        { label: "Our apps", text: "Your data stays on your device unless you flip on a feature that syncs it." },
+        { label: "This website", text: "No analytics, no ads, no tracking cookies. We're not watching." },
+        { label: "Never", text: "We don't sell your data or feed it to advertisers." },
       ]}
       sections={[
         {

@@ -188,7 +188,7 @@ export function NextAppCard({ number, delay = 0, size = "md" }: { number: number
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-blue" />
           </span>
-          Building
+          Cooking
         </span>
       </div>
     </div>

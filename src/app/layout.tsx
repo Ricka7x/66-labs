@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     template: "%s: 66 Labs",
   },
   description:
-    "66 labs makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
+    "66 labs makes small, native apps for the Mac and iPhone, each one fixing one everyday annoyance properly, then getting out of the way.",
   openGraph: {
     title: "66 Labs: Small apps for big annoyances",
     description:
-      "66 labs makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
+      "66 labs makes small, native apps for the Mac and iPhone, each one fixing one everyday annoyance properly, then getting out of the way.",
     url: "https://66labs.dev",
     siteName: "66 Labs",
     type: "website",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "66 Labs: Small apps for big annoyances",
     description:
-      "66 labs makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
+      "66 labs makes small, native apps for the Mac and iPhone, each one fixing one everyday annoyance properly, then getting out of the way.",
   },
 };
 

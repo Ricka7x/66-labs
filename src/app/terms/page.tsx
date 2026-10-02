@@ -16,8 +16,8 @@ export default function TermsPage() {
       updated="September 26, 2026"
       summary={[
         { label: "In short", text: "Use our apps on your own devices. Don't resell or redistribute them." },
-        { label: "Paying", text: "Paid licenses go through Lemon Squeezy, which handles checkout and receipts." },
-        { label: "Fine print", text: "The apps come as they are. We work hard on them, but can't promise perfection." },
+        { label: "Paying", text: "Paid licenses run through Lemon Squeezy, who handles checkout and receipts." },
+        { label: "Fine print", text: "The apps come as they are. We sweat the details, but can't promise perfection." },
       ]}
       sections={[
         {
