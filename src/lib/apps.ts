@@ -175,7 +175,7 @@ export const apps: App[] = [
     glow: ["#bb7bff", "#1556db"],
     features: [
       { title: "A palette, not a folder graveyard", body: "Search, add, open, pin, tag and delete, all from one keyboard-first palette." },
-      { title: "Grab the tab you're on", body: "One shortcut saves the frontmost tab from Safari, Chrome, Arc, Brave or Edge. No window switching." },
+      { title: "Grab the tab you're on", body: "One shortcut saves the frontmost tab from Safari, Chrome, Arc, Brave or Edge, free, no Pro required. No window switching." },
       { title: "Bring your old bookmarks", body: "One-time import from Safari and Chromium browsers. Your folders become tags." },
       { title: "Tags that don't multiply", body: "Case-insensitive with autocomplete, so “Work” and “work” never become two tags." },
       { title: "⌘1–⌘9 quick-open", body: "Your top results, one keystroke each. Faster than typing the URL." },
@@ -183,7 +183,7 @@ export const apps: App[] = [
     ],
     tech: ["Swift", "SwiftUI", "CloudKit", "Sparkle", "Expo"],
     pricing: {
-      free: "Free to download",
+      free: "Free to download, browser extension included",
       pro: {
         note: "one-time license",
         perks: ["iCloud sync with Boomark on iPhone", "Every theme beyond Default"],

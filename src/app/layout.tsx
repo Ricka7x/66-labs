@@ -33,7 +33,7 @@ const jbMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://66studio.co"),
+  metadataBase: new URL("https://66labs.dev"),
   title: {
     default: "66 Studio: Small apps for big annoyances",
     template: "%s: 66 Studio",

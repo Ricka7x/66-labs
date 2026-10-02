@@ -61,7 +61,7 @@ export default function HomePage() {
                 className="group inline-flex items-center gap-3 rounded-full bg-ink py-2.5 pl-6 pr-2.5 font-mono text-[13px] uppercase tracking-[0.05em] text-paper"
               >
                 Meet the apps
-                <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-paper text-ink">
+                <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-paper text-ink transition-colors duration-300 group-hover:bg-coral group-hover:text-paper">
                   <span className="arrow-swap" data-glyph="↓">
                     ↓
                   </span>
@@ -99,19 +99,19 @@ export default function HomePage() {
               </SplitReveal>
               <div className="mt-11 grid grid-cols-1 gap-4 border-t border-line pt-6 md:grid-cols-3 md:gap-6">
                 <Reveal>
+                  <b className="block font-display text-[44px] font-extrabold leading-none text-coral">
+                    <CountUp to={shipped} />
+                  </b>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
+                    Out in the wild
+                  </span>
+                </Reveal>
+                <Reveal delay={0.06}>
                   <b className="block font-display text-[44px] font-extrabold leading-none">
                     <CountUp to={apps.length} />
                   </b>
                   <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
                     Apps and counting
-                  </span>
-                </Reveal>
-                <Reveal delay={0.06}>
-                  <b className="block font-display text-[44px] font-extrabold leading-none">
-                    <CountUp to={shipped} />
-                  </b>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
-                    Out in the wild
                   </span>
                 </Reveal>
                 <Reveal delay={0.12}>
@@ -156,14 +156,14 @@ export default function HomePage() {
           <Reveal delay={0.16} className="mt-12">
             <MagneticButton>
               <a
-                href="mailto:hello@66studio.co"
+                href="mailto:hello@66labs.dev"
                 data-cursor="Say hi"
                 className="group inline-flex items-center gap-3.5 rounded-full bg-paper py-3 pl-7 pr-3 font-mono text-sm uppercase tracking-[0.05em] text-ink md:text-base"
               >
-                hello@66studio.co
+                hello@66labs.dev
                 <span
                   aria-hidden="true"
-                  className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-ink text-paper"
+                  className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-ink text-paper transition-colors duration-300 group-hover:bg-coral"
                 >
                   <span className="arrow-swap" data-glyph="↗">
                     ↗

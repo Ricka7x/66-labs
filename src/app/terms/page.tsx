@@ -27,7 +27,7 @@ export default function TermsPage() {
             <>
               <p>
                 These Terms &amp; Conditions (“Terms”) cover every app made by 66 studio (“we”, “us”), including
-                the ones listed on our <Link href="/apps">apps page</Link>, and this website, 66studio.co. By
+                the ones listed on our <Link href="/apps">apps page</Link>, and this website, 66labs.dev. By
                 downloading, installing or using one of our apps, you agree to these Terms.
               </p>
               <p>
@@ -76,7 +76,7 @@ export default function TermsPage() {
               </p>
               <p>
                 Something wrong with an order? Email us at{" "}
-                <a href="mailto:hello@66studio.co">hello@66studio.co</a>.
+                <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
               </p>
             </>
           ),
@@ -148,7 +148,7 @@ export default function TermsPage() {
           title: "Contact",
           body: (
             <p>
-              Questions about these Terms? Email <a href="mailto:hello@66studio.co">hello@66studio.co</a>.
+              Questions about these Terms? Email <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
             </p>
           ),
         },

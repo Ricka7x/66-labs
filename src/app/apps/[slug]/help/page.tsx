@@ -62,7 +62,7 @@ export default async function AppHelpPage({ params }: PageProps<"/apps/[slug]/he
             <p className="mt-3 text-ink-soft">
               Setup, shortcuts and fixes. Stuck anyway?{" "}
               <a
-                href={`mailto:hello@66studio.co?subject=${encodeURIComponent(`${app.name} help`)}`}
+                href={`mailto:hello@66labs.dev?subject=${encodeURIComponent(`${app.name} help`)}`}
                 className="text-ink underline decoration-2 underline-offset-4"
                 style={{ textDecorationColor: app.accent }}
               >

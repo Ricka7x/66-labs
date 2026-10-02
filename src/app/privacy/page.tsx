@@ -27,7 +27,7 @@ export default function PrivacyPage() {
             <>
               <p>
                 66 studio (“we”, “us”) makes small apps for the Mac and iPhone. This policy explains what our apps
-                and this website (66studio.co) collect, why, and who else is involved. The short version: as little
+                and this website (66labs.dev) collect, why, and who else is involved. The short version: as little
                 as possible.
               </p>
               <p>
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
           title: "This website",
           body: (
             <ul>
-              <li>We don&apos;t use analytics, advertising or tracking cookies on 66studio.co.</li>
+              <li>We don&apos;t use analytics, advertising or tracking cookies on 66labs.dev.</li>
               <li>Fonts are served from this site, so loading a page doesn&apos;t ping a third-party font service.</li>
               <li>
                 The site stores one small flag in your browser&apos;s session storage so the intro animation only
@@ -166,7 +166,7 @@ export default function PrivacyPage() {
           body: (
             <p>
               We&apos;ll update this page when our apps or this site change what they collect, and change the date
-              at the top. Questions? Email <a href="mailto:hello@66studio.co">hello@66studio.co</a>.
+              at the top. Questions? Email <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
             </p>
           ),
         },

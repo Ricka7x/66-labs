@@ -1,73 +1,87 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { usePrefersReducedMotion } from "@/lib/use-reduced-motion";
 import { clamp, easeInOutCubic, pinProgress } from "@/lib/motion";
 
-const SCENES = [
-  {
-    label: "Small.",
-    sub: "One app, one job. It does that job brilliantly, then gets out of your way.",
-    bg: "#f4f2ea",
-    fg: "#0b0b0a",
-    accent: "#1556db",
-    origin: "50% 50%",
-  },
-  {
-    label: "Native.",
-    sub: "Swift and SwiftUI, built for the platform it runs on, not a website in an app costume.",
-    bg: "#0b0b0a",
-    fg: "#f4f2ea",
-    accent: "#fe6445",
-    origin: "20% 80%",
-  },
-  {
-    label: "Fair.",
-    sub: "Priced so anyone who needs the fix can actually have it.",
-    bg: "#1556db",
-    fg: "#f4f2ea",
-    accent: "#c4f042",
-    origin: "80% 20%",
-  },
+const LINES: { text: string; emphasis?: string; in: [number, number]; out: [number, number] }[] = [
+  { text: "Every day, something makes you mutter at your screen.", emphasis: "mutter", in: [0, 0.06], out: [0.24, 0.32] },
+  { text: "We can't stand it either.", in: [0.3, 0.36], out: [0.52, 0.6] },
+  { text: "So we fix it. Then we ship it.", emphasis: "ship", in: [0.58, 0.65], out: [0.97, 1] },
 ];
 
+const COLORS = ["var(--blue)", "var(--coral)", "var(--violet)", "var(--lime)"];
+const COLS = 5;
+const ROWS = 3;
+const TILE_COUNT = COLS * ROWS;
+
+interface Tile {
+  dx: number;
+  dy: number;
+  rot: number;
+  delay: number;
+  duration: number;
+  color: string;
+}
+
+function makeTiles(): Tile[] {
+  return Array.from({ length: TILE_COUNT }, (_, i) => ({
+    dx: (Math.random() - 0.5) * 2 * (110 + Math.random() * 120),
+    dy: (Math.random() - 0.5) * 2 * (50 + Math.random() * 70),
+    rot: (Math.random() - 0.5) * 70,
+    delay: (i / TILE_COUNT) * 0.5 + Math.random() * 0.06,
+    duration: 0.26 + Math.random() * 0.08,
+    color: COLORS[i % COLORS.length],
+  }));
+}
+
+function bandOpacity(p: number, [inStart, inEnd]: [number, number], [outStart, outEnd]: [number, number]) {
+  if (p <= inStart || p >= outEnd) return 0;
+  if (p < inEnd) return clamp((p - inStart) / (inEnd - inStart));
+  if (p > outStart) return clamp((outEnd - p) / (outEnd - outStart));
+  return 1;
+}
+
 /**
- * Three pinned statements. Scroll grows each next scene out of a circle over
- * the last one, while the outgoing word shrinks back into the page and the
- * incoming one settles from oversize, all scrubbed directly by scroll.
+ * One pinned beat: a scattered field of tiles settles into a clean grid,
+ * each picking up a brand color as it locks into place, while three lines
+ * of copy cross-fade over the same scroll range. The studio's actual
+ * annoyance-to-shipped-app loop, dramatized instead of declared.
  */
 export function SceneScroll() {
   const wrapRef = useRef<HTMLDivElement>(null);
-  const layers = useRef<(HTMLDivElement | null)[]>([]);
-  const words = useRef<(HTMLDivElement | null)[]>([]);
-  const dots = useRef<(HTMLSpanElement | null)[]>([]);
+  const tileRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lineRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const glowRef = useRef<HTMLDivElement>(null);
   const reduceMotion = usePrefersReducedMotion();
+  const tiles = useMemo(makeTiles, []);
 
   useEffect(() => {
     if (reduceMotion) return;
     let raf = 0;
-    const n = SCENES.length;
 
     function update() {
       raf = 0;
       const el = wrapRef.current;
       if (!el) return;
-      const seg = pinProgress(el) * (n - 1);
+      const p = pinProgress(el);
 
-      SCENES.forEach((s, i) => {
-        const layer = layers.current[i];
-        const word = words.current[i];
-        const enter = i === 0 ? 1 : easeInOutCubic(clamp(seg - (i - 1)));
-        const leave = i === n - 1 ? 0 : easeInOutCubic(clamp(seg - i));
-        if (layer && i > 0) layer.style.clipPath = `circle(${enter * 150}% at ${s.origin})`;
-        if (word) {
-          const scale = (i === 0 ? 1 : 1.35 - 0.35 * enter) * (1 - 0.25 * leave);
-          word.style.transform = `translateY(${leave * -12}vh) scale(${scale})`;
-          word.style.opacity = `${1 - leave}`;
-        }
-        const dot = dots.current[i];
-        if (dot) dot.style.transform = `scaleX(${clamp(seg - i + 1)})`;
+      tiles.forEach((tile, i) => {
+        const node = tileRefs.current[i];
+        if (!node) return;
+        const local = easeInOutCubic(clamp((p - tile.delay) / tile.duration));
+        const scatter = 1 - local;
+        node.style.transform = `translate3d(${tile.dx * scatter}px, ${tile.dy * scatter}px, 0) rotate(${tile.rot * scatter}deg) scale(${0.55 + 0.45 * local})`;
+        node.style.opacity = `${0.3 + 0.7 * local}`;
+        node.style.backgroundColor = `color-mix(in oklab, ${tile.color} ${Math.round(local * 100)}%, var(--ink-soft))`;
       });
+
+      LINES.forEach((line, i) => {
+        const node = lineRefs.current[i];
+        if (node) node.style.opacity = `${bandOpacity(p, line.in, line.out)}`;
+      });
+
+      if (glowRef.current) glowRef.current.style.opacity = `${clamp(p / 0.85) * 0.35}`;
     }
 
     function onScroll() {
@@ -81,60 +95,70 @@ export function SceneScroll() {
       window.removeEventListener("resize", onScroll);
       cancelAnimationFrame(raf);
     };
-  }, [reduceMotion]);
+  }, [reduceMotion, tiles]);
 
   if (reduceMotion) {
     return (
-      <div className="flex flex-col gap-16 bg-ink px-5 py-24 text-paper md:px-14">
-        {SCENES.map((s) => (
-          <div key={s.label}>
-            <h2 className="font-display text-5xl font-extrabold tracking-tight md:text-6xl">{s.label}</h2>
-            <p className="mt-3 max-w-md opacity-70">{s.sub}</p>
-          </div>
-        ))}
-      </div>
+      <section className="bg-paper px-5 py-24 text-center md:px-14">
+        <div className="mx-auto grid max-w-xs grid-cols-5 gap-2 opacity-90 md:max-w-sm">
+          {tiles.map((tile, i) => (
+            <div key={i} className="aspect-square rounded-xl" style={{ background: tile.color }} />
+          ))}
+        </div>
+        <div className="mx-auto mt-10 max-w-lg space-y-3">
+          {LINES.map((line) => (
+            <p key={line.text} className="font-display text-2xl font-extrabold tracking-tight">
+              {line.emphasis
+                ? line.text.split(line.emphasis).map((part, i, arr) => (
+                    <span key={i}>
+                      {part}
+                      {i < arr.length - 1 && <em>{line.emphasis}</em>}
+                    </span>
+                  ))
+                : line.text}
+            </p>
+          ))}
+        </div>
+      </section>
     );
   }
 
   return (
-    <div ref={wrapRef} style={{ height: `${SCENES.length * 110}vh` }} className="relative">
-      <div className="sticky top-0 h-dvh overflow-hidden">
-        {SCENES.map((s, i) => (
-          <div
-            key={s.label}
-            ref={(el) => {
-              layers.current[i] = el;
-            }}
-            className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
-            style={{ background: s.bg, color: s.fg, clipPath: i === 0 ? undefined : `circle(0% at ${s.origin})` }}
-          >
-            <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-60">
-              {String(i + 1).padStart(2, "0")} / {String(SCENES.length).padStart(2, "0")}
-            </span>
+    <div ref={wrapRef} style={{ height: "280vh" }} className="relative bg-paper">
+      <div className="sticky top-0 flex h-dvh flex-col items-center justify-center overflow-hidden px-6">
+        <div ref={glowRef} aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 opacity-0 blur-[110px]" style={{ background: "radial-gradient(circle at 50% 58%, var(--blue) 0%, transparent 62%)" }} />
+
+        <div className="relative z-10 grid h-24 max-w-90 place-items-center text-center md:h-28 md:max-w-2xl">
+          {LINES.map((line, i) => (
             <div
+              key={line.text}
               ref={(el) => {
-                words.current[i] = el;
+                lineRefs.current[i] = el;
               }}
-              className="will-change-transform"
+              className="col-start-1 row-start-1 font-display text-xl font-extrabold leading-tight tracking-tight text-ink opacity-0 md:text-4xl"
             >
-              <h2 className="mt-6 font-display text-[19vw] font-extrabold leading-none tracking-tight md:text-[12vw]">
-                {s.label.slice(0, -1)}
-                <span style={{ color: s.accent }}>.</span>
-              </h2>
-              <p className="mx-auto mt-5 max-w-md text-base opacity-75 md:text-lg">{s.sub}</p>
+              {line.emphasis
+                ? line.text.split(line.emphasis).map((part, j, arr) => (
+                    <span key={j}>
+                      {part}
+                      {j < arr.length - 1 && <em>{line.emphasis}</em>}
+                    </span>
+                  ))
+                : line.text}
             </div>
-          </div>
-        ))}
-        <div className="pointer-events-none absolute inset-x-0 bottom-10 z-10 flex justify-center gap-2 mix-blend-difference">
-          {SCENES.map((s, i) => (
-            <span key={s.label} aria-hidden="true" className="relative h-1 w-10 overflow-hidden rounded-full bg-white/25">
-              <span
-                ref={(el) => {
-                  dots.current[i] = el;
-                }}
-                className="absolute inset-0 origin-left [transform:scaleX(0)] bg-white"
-              />
-            </span>
+          ))}
+        </div>
+
+        <div className="relative z-10 mt-16 grid gap-3 md:mt-20 md:gap-4" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}>
+          {tiles.map((tile, i) => (
+            <div
+              key={i}
+              ref={(el) => {
+                tileRefs.current[i] = el;
+              }}
+              className="h-10 w-10 rounded-xl will-change-transform md:h-14 md:w-14"
+              style={{ background: "var(--ink-soft)" }}
+            />
           ))}
         </div>
       </div>

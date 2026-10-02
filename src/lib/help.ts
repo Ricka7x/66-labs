@@ -308,7 +308,7 @@ export const studioHelp: HelpSection = {
   items: [
     {
       q: "How do I get support?",
-      a: "Email hello@66studio.co. Tell us which app, your macOS version and what happened, screenshots help. It's a small studio, so replies come from the people who build the apps.",
+      a: "Email hello@66labs.dev. Tell us which app, your macOS version and what happened, screenshots help. It's a small studio, so replies come from the people who build the apps.",
     },
     {
       q: "Who handles payments?",

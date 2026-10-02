@@ -3,7 +3,7 @@ import { getPosts } from "@/lib/posts";
 
 export const dynamic = "force-static";
 
-const SITE = "https://66studio.co";
+const SITE = "https://66labs.dev";
 
 const esc = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");

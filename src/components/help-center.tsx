@@ -89,8 +89,8 @@ export function HelpCenter({ sections, accent = "var(--coral)" }: { sections: He
             <p className="font-display text-2xl font-extrabold tracking-tight">Nothing on “{query}” yet.</p>
             <p className="mt-2 text-ink-soft">
               Ask us directly:{" "}
-              <a href="mailto:hello@66studio.co" className="text-ink underline decoration-coral decoration-2 underline-offset-4">
-                hello@66studio.co
+              <a href="mailto:hello@66labs.dev" className="text-ink underline decoration-coral decoration-2 underline-offset-4">
+                hello@66labs.dev
               </a>
             </p>
           </div>

@@ -53,7 +53,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
     datePublished: `${post.date}T00:00:00Z`,
     author: { "@type": "Organization", name: post.author ?? "66 studio" },
     publisher: { "@type": "Organization", name: "66 studio" },
-    mainEntityOfPage: `https://66studio.co/blog/${post.slug}`,
+    mainEntityOfPage: `https://66labs.dev/blog/${post.slug}`,
     keywords: post.tags.join(", "),
   };
 

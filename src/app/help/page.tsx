@@ -27,7 +27,7 @@ export default function HelpPage() {
         </SplitReveal>
         <p className="mt-6 max-w-130 text-base text-ink-soft md:text-lg">
           Pick an app for setup guides, shortcuts and fixes, or skip the reading and{" "}
-          <a href="mailto:hello@66studio.co" className="text-ink underline decoration-coral decoration-2 underline-offset-4">
+          <a href="mailto:hello@66labs.dev" className="text-ink underline decoration-coral decoration-2 underline-offset-4">
             email us
           </a>
           .
