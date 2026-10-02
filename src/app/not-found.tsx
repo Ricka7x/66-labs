@@ -15,25 +15,22 @@ export default function NotFound() {
       <div className="grain" aria-hidden="true" />
 
       <Reveal className="relative z-10 max-w-[900px]">
-        <p className="mb-7 flex items-center gap-2.5 font-mono text-[13px] uppercase tracking-[0.14em] text-blue-soft">
-          <span aria-hidden="true" className="h-px w-6 bg-blue-soft" />
-          Error 404
-        </p>
+        <span className="mb-7 inline-flex items-center rounded-full border border-[rgba(243,245,249,0.25)] px-3.5 py-1.5 font-mono text-xs uppercase tracking-[0.16em]">
+          404: nothing to see here
+        </span>
         <h1 className="font-display text-[15vw] font-extrabold leading-[0.92] tracking-tight md:text-[7.5vw]">
-          That page <span className="text-blue-soft">snapped</span>
-          <br />
-          out of view.
+          Well, this is <span className="text-blue-soft">awkward.</span>
         </h1>
         <p className="mt-7 max-w-[46ch] font-mono text-[15px] leading-relaxed text-[rgba(243,245,249,0.68)]">
-          Wrong link, old bookmark, or we moved something. Either way, it&apos;s not here, but the rest of 66 Labs
-          still is.
+          This page doesn&apos;t exist, never did, or packed up and left without telling us. Either way, you
+          caught us empty-handed. The apps are all still where we left them.
         </p>
         <div className="mt-11 flex flex-wrap gap-4">
           <Link
             href="/"
             className="inline-flex items-center gap-2.5 rounded-full bg-paper px-6 py-3.5 font-mono text-[13px] uppercase tracking-[0.05em] text-ink transition-colors duration-300 hover:bg-blue-soft hover:text-paper"
           >
-            Back to home
+            Take me home
           </Link>
           <Link
             href="/apps"

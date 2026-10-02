@@ -42,9 +42,9 @@ export function SiteHeader() {
     <>
       <header
         style={{ viewTransitionName: "site-header" }}
-        className={`fixed top-0 inset-x-0 z-100 flex items-center justify-between px-5 md:px-14 py-4.5 border-b transition-colors duration-300 ${
-          scrolled ? "bg-paper/90 backdrop-blur-md border-line" : "border-transparent"
-        } ${onDark ? "text-paper" : "text-ink"}`}
+        className={`fixed top-0 inset-x-0 z-120 flex items-center justify-between px-5 md:px-14 py-4.5 border-b transition-colors duration-300 ${
+          open ? "bg-ink border-transparent" : scrolled ? "bg-paper/90 backdrop-blur-md border-line" : "border-transparent"
+        } ${onDark || open ? "text-paper" : "text-ink"}`}
       >
         <Link
           href="/"
@@ -68,7 +68,7 @@ export function SiteHeader() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-nav"
           className="relative z-130 h-6 w-8.5 md:hidden"
