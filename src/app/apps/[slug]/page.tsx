@@ -303,7 +303,11 @@ function PrimaryAction({ app }: { app: App }) {
   const className =
     "group inline-flex items-center gap-3 rounded-full bg-paper py-2.5 pl-6 pr-2.5 font-mono text-[13px] uppercase tracking-[0.05em] text-ink";
   const icon = (Icon: typeof ArrowDown, direction: "down" | "diagonal" = "down") => (
-    <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-ink text-paper">
+    <span
+      aria-hidden="true"
+      className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-ink text-paper transition-colors duration-300 group-hover:bg-[var(--hover-bg)] group-hover:text-paper"
+      style={{ "--hover-bg": app.accent } as React.CSSProperties}
+    >
       <IconSwap icon={Icon} direction={direction} />
     </span>
   );
