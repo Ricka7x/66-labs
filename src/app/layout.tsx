@@ -34,6 +34,20 @@ export const metadata: Metadata = {
   },
   description:
     "66 labs makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
+  openGraph: {
+    title: "66 Labs: Small apps for big annoyances",
+    description:
+      "66 labs makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
+    url: "https://66labs.dev",
+    siteName: "66 Labs",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "66 Labs: Small apps for big annoyances",
+    description:
+      "66 labs makes small, native apps for the Mac and iPhone, each one fixing a single everyday annoyance, properly.",
+  },
 };
 
 /**
