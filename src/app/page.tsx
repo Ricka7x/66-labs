@@ -1,7 +1,6 @@
 import { Reveal } from "@/components/reveal";
 import { Parallax } from "@/components/parallax";
 import { Marquee } from "@/components/marquee";
-import { SceneScroll } from "@/components/scene-scroll";
 import { MagneticButton } from "@/components/magnetic-button";
 import { KineticHeadline } from "@/components/kinetic-headline";
 import { HeroStickers } from "@/components/hero-stickers";
@@ -83,8 +82,6 @@ export default function HomePage() {
 
       {/* ---------- The shelf ---------- */}
       <AppShowcase apps={apps} />
-
-      <SceneScroll />
 
       {/* ---------- About ---------- */}
       <section id="about" className="py-30">
