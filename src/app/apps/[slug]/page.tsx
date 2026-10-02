@@ -2,6 +2,7 @@ import { ViewTransition } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { ArrowDown, ArrowRight, Mail } from "lucide-react";
 import { AppIcon } from "@/components/app-icon";
 import { StatusSticker } from "@/components/app-card";
 import { Reveal } from "@/components/reveal";
@@ -11,6 +12,7 @@ import { Marquee } from "@/components/marquee";
 import { OrbitText, TiltBox } from "@/components/app-page-bits";
 import { AppVideo, VideoPlaceholder } from "@/components/app-video";
 import { FeatureShowcase } from "@/components/feature-showcase";
+import { IconSwap } from "@/components/icon-swap";
 import { STATUS_LABEL, apps, getApp, getNextApp, type App } from "@/lib/apps";
 import { getPostsForApp } from "@/lib/posts";
 import { LatestPosts } from "@/components/latest-posts";
@@ -284,10 +286,8 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                 <span className="block font-mono text-xs uppercase tracking-[0.08em] text-ink-soft">Next app</span>
                 <span className="mt-1 inline-flex items-center gap-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
                   {next.name}
-                  <span className="overflow-hidden">
-                    <span className="arrow-swap" data-glyph="→">
-                      →
-                    </span>
+                  <span className="h-8 w-8 overflow-hidden md:h-10 md:w-10">
+                    <IconSwap icon={ArrowRight} direction="right" className="h-[55%] w-[55%]" />
                   </span>
                 </span>
               </Link>
@@ -302,11 +302,9 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
 function PrimaryAction({ app }: { app: App }) {
   const className =
     "group inline-flex items-center gap-3 rounded-full bg-paper py-2.5 pl-6 pr-2.5 font-mono text-[13px] uppercase tracking-[0.05em] text-ink";
-  const arrow = (glyph: string) => (
+  const icon = (Icon: typeof ArrowDown, direction: "down" | "diagonal" = "down") => (
     <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-ink text-paper">
-      <span className="arrow-swap" data-glyph={glyph}>
-        {glyph}
-      </span>
+      <IconSwap icon={Icon} direction={direction} />
     </span>
   );
 
@@ -314,7 +312,7 @@ function PrimaryAction({ app }: { app: App }) {
     return (
       <a href={app.links.download} className={className}>
         Download for {app.platforms[0]}
-        {arrow("↓")}
+        {icon(ArrowDown)}
       </a>
     );
   }
@@ -323,7 +321,7 @@ function PrimaryAction({ app }: { app: App }) {
     return (
       <span aria-disabled="true" className={`${className} cursor-default opacity-80`}>
         Download for {app.platforms[0]}, soon
-        {arrow("↓")}
+        {icon(ArrowDown)}
       </span>
     );
   }
@@ -333,7 +331,7 @@ function PrimaryAction({ app }: { app: App }) {
       className={className}
     >
       Tell me when it&apos;s out
-      {arrow("✉")}
+      {icon(Mail, "diagonal")}
     </a>
   );
 }

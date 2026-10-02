@@ -194,6 +194,13 @@ export const apps: App[] = [
   },
 ];
 
+/** Short price label for cards: the Pro price when one exists, else "Free". */
+export function getPriceLabel(app: App): string {
+  if (app.pricing.pro?.price) return `${app.pricing.pro.price} once`;
+  if (app.pricing.pro) return "One-time";
+  return "Free";
+}
+
 export function getApp(slug: string): App | undefined {
   return apps.find((a) => a.slug === slug);
 }

@@ -1,11 +1,13 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import { ViewTransition } from "react";
 import Link from "next/link";
 import { useReveal } from "@/components/reveal";
 import { tiltHandlers } from "@/components/tilt";
 import { AppIcon } from "@/components/app-icon";
-import { STATUS_LABEL, type App } from "@/lib/apps";
+import { IconSwap } from "@/components/icon-swap";
+import { STATUS_LABEL, getPriceLabel, type App } from "@/lib/apps";
 
 export function AppCard({ app, delay = 0, size = "md" }: { app: App; delay?: number; size?: "md" | "lg" }) {
   const [ref, revealProps] = useReveal<HTMLDivElement>(delay);
@@ -62,11 +64,24 @@ export function AppCard({ app, delay = 0, size = "md" }: { app: App; delay?: num
       <div className={`relative z-2 flex items-end justify-between gap-4 pt-8 ${lg ? "" : "mt-auto"}`}>
         <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(244,242,234,0.55)]">
           {app.platforms.join(" + ")}
+          <span className="mx-2 opacity-40">·</span>
+          {getPriceLabel(app)}
         </span>
+        {app.status === "coming-soon" && (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              window.location.href = `mailto:hello@66labs.dev?subject=${encodeURIComponent(`Tell me when ${app.name} launches`)}`;
+            }}
+            className="relative z-10 hidden cursor-pointer font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(244,242,234,0.75)] underline decoration-[rgba(244,242,234,0.35)] underline-offset-4 hover:text-paper hover:decoration-paper sm:inline"
+          >
+            Notify me
+          </button>
+        )}
         <span className="flex h-11.5 w-11.5 shrink-0 items-center justify-center overflow-hidden rounded-full border border-line-invert transition-colors duration-300 group-hover:bg-paper group-hover:text-ink">
-          <span className="arrow-swap" data-glyph="→">
-            →
-          </span>
+          <IconSwap icon={ArrowRight} direction="right" />
         </span>
       </div>
     </>
@@ -138,9 +153,7 @@ export function AppStrip({ app }: { app: App }) {
           </span>
         </div>
         <span className="relative z-2 hidden h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-line-invert transition-colors duration-300 group-hover:bg-paper group-hover:text-ink sm:flex">
-          <span className="arrow-swap" data-glyph="→">
-            →
-          </span>
+          <IconSwap icon={ArrowRight} direction="right" />
         </span>
       </Link>
     </div>

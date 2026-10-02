@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { AppIcon } from "@/components/app-icon";
 import { HelpCenter } from "@/components/help-center";
 import { Reveal } from "@/components/reveal";
 import { SplitReveal } from "@/components/split-reveal";
+import { IconSwap } from "@/components/icon-swap";
 import { apps } from "@/lib/apps";
 import { appHelp, labHelp } from "@/lib/help";
 
@@ -53,10 +55,8 @@ export default function HelpPage() {
                       {count} answers
                     </span>
                   </span>
-                  <span aria-hidden="true" className="overflow-hidden">
-                    <span className="arrow-swap" data-glyph="→">
-                      →
-                    </span>
+                  <span aria-hidden="true" className="h-6 w-6 shrink-0 overflow-hidden">
+                    <IconSwap icon={ArrowRight} direction="right" />
                   </span>
                 </Link>
               </Reveal>

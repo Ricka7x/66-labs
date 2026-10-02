@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { AppIcon } from "@/components/app-icon";
 import { HelpCenter } from "@/components/help-center";
@@ -39,7 +40,7 @@ export default async function AppHelpPage({ params }: PageProps<"/apps/[slug]/he
 
   return (
     <main id="main" className="pt-32 pb-30">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id={`jsonld-help-${app.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="mx-auto max-w-[1280px] px-5 md:px-14">
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] text-ink-soft">
           <Link href="/help" className="hover:text-ink">

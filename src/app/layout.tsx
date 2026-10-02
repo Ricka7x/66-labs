@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
@@ -59,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: ARRIVAL_SCRIPT }} />
+        <Script id="arrival-script" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: ARRIVAL_SCRIPT }} />
       </head>
       <body className="bg-paper text-ink antialiased">
         <a href="#main" className="skip-link">

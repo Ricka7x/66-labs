@@ -2,6 +2,7 @@
 
 import { useDeferredValue, useEffect, useId, useState } from "react";
 import Link from "next/link";
+import { Search } from "lucide-react";
 import type { HelpItem, HelpSection } from "@/lib/help";
 
 /**
@@ -69,9 +70,7 @@ export function HelpCenter({ sections, accent = "var(--coral)" }: { sections: He
         {/* Search */}
         <label className="group relative block">
           <span className="sr-only">Search help</span>
-          <span aria-hidden="true" className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 font-mono text-ink-soft">
-            ⌕
-          </span>
+          <Search aria-hidden="true" className="pointer-events-none absolute left-5 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-ink-soft" strokeWidth={2.25} />
           <input
             type="search"
             value={query}

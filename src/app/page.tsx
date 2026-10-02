@@ -1,3 +1,4 @@
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { Parallax } from "@/components/parallax";
 import { Marquee } from "@/components/marquee";
@@ -7,6 +8,7 @@ import { HeroStickers } from "@/components/hero-stickers";
 import { AppShowcase } from "@/components/app-showcase";
 import { SplitReveal } from "@/components/split-reveal";
 import { CountUp, PointerGlow } from "@/components/micro";
+import { IconSwap } from "@/components/icon-swap";
 import { apps } from "@/lib/apps";
 import { getPosts } from "@/lib/posts";
 import { LatestPosts } from "@/components/latest-posts";
@@ -61,9 +63,7 @@ export default function HomePage() {
               >
                 Meet the apps
                 <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-paper text-ink transition-colors duration-300 group-hover:bg-coral group-hover:text-paper">
-                  <span className="arrow-swap" data-glyph="↓">
-                    ↓
-                  </span>
+                  <IconSwap icon={ArrowDown} direction="down" className="h-[46%] w-[46%]" />
                 </span>
               </a>
             </MagneticButton>
@@ -167,9 +167,7 @@ export default function HomePage() {
                   aria-hidden="true"
                   className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-ink text-paper transition-colors duration-300 group-hover:bg-coral"
                 >
-                  <span className="arrow-swap" data-glyph="↗">
-                    ↗
-                  </span>
+                  <IconSwap icon={ArrowUpRight} direction="diagonal" />
                 </span>
               </a>
             </MagneticButton>
