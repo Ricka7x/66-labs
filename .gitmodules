@@ -1,0 +1,3 @@
+[submodule "ops"]
+	path = ops
+	url = https://github.com/Ricka7x/studio-ops.git

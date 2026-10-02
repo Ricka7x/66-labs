@@ -9,6 +9,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { CustomCursor } from "@/components/custom-cursor";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { IntroLoader } from "@/components/intro-loader";
+import ClarityAnalytics from "@/components/clarity-analytics";
+
+const GA_MEASUREMENT_ID = "G-53S1NP5SF6";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -78,8 +81,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <IntroLoader />
         <CustomCursor />
         <SiteHeader />
+        <ClarityAnalytics />
         {children}
         <SiteFooter />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );

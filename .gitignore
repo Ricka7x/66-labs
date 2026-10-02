@@ -34,9 +34,11 @@ yarn-error.log*
 .env*
 
 # secrets: never commit
+ops-secrets/
 ops/secrets/
 *.pem
 *service-account*.json
+*ga4-reader*.json
 
 # vercel
 .vercel
