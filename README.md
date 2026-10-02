@@ -1,13 +1,20 @@
 # 66 labs
 
-The lab's site: Next.js (App Router), Tailwind v4, native React `<ViewTransition>` for the
-app-card → app-page morph.
+The lab's site, live at [66labs.dev](https://66labs.dev). Next.js (App Router), Tailwind v4,
+static export deployed to GitHub Pages, native React `<ViewTransition>` for the app-card →
+app-page morph.
 
 ```bash
 npm run dev     # http://localhost:3000
-npm run build   # production build + static generation check
+npm run build   # production build + static export to out/
 npm run lint
 ```
+
+## Deploying
+
+Push to `main` and GitHub Actions (`.github/workflows/deploy-gh-pages.yml`) builds the static
+export and publishes it to GitHub Pages automatically, no manual deploy step. `CNAME` points the
+custom domain at the Pages build.
 
 ## Adding an app
 
@@ -22,7 +29,7 @@ and `/apps/[slug]` (statically generated) are all driven off that array.
   feature's "Screenshot soon" card for the real thing. Screenshots around 3:2 fit the frame best.
 - Demo video: put `<name>.mp4`, `<name>.webm` and `<name>-poster.webp` in `public/apps/<slug>/`, then
   set `video: { src: "/apps/<slug>/<name>", title, caption, aspect: "w / h" }`. Without one the
-  page shows a "Demo video on the way" frame.
+  page shows a "Still filming, hang tight" frame.
 - `status: "coming-soon"` shows a "Tell me when it's out" email button. For shipped apps, set
   `links.download`, until then the page shows "Download, soon".
 
@@ -68,6 +75,7 @@ published: true       # false keeps it out of every list, page and the feed
 - `src/app/apps/page.tsx`: every app
 - `src/app/apps/[slug]/page.tsx`: one app's page (hero, features, pricing)
 - `src/app/blog/`: blog index + post pages; `src/app/feed.xml/route.ts`: RSS
+- `src/app/not-found.tsx`: custom 404; `src/app/opengraph-image.tsx`: generated OG share image
 - `src/lib/apps.ts`: the single source of truth for all app content
 - `src/lib/posts.ts`: reads `content/blog/*.mdx`
 - `src/components/`: shared UI (header, footer, cursor, reveal/parallax hooks, cards)
@@ -75,8 +83,8 @@ published: true       # false keeps it out of every list, page and the feed
 
 ## Notes
 
-- Fonts (Bricolage Grotesque, Instrument Serif, JetBrains Mono) are self-hosted automatically via
-  `next/font/google`; no runtime requests to Google.
+- Fonts (Bricolage Grotesque, Geist Sans, JetBrains Mono) are self-hosted automatically via
+  `next/font/google` (Geist via the `geist` package); no runtime requests to Google.
 - The card → app-page transition uses React's `<ViewTransition>` (built into the App Router,
   see [Next's view transitions guide](https://nextjs.org/docs/app/guides/view-transitions)).
 - Motion is hand-rolled (rAF + CSS custom properties); the only dependency is
