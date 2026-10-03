@@ -133,7 +133,10 @@ export const apps: App[] = [
         ],
       },
     },
-    links: {},
+    links: {
+      download: "https://snapbackapp.com/releases/Snapback-0.43.1.dmg",
+      purchase: "https://store.snapbackapp.com/checkout/buy/83715b0a-448b-4e25-80d2-b2e6203c713e",
+    },
   },
   {
     slug: "peggo",
