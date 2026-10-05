@@ -57,6 +57,12 @@ export const metadata: Metadata = {
  * Runs before paint: marks JS as available (so arrival animations can start
  * hidden) and decides whether this is the first visit of the session, which
  * gets the intro counter.
+ *
+ * This must be a plain `<script>` tag, not `next/script`: in this Next
+ * version, `beforeInteractive` scripts are serialized into a `self.__next_s`
+ * queue that the async-loaded runtime bundle only drains after it hydrates,
+ * so the real page paints first and the intro flashes in afterward. A raw
+ * inline script is parser-blocking and runs before any body content paints.
  */
 const ARRIVAL_SCRIPT = `(function(){var d=document.documentElement;d.classList.add("js");try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!sessionStorage.getItem("66-intro"))d.classList.add("intro")}catch(e){}})()`;
 
@@ -70,7 +76,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
-        <Script id="arrival-script" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: ARRIVAL_SCRIPT }} />
+        <script id="arrival-script" dangerouslySetInnerHTML={{ __html: ARRIVAL_SCRIPT }} />
       </head>
       <body className="bg-paper text-ink antialiased">
         <a href="#main" className="skip-link">
