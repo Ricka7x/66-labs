@@ -94,7 +94,7 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             gap: 10,
-            padding: "52px 0 0 56px",
+            padding: "56px 0 0 120px",
             fontFamily: "JetBrains Mono",
             fontWeight: 700,
             fontSize: 13,
@@ -105,7 +105,7 @@ export default async function Image() {
           66 LABS: INDEPENDENT SOFTWARE
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", padding: "0 56px", flex: 1, justifyContent: "center", gap: 20 }}>
+        <div style={{ display: "flex", flexDirection: "column", padding: "0 120px", flex: 1, justifyContent: "center", gap: 20 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
             <div style={{ display: "flex", fontWeight: 800, fontSize: 72, lineHeight: 0.98, letterSpacing: -2.5, color: PAPER }}>
               SMALL APPS FOR
@@ -135,7 +135,7 @@ export default async function Image() {
             alignItems: "center",
             justifyContent: "space-between",
             borderTop: "1px solid rgba(243,245,249,0.14)",
-            padding: "26px 56px 44px",
+            padding: "32px 120px 48px",
             fontFamily: "JetBrains Mono",
             fontWeight: 500,
             fontSize: 15,
