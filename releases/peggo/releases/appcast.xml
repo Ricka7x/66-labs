@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Peggo</title>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Tue, 06 Oct 2026 18:08:33 -0600</pubDate>
+            <link>https://66labs.dev/apps/peggo</link>
+            <sparkle:version>0</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://dl.66labs.dev/Peggo/Peggo-0.1.0.html</sparkle:releaseNotesLink>
+            <enclosure url="https://dl.66labs.dev/Peggo/Peggo-0.1.0.dmg" length="4809508" type="application/octet-stream" sparkle:edSignature="xpZGJW3+Y8ZT4/X6/i5lJl37ia4xgD9/lj5a0D32cdXLqZQHjHh0zbKmeC4ZudSYUJR1xjAJJHABlIc4n+mGAA=="/>
+        </item>
+    </channel>
+</rss>

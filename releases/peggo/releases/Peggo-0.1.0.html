@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<h3>What's new in v0.1.0</h3>
+<h4>New Features</h4>
+<ul>
+  <li>Add SQLite (GRDB) data layer for clipboard history: ClipboardItem model, migrations, and repository with dedup/pin/retention/search</li>
+  <li>Add clipboard monitoring: pasteboard classifier, disk-backed image storage, privacy/own-write filtering, and polling monitor wired into the app</li>
+  <li>Add menu bar shell: status item + popover with a live-updating clipboard history list, click-to-copy, pin/delete</li>
+  <li>Redesign as a Snapback-style floating panel with shared design tokens, add global numbered paste shortcuts (configurable master key), and full Settings</li>
+  <li>Fix panel centering bug, widen to match Snapback, strengthen selection highlight, and animate Settings sidebar tab transitions</li>
+  <li>Color-code history icons per content type (accent-derived, Snapback-style) and match Settings sidebar/window/cards precisely to Snapback's exact spec</li>
+  <li>Switch settings cards to native GroupBox and fix sidebar button focus-ring/hover bugs to match Snapback exactly</li>
+  <li>Show the real filename for image-file copies instead of a generic "Image" label, and stop the panel-hide from stepping on the next mouse click.</li>
+  <li>Match the search bar to Snapback's sizing, replace the mystery item-count with a clear-button/shortcut-badge, and add color-coded kind filter chips.</li>
+  <li>Handle videos</li>
+  <li>Port Snapback's exact panel enter/exit animation, add icons to the status-bar menu, and make Pin/Delete inline hover actions on rows.</li>
+  <li>Real Quick Look thumbnails for file previews (PDFs, docs, code, archives, etc.), matching what Finder shows.</li>
+  <li>Remove snippets and add colors</li>
+  <li>port Snapback's theme system (20 presets + picker UI) into Peggo's Appearance settings</li>
+  <li>replace the native OS Accessibility prompt with a custom alert</li>
+  <li>live Accessibility permission polling → toast notifications → excluded-apps privacy feature → onboarding</li>
+  <li>Remove multi file support</li>
+  <li>Add full-width footer bar to the panel (below both the list and preview columns) and hover state to the list items</li>
+  <li>Add audio support and fix bug related to testing deleting real data when ran</li>
+  <li>mimic Snapback about and added mock urls</li>
+  <li>Translucent control</li>
+  <li>Navigate filters with arrow keys</li>
+  <li>Add a Code clipboard-item kind (detection via the existing looksLikeCode heuristic, storage, paste-back, row/preview UI, filter chip, keyboard cycling) plus a migration backfilling existing history items that look like code.</li>
+  <li>Replace the placeholder clipboard SF Symbol with the new Peggo logo mark in both the menu bar status item and the command-palette footer's app-identity icon.</li>
+  <li>Add missing descriptions to setting options</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+  <li>left-alignment bug in GroupBox rows (missing VStack alignment: .leading caused centering) and remove the redundant Preview row</li>
+  <li>Classify copied image files (Finder/Preview Copy) as image content instead of generic file</li>
+  <li>list-selection highlight desync during keyboard nav, and add a Clear History control to Settings.</li>
+  <li>the hotkey-toggle race that made reopening the panel silently fail, which also explains the focus issue.</li>
+  <li>Reset search and kind filter when the panel closes instead of leaving them stuck for next time.</li>
+  <li>Pinned items now sort to the top, with "Pinned"/"Recent" section labels so the reorder reads as intentional.</li>
+  <li>File preview</li>
+  <li>Go back to non deprecated File thunbnail generation</li>
+  <li>reduce numbered paste-back shortcuts from 9 slots to 5 and repair corrupted</li>
+  <li>arrow-key auto-scroll (missing row .id tag) and Swift 6 weak-self capture warning in retention timer</li>
+  <li>prevent overlapping command palettes when toggling the hotkey rapidly</li>
+  <li>numbered paste-back badges show the full shortcut (e.g. "⌘1")</li>
+  <li>closing the clipboard history panel now resets selection back to the first item (not just search/filter), so reopening never shows a stale highlighted row.</li>
+  <li>paste-back now surfaces an alert (with a System Settings shortcut) when Accessibility access is missing, instead of silently failing to paste.</li>
+  <li>selected-row highlight in the command palette now updates immediately on theme change LazyVStack wasn't propagating the theme change into already-rendered rows, so the list is now keyed to the active theme's id to force a fresh render.</li>
+  <li>Toasts and add enable/disable control</li>
+  <li>retention sweep and clear-history now purge orphaned image/video files from disk, not just their database rows.</li>
+  <li>Settings toggles (Launch at Login, Notifications, excluded-app rows) now use the active theme's accent color instead of the system default.</li>
+  <li>Remove redundant right-click context menu from history list rows (inline pin/trash buttons already cover those actions)</li>
+  <li>Clear History no longer deletes pinned images/videos hidden by an active search or kind filter (it was computing the keep-set from the filtered list instead of the full history)</li>
+  <li>Preview pane no longer flickers placeholder-then-content on selection, and video preview now shows just a minimal play button instead of the full transport bar</li>
+  <li>Unify image/video/file preview styling into a shared PreviewMediaStyling component (matching card border, placeholder icon size/color) so the three preview types can't visually drift apart</li>
+  <li>Search field's blinking caret now uses the active theme's accent color</li>
+  <li>Command palette no longer silently fails to reopen after the app loses focus</li>
+  <li>Master Key modifier toggle buttons in Settings now respond to clicks anywhere in the button,</li>
+  <li>Add a caption to onboarding's shortcut row nudging users to change it if it conflicts with another app</li>
+  <li>Theme contrast</li>
+  <li>Close command palette when it loses focus while keeping state</li>
+  <li>Wire up the new AppIcon and MenuIcon assets, fix orphaned image/video/audio files left behind by repeat copies and single-item delete, and fix the About window's title bar not matching the body color after a theme switch.</li>
+  <li>Remove outline from about links</li>
+  <li>Set defaults</li>
+  <li>Toggle knob</li>
+  <li>Fix themes that define only a light or dark variant staying active and visually mismatched when the system appearance switches to the one they don't support. Falls back to Default</li>
+  <li>match selected theme icon with snapback</li>
+  <li>stop PeggoKit tests from leaking UserDefaults plist files</li>
+  <li>use effectiveAccentColor for Excluded Apps toggles, fixing the disappearing switch knob over vibrancy</li>
+</ul>
+
+</body>
+</html>

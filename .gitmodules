@@ -1,3 +1,12 @@
 [submodule "ops"]
 	path = ops
 	url = https://github.com/Ricka7x/studio-ops.git
+[submodule "releases/boomark/scripts"]
+	path = releases/boomark/scripts
+	url = https://github.com/Ricka7x/macos-release-tools.git
+[submodule "releases/peggo/scripts"]
+	path = releases/peggo/scripts
+	url = https://github.com/Ricka7x/macos-release-tools.git
+[submodule "releases/snapback/scripts"]
+	path = releases/snapback/scripts
+	url = https://github.com/Ricka7x/macos-release-tools.git
