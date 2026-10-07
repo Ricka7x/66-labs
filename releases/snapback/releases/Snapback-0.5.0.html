@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<h3>What's new in v0.5.0</h3>
+<h4>New Features</h4>
+<ul>
+  <li>implement group cycling with modifier key release preview</li>
+  <li>improve group preview logic to exclude active group</li>
+  <li>enhance status bar to display active group indicator with dynamic sizing</li>
+  <li>add option to show active group label in status bar and update related settings view</li>
+  <li>implement GroupCycleHUD for displaying group cycling options and update GroupManager to expose pendingGroupId</li>
+  <li>cap GroupCycleHUD at 8 rows with auto-scroll to pending group</li>
+  <li>warn and auto-deselect duplicate app windows at save time instead of attempting unreliable multi-window restoration</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+  <li>prevent command palette key monitor from intercepting events in other windows</li>
+  <li>center command palette on screen and raise toast window level above command palette and HUD</li>
+</ul>
+
+</body>
+</html>

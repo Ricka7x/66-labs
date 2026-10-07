@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<h3>What's new in v0.8.0</h3>
+<h4>New Features</h4>
+<ul>
+  <li>cycle through workspaces or groups with configurable target setting</li>
+  <li>groups redesign - data model foundation (steps 1-4)</li>
+  <li>groups redesign - UI + cycle HUD (steps 5-8)</li>
+  <li>separate groups from workspaces tab, hide Default pill, reuse save panel for groups</li>
+  <li>add action button to empty states in groups and workspaces tabs</li>
+  <li>update form copy to reflect group vs workspace context when save as group is active</li>
+  <li>ungrouped workspaces are globally accessible across all group contexts</li>
+  <li>hint global workspaces with globe icon and separate section in palette and cycle HUD</li>
+  <li>flatten group workspaces to global on license removal; add 4 downgrade tests</li>
+  <li>prompt export backup on Pro downgrade before flattening groups</li>
+  <li>separate cycle workspaces and cycle groups into independent shortcuts</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+  <li>remove hanging NSScreen-dependent tests, add pure-math calculation tests</li>
+  <li>update stale isCriticalDisplayChange assertions</li>
+  <li>read real backingScaleFactor from NSScreen in getAllDisplays()</li>
+  <li>use main display maxY as Y-flip pivot in AccessibilityElement.getFrame</li>
+  <li>demote noisy main-display-changed messages from warning/info to debug</li>
+  <li>hide header and add button when groups/workspaces list is empty</li>
+  <li>group row edit opens edit workspace panel; add restore option to group rows</li>
+  <li>remove Default group from command palette; ungrouped workspaces always visible in menu</li>
+  <li>show close unrelated apps toggle on free; group copy only shown on Pro</li>
+  <li>isGroup requires Pro license; free workspaces with close flag remain regular workspaces</li>
+  <li>deduplicate conflicting shortcuts on Pro downgrade</li>
+  <li>offer export before deactivation in ProUpgradeView; skip prompt on remote revocation</li>
+  <li>hide Show Groups toggle for Pro users; update non-Pro close windows text in SaveWorkspaceView</li>
+  <li>always show global workspaces in WorkspacesSettingsView regardless of active group</li>
+  <li>add new custom icon names to systemCompat allow-lists in BackwardCompatibility</li>
+  <li>ensure static backing for modes enabled state is updated in test-only override</li>
+</ul>
+
+</body>
+</html>

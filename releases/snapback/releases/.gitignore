@@ -1,0 +1,7 @@
+# Release Build Artifacts
+# Only commit .dmg, .html, .txt, and appcast.xml
+# Ignore temporary files and build artifacts
+
+*.tmp
+*.log
+.DS_Store

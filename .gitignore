@@ -40,6 +40,9 @@ ops/secrets/
 *service-account*.json
 *ga4-reader*.json
 
+# release pipeline (macos-release-tools): machine-specific build logs
+build.log
+
 # vercel
 .vercel
 
