@@ -3,6 +3,19 @@
     <channel>
         <title>Peggo</title>
         <item>
+            <title>0.1.1</title>
+            <pubDate>Wed, 07 Oct 2026 10:58:21 -0600</pubDate>
+            <link>https://66labs.dev/apps/peggo</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://dl.66labs.dev/Peggo/Peggo-0.1.1.html</sparkle:releaseNotesLink>
+            <enclosure url="https://dl.66labs.dev/Peggo/Peggo-0.1.1.dmg" length="4809317" type="application/octet-stream" sparkle:edSignature="Oc9lf/VOmgiiXkWfZ5Aa2RtWUFYTNLhjtKQHTITLeWqJwvvDv0MJ+Vp4Wk7Li6bEhtZXyQOCWu4FUOouq+0RDg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://dl.66labs.dev/Peggo/Peggo1-0.delta" sparkle:deltaFrom="0" length="15530" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Jqy8/Yx1OrwnTetEAaKlARKyg32hvaFveEQcqk9Gg78KIFWEeTXtr8BG3/KH+LQGiGHAVvQHejzqMfXstrsoBA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.0</title>
             <pubDate>Tue, 06 Oct 2026 18:08:33 -0600</pubDate>
             <link>https://66labs.dev/apps/peggo</link>
