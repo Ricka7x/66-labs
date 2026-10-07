@@ -10,10 +10,10 @@
             <sparkle:shortVersionString>0.43.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://snapbackapp.com/releases/Snapback-0.43.1.html</sparkle:releaseNotesLink>
-            <enclosure url="https://snapbackapp.com/releases/Snapback-0.43.1.dmg" length="7856477" type="application/octet-stream" sparkle:edSignature="ONgExQH8olDddzyq6PYFx/Pu+c34ABuTufGoI2kVN+gK7bgwjvgi48IGe+H74RWM46IQdgkytseJ1S5n/KwwDQ=="/>
+            <enclosure url="https://dl.66labs.dev/Snapback/Snapback-0.43.1.dmg" length="7856477" type="application/octet-stream" sparkle:edSignature="ONgExQH8olDddzyq6PYFx/Pu+c34ABuTufGoI2kVN+gK7bgwjvgi48IGe+H74RWM46IQdgkytseJ1S5n/KwwDQ=="/>
             <sparkle:deltas>
-                <enclosure url="https://snapbackapp.com/releases/Snapback106-103.delta" sparkle:deltaFrom="103" length="2330254" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1Pa+cxE3YopWBwKJ2eMc32JLN2RJkvmFq0cnEGtSqpMejUsogCH0e3BCeMNeaQZe46Mwj+VXmE1zDkuoSAmQDQ=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback106-102.delta" sparkle:deltaFrom="102" length="2344530" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wBRee8V7BoUNCBv2HbfFplpldK84sCGU+S3nX5SIi02G9oZNWrJLvZ0HBmfEscRAAUc9bq1hP/QJe9DdXWtODg=="/>
+                <enclosure url="https://dl.66labs.dev/Snapback/Snapback106-103.delta" sparkle:deltaFrom="103" length="2330254" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1Pa+cxE3YopWBwKJ2eMc32JLN2RJkvmFq0cnEGtSqpMejUsogCH0e3BCeMNeaQZe46Mwj+VXmE1zDkuoSAmQDQ=="/>
+                <enclosure url="https://dl.66labs.dev/Snapback/Snapback106-102.delta" sparkle:deltaFrom="102" length="2344530" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wBRee8V7BoUNCBv2HbfFplpldK84sCGU+S3nX5SIi02G9oZNWrJLvZ0HBmfEscRAAUc9bq1hP/QJe9DdXWtODg=="/>
             </sparkle:deltas>
         </item>
         <item>
