@@ -36,7 +36,17 @@ EXPORT_PATH="$BUILD_DIR/Export"
 # Release configuration
 RELEASES_DIR="$PROJECT_ROOT/releases"
 WEBSITE_URL="https://snapbackapp.com"
+# Deliberately NOT pointed at the R2 bucket, unlike Boomark/Peggo: every shipped
+# Snapback install has https://snapbackapp.com/releases/appcast.xml baked in as its
+# Sparkle feed, and that can never move. R2_BUCKET below just mirrors a copy of
+# releases/ there too, purely additive, nothing reads from or points at it.
 DOWNLOAD_URL_PREFIX="$WEBSITE_URL/releases"
+
+# Shared Cloudflare R2 release hosting (see macos-release-tools config.example.sh
+# for details). A mirror only: DOWNLOAD_URL_PREFIX above stays snapbackapp.com, so
+# the appcast's own enclosure URLs are unaffected.
+R2_BUCKET="app-releases"
+R2_PREFIX="Snapback"
 
 # Runs before anything else touches a file; a failing suite aborts the
 # release with the repo completely untouched.
