@@ -91,7 +91,12 @@ EXPORT_OPTIONS_PLIST="$BUILD_DIR/ExportOptions.plist"
 #=============================================================================
 # NOTARIZATION SETTINGS
 #=============================================================================
-NOTARY_PROFILE="${NOTARY_PROFILE:-}"
+# Defaulted to empty before, which meant the script fell through to the direct
+# Apple ID auth path and failed on an unset $APPLE_ID the first time this ran
+# for real. "snapback-notary" is the actual keychain profile already used for
+# every notarized build, Snapback's own included, Boomark and Peggo just reuse
+# it under this same name rather than creating a separate one per app.
+NOTARY_PROFILE="${NOTARY_PROFILE:-snapback-notary}"
 
 # ============================================================================
 # LOGGING AND DEBUGGING
