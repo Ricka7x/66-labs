@@ -36,17 +36,16 @@ EXPORT_PATH="$BUILD_DIR/Export"
 # Release configuration
 RELEASES_DIR="$PROJECT_ROOT/releases"
 WEBSITE_URL="https://snapbackapp.com"
-# Deliberately NOT pointed at the R2 bucket, unlike Boomark/Peggo: every shipped
-# Snapback install has https://snapbackapp.com/releases/appcast.xml baked in as its
-# Sparkle feed, and that can never move. R2_BUCKET below just mirrors a copy of
-# releases/ there too, purely additive, nothing reads from or points at it.
-DOWNLOAD_URL_PREFIX="$WEBSITE_URL/releases"
-
-# Shared Cloudflare R2 release hosting (see macos-release-tools config.example.sh
-# for details). A mirror only: DOWNLOAD_URL_PREFIX above stays snapbackapp.com, so
-# the appcast's own enclosure URLs are unaffected.
+# Moved to the R2 bucket going forward, matching Boomark/Peggo. Every build from
+# here on gets SUFeedURL and its appcast enclosure URLs pointed at dl.66labs.dev.
+# Already-shipped installs keep polling https://snapbackapp.com/releases/appcast.xml
+# (baked into their own Info.plist) until they pull this release, which carries the
+# new R2 feed URL forward into their next update check. EXTERNAL_SITE_REPO below
+# keeps syncing to snapback-web precisely so that transitional appcast stays fresh
+# for those installs until they've all moved over.
 R2_BUCKET="app-releases"
 R2_PREFIX="Snapback"
+DOWNLOAD_URL_PREFIX="https://dl.66labs.dev/Snapback"
 
 # Runs before anything else touches a file; a failing suite aborts the
 # release with the repo completely untouched.
@@ -83,9 +82,11 @@ SPARKLE_ED_KEY_FILE="${SPARKLE_ED_KEY_FILE:-}"
 # its own key explicitly.
 SPARKLE_ED_PUBLIC_KEY="${SPARKLE_ED_PUBLIC_KEY:-1btXa+HGNXBso5RoX1qjX2lltfdpXbryUma3dw6+/O4=}"
 
-# Keychain account name for Snapback's Sparkle private key. This is Sparkle's
-# own default account name, kept explicit so it's not an implicit fallback.
-SPARKLE_ACCOUNT="${SPARKLE_ACCOUNT:-ed25519}"
+# Keychain account name for Snapback's Sparkle private key, matching the
+# per-app naming convention Peggo ("peggo") and Boomark ("boomark") use.
+# The keychain item itself (and its key material) is unchanged, only the
+# account label sign_update looks it up by.
+SPARKLE_ACCOUNT="${SPARKLE_ACCOUNT:-snapback}"
 
 # ============================================================================
 # BUILD SETTINGS
