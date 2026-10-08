@@ -89,6 +89,8 @@ export default function PrivacyPage() {
                 It uses the macOS Accessibility permission only to paste clips into the app you&apos;re using, when
                 you ask it to.
               </li>
+              <li>It checks our update feed to see whether a new version is available.</li>
+              <li>If you buy Pro, your license is checked with Lemon Squeezy (see “Purchases” below).</li>
             </ul>
           ),
         },
