@@ -6,15 +6,14 @@
             <title>0.6.2</title>
             <pubDate>Wed, 07 Oct 2026 12:41:18 -0600</pubDate>
             <link>https://66labs.dev/apps/boomark</link>
-            <sparkle:version>9</sparkle:version>
+            <sparkle:version>10</sparkle:version>
             <sparkle:shortVersionString>0.6.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://dl.66labs.dev/Boomark/Boomark-0.6.2.html</sparkle:releaseNotesLink>
-            <enclosure url="https://dl.66labs.dev/Boomark/Boomark-0.6.2.dmg" length="2841993" type="application/octet-stream" sparkle:edSignature="R63EH3Z4icQeO1Nx/H7xdu5wEXt00l5GlV8/9y5MsznoAB8A/wbkR5wYRYyGJzosCizU+YqrKrSFrwU1VNTbCQ=="/>
+            <enclosure url="https://dl.66labs.dev/Boomark/Boomark-0.6.2.dmg" length="2841459" type="application/octet-stream" sparkle:edSignature="xm/HwqammJaILQlsP9S2XUiR3QVeQgDz+vwLHsT46pfAZRzDKoWMT1wlw4QAJcBx8hNbvfShKbhFg7CCKZKODg=="/>
             <sparkle:deltas>
-                <enclosure url="https://dl.66labs.dev/Boomark/Boomark9-8.delta" sparkle:deltaFrom="8" length="154242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="EHEDFKanYHCE6rka7BrZ2l0sBzj3vS3GaHmQ50I3fGYd4kmrUzBKuhyYSCdCuqbWbhJIi/m1p3B6qi9Gg2PlBQ=="/>
-                <enclosure url="https://dl.66labs.dev/Boomark/Boomark9-6.delta" sparkle:deltaFrom="6" length="249430" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="FEUWhOMYoD/HA//VpRFNCEbYtHOS5QWWj+3KGGlJkTkeW6/DpUPfil7nIDSKI5JNXYKvj5Mr0woAdp8v12vdAw=="/>
-                <enclosure url="https://dl.66labs.dev/Boomark/Boomark9-5.delta" sparkle:deltaFrom="5" length="404618" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="n2bBibJ9xw/wne3sm2BmxIsV7QgTQYnTPWPlOxAJqRDmfejl13dqZW9YM4csJyu/MLz5LAEV4eDVer8TvTCvAg=="/>
+                <enclosure url="https://dl.66labs.dev/Boomark/Boomark10-8.delta" sparkle:deltaFrom="8" length="157558" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="vEiaaK3LajKuUGWd7YdW5+1rbbi4wyHRvCJbPQoFf0Yf4w4fUottR5STayWulvjGUR7Eha7cUzwGilIrmz8ACQ=="/>
+                <enclosure url="https://dl.66labs.dev/Boomark/Boomark10-6.delta" sparkle:deltaFrom="6" length="249666" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6W486yEjT3EUyGcn3VygFoWdg9B07jeJefpbZHCFalgdVgf2G1UV9fEuSYy3k+cfC6g9yjuDwws9cmJWeqHgAg=="/>
             </sparkle:deltas>
         </item>
         <item>
