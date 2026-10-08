@@ -148,7 +148,7 @@ export const apps: App[] = [
     kind: "Clipboard manager",
     platforms: ["macOS"],
     requires: "macOS 14.6+",
-    status: "coming-soon",
+    status: "available",
     accent: "#0f9d8a",
     glow: ["#0f9d8a", "#0b63e5"],
     features: [
@@ -159,8 +159,21 @@ export const apps: App[] = [
       { title: "Stays on your Mac", body: "A local database, on your machine. Nothing you copy goes anywhere else." },
     ],
     tech: ["Swift", "SwiftUI", "SQLite", "Accessibility API"],
-    pricing: { free: "Free to download" },
-    links: {},
+    pricing: {
+      free: "Free to download",
+      pro: {
+        price: "$6.00",
+        note: "one-time",
+        perks: [
+          "Unlimited clipboard history and retention",
+          "Every theme, including Catppuccin, Dracula and Nord",
+        ],
+      },
+    },
+    links: {
+      download: "https://dl.66labs.dev/Peggo/Peggo-0.1.2.dmg",
+      purchase: "https://store.66labs.dev/checkout/buy/bedb74bc-98d8-4dae-9724-8a94f9852aee",
+    },
     iconFullBleed: true,
   },
   {
