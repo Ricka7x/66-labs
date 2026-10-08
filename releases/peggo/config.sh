@@ -50,6 +50,14 @@ R2_BUCKET="app-releases"
 R2_PREFIX="$APP_NAME"
 DOWNLOAD_URL_PREFIX="https://dl.66labs.dev/$APP_NAME"
 
+# Auto-purges Cloudflare's cache for files just synced to R2 (see
+# config.example.sh for why; this is exactly the bug hit on this app's
+# build 4, where Cloudflare kept serving build 3's bytes under the same
+# reused filename). This is the 66labs.dev zone, matching DOWNLOAD_URL_PREFIX
+# above. Also requires CLOUDFLARE_API_TOKEN exported in the shell running the
+# release, never stored here.
+CF_ZONE_ID="e85170acb9523dca14edfd3cb4105833"
+
 # ============================================================================
 # SPARKLE SETTINGS
 # ============================================================================

@@ -47,6 +47,15 @@ R2_BUCKET="app-releases"
 R2_PREFIX="Snapback"
 DOWNLOAD_URL_PREFIX="https://dl.66labs.dev/Snapback"
 
+# Auto-purges Cloudflare's cache for files just synced to R2 (see
+# config.example.sh for why). This is the 66labs.dev zone, matching
+# DOWNLOAD_URL_PREFIX above. Also requires CLOUDFLARE_API_TOKEN exported in
+# the shell running the release, never stored here. Does NOT cover the
+# separate snapbackapp.com copy synced below via EXTERNAL_SITE_REPO, a
+# different zone this doesn't have the ID for; that path can still go stale
+# the same way until it's purged too.
+CF_ZONE_ID="e85170acb9523dca14edfd3cb4105833"
+
 # Runs before anything else touches a file; a failing suite aborts the
 # release with the repo completely untouched.
 TEST_COMMAND="${TEST_COMMAND:-xcodebuild test -scheme Snapback -destination 'platform=macOS'}"
