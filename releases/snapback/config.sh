@@ -66,6 +66,12 @@ TEST_COMMAND="${TEST_COMMAND:-xcodebuild test -scheme Snapback -destination 'pla
 # feeds that existing, untouched workflow data, never its code.
 EXTERNAL_SITE_REPO="${EXTERNAL_SITE_REPO:-/Users/ricka7x/Projects/snapback-web}"
 
+# Closes the one gap CF_ZONE_ID above doesn't cover: this is snapbackapp.com's
+# own Cloudflare zone (separate from 66labs.dev), so files pushed to
+# EXTERNAL_SITE_REPO get purged there too. Also requires CLOUDFLARE_API_TOKEN
+# exported in the shell running the release, never stored here.
+CF_EXTERNAL_ZONE_ID="0c490f73f4e81b653addab091de212e9"
+
 # Keeps 66-studio's catalog entry for Snapback pointing at the latest DMG.
 CATALOG_FILE="${CATALOG_FILE:-/Users/ricka7x/Projects/66-studio/src/lib/apps.ts}"
 CATALOG_APP_SLUG="${CATALOG_APP_SLUG:-snapback}"
