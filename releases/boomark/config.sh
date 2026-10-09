@@ -58,15 +58,16 @@ DOWNLOAD_URL_PREFIX="https://dl.66labs.dev/$APP_NAME"
 # the shell running the release, never stored here.
 CF_ZONE_ID="e85170acb9523dca14edfd3cb4105833"
 
+# Keeps 66-studio's catalog entry for Boomark pointing at the latest DMG,
+# once it leaves "coming-soon" status and actually gets a download link in
+# src/lib/apps.ts. Harmless to set now: the script only touches the entry
+# that matches this slug.
+CATALOG_FILE="${CATALOG_FILE:-/Users/ricka7x/Projects/66-studio/src/lib/apps.ts}"
+CATALOG_APP_SLUG="${CATALOG_APP_SLUG:-boomark}"
+
 # ============================================================================
 # SPARKLE SETTINGS
 # ============================================================================
-#
-# NOTE: Boomark does not have the Sparkle framework wired into its Xcode
-# project yet. This pipeline assumes it does (it injects SUFeedURL/
-# SUPublicEDKey into Info.plist and re-signs Sparkle.framework during
-# notarization). Add Sparkle to the app target, generate an EdDSA keypair,
-# and fill in SPARKLE_ED_PUBLIC_KEY below before running a real release.
 
 # Sparkle tools are auto-detected by scripts/generate-appcast.sh.
 # It checks SPARKLE_BIN/SPARKLE_TOOLS_PATH, PATH/Homebrew locations,

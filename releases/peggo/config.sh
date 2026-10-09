@@ -58,6 +58,12 @@ DOWNLOAD_URL_PREFIX="https://dl.66labs.dev/$APP_NAME"
 # release, never stored here.
 CF_ZONE_ID="e85170acb9523dca14edfd3cb4105833"
 
+# Keeps 66-studio's catalog entry for Peggo pointing at the latest DMG. Was
+# missing before the 0.2.0 release, which left the website linking to 0.1.2
+# even though the real DMG had already shipped; added so this can't recur.
+CATALOG_FILE="${CATALOG_FILE:-/Users/ricka7x/Projects/66-studio/src/lib/apps.ts}"
+CATALOG_APP_SLUG="${CATALOG_APP_SLUG:-peggo}"
+
 # ============================================================================
 # SPARKLE SETTINGS
 # ============================================================================

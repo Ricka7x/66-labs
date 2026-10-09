@@ -171,7 +171,7 @@ export const apps: App[] = [
       },
     },
     links: {
-      download: "https://dl.66labs.dev/Peggo/Peggo-0.1.2.dmg",
+      download: "https://dl.66labs.dev/Peggo/Peggo-0.2.0.dmg",
       purchase: "https://store.66labs.dev/checkout/buy/bedb74bc-98d8-4dae-9724-8a94f9852aee",
     },
     iconFullBleed: true,
