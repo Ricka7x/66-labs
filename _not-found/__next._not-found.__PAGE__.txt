@@ -1,0 +1,37 @@
+1:"$Sreact.fragment"
+2:I[28478,["/_next/static/chunks/0_ihcjdcaeh8y.js","/_next/static/chunks/29_6kf2xjl593.js"],"Reveal"]
+3:I[22016,["/_next/static/chunks/0_ihcjdcaeh8y.js","/_next/static/chunks/29_6kf2xjl593.js"],""]
+4:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+a:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+8:X
+1c:X
+1c:C
+0:{"buildId":"LOuxQs1Bt5tm48sW7CSD8","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main","className":"relative flex min-h-screen flex-col items-start justify-center overflow-hidden bg-ink px-5 pt-24 pb-20 text-paper md:px-14","children":[["$","div",null,{"className":"grain","aria-hidden":"true"}],["$","$L2",null,{"className":"relative z-10 max-w-[900px]","children":[["$","span",null,{"className":"mb-7 inline-flex items-center rounded-full border border-[rgba(243,245,249,0.25)] px-3.5 py-1.5 font-mono text-xs uppercase tracking-[0.16em]","children":"404: nothing to see here"}],["$","h1",null,{"className":"font-display text-[15vw] font-extrabold leading-[0.92] tracking-tight md:text-[7.5vw]","children":["Well, this is ",["$","span",null,{"className":"text-blue-soft","children":"awkward."}]]}],["$","p",null,{"className":"mt-7 max-w-[46ch] font-mono text-[15px] leading-relaxed text-[rgba(243,245,249,0.68)]","children":"This page doesn't exist, never did, or packed up and left without telling us. Either way, you caught us empty-handed. The apps are all still where we left them."}],["$","div",null,{"className":"mt-11 flex flex-wrap gap-4","children":[["$","$L3",null,{"href":"/","className":"inline-flex items-center gap-2.5 rounded-full bg-paper px-6 py-3.5 font-mono text-[13px] uppercase tracking-[0.05em] text-ink transition-colors duration-300 hover:bg-blue-soft hover:text-paper","children":"Take me home"}],["$","$L3",null,{"href":"/apps","className":"inline-flex items-center gap-2.5 rounded-full border border-[rgba(243,245,249,0.25)] px-6 py-3.5 font-mono text-[13px] uppercase tracking-[0.05em] text-paper transition-colors duration-300 hover:border-paper hover:bg-[rgba(243,245,249,0.06)]","children":"See the apps"}]]}]]}],["$","div",null,{"aria-hidden":"true","className":"absolute right-16 top-1/2 hidden h-45 w-45 -translate-y-1/2 md:block","children":["$","div",null,{"className":"orbit relative h-full w-full rounded-full border border-dashed border-[rgba(243,245,249,0.25)]","children":["$","span",null,{"className":"absolute -top-1.5 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-lime"}]}]}],["$","span",null,{"aria-hidden":"true","className":"ghost-word pointer-events-none absolute -bottom-20 -right-6 select-none font-display text-[32vw] font-extrabold leading-none md:text-[22vw]","children":"66"}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/29_6kf2xjl593.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Page not found: 66 Labs"}],["$","meta","1",{"name":"description","content":"66 labs makes small, native apps for the Mac and iPhone, each one fixing one everyday annoyance properly, then getting out of the way."}],["$","link","2",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","meta","3",{"property":"og:title","content":"66 Labs: Small apps for big annoyances"}],["$","meta","4",{"property":"og:description","content":"66 labs makes small, native apps for the Mac and iPhone, each one fixing one everyday annoyance properly, then getting out of the way."}],["$","meta","5",{"property":"og:url","content":"https://66labs.dev/"}],["$","meta","6",{"property":"og:site_name","content":"66 Labs"}],["$","meta","7",{"property":"og:image","content":"https://66labs.dev/opengraph-image?174d673655a51220"}],["$","meta","8",{"property":"og:image:type","content":"image/png"}],["$","meta","9",{"property":"og:image:width","content":"1200"}],["$","meta","10",{"property":"og:image:height","content":"630"}],["$","meta","11",{"property":"og:image:alt","content":"66 Labs: small apps for big annoyances"}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17"]}]}]}],"$L18"]}],"isPartial":"$@19","staleTime":"$8","varyParams":null},{"rsc":"$L1a","isPartial":"$@1b","staleTime":"$8","varyParams":"$1c"}],"isUpgradeableISRFallback":false,"a":"$@1d","rootVaryParams":null,"needsRuntimeRequest":"$@1e"}
+1f:I[27201,["/_next/static/chunks/3fntmmi971322.js"],"IconMark"]
+20:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+21:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+6:null
+b:["$","meta","12",{"property":"og:type","content":"website"}]
+c:["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}]
+d:["$","meta","14",{"name":"twitter:title","content":"66 Labs: Small apps for big annoyances"}]
+e:["$","meta","15",{"name":"twitter:description","content":"66 labs makes small, native apps for the Mac and iPhone, each one fixing one everyday annoyance properly, then getting out of the way."}]
+f:["$","meta","16",{"name":"twitter:image","content":"https://66labs.dev/opengraph-image?174d673655a51220"}]
+10:["$","meta","17",{"name":"twitter:image:alt","content":"66 Labs: small apps for big annoyances"}]
+11:["$","meta","18",{"name":"twitter:image:type","content":"image/png"}]
+12:["$","meta","19",{"name":"twitter:image:width","content":"1200"}]
+13:["$","meta","20",{"name":"twitter:image:height","content":"630"}]
+14:["$","link","21",{"rel":"icon","href":"/favicon.ico?favicon.1x-lr0r4f8tej.ico","sizes":"32x32","type":"image/x-icon"}]
+15:["$","link","22",{"rel":"icon","href":"/icon.png?icon.2psd0t0l5jgmp.png","sizes":"512x512","type":"image/png"}]
+16:["$","link","23",{"rel":"apple-touch-icon","href":"/apple-icon.png?apple-icon.1fcih33ibqszk.png","sizes":"180x180","type":"image/png"}]
+17:["$","$L1f","24",{}]
+18:["$","meta",null,{"name":"next-size-adjust","content":""}]
+1a:["$","$1","c",{"children":[null,["$","$L20",null,{"parallelRouterKey":"children","template":["$","$L21",null,{}]}]]}]
+1e:true
+8:300
+8:C
+1d:0
+19:"$undefined"
+1b:"$undefined"
+7:"$undefined"
