@@ -186,7 +186,7 @@ export const apps: App[] = [
     kind: "Bookmark manager",
     platforms: ["macOS", "iPhone"],
     requires: "macOS 14.6+",
-    status: "coming-soon",
+    status: "available",
     accent: "#e5890b",
     glow: ["#e5890b", "#0b63e5"],
     features: [
@@ -205,7 +205,9 @@ export const apps: App[] = [
         perks: ["iCloud sync with Boomark on iPhone", "Every theme beyond Default"],
       },
     },
-    links: {},
+    links: {
+      download: "https://dl.66labs.dev/Boomark/Boomark-0.7.1.dmg",
+    },
     iconFullBleed: true,
   },
 ];
