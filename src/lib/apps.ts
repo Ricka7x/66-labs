@@ -134,7 +134,7 @@ export const apps: App[] = [
       },
     },
     links: {
-      download: "https://dl.66labs.dev/Snapback/Snapback-0.43.1.dmg",
+      download: "https://dl.66labs.dev/Snapback/Snapback-0.44.0.dmg",
       purchase: "https://store.66labs.dev/checkout/buy/83715b0a-448b-4e25-80d2-b2e6203c713e",
     },
   },
