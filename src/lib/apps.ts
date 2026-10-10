@@ -206,7 +206,7 @@ export const apps: App[] = [
       },
     },
     links: {
-      download: "https://dl.66labs.dev/Boomark/Boomark-0.7.1.dmg",
+      download: "https://dl.66labs.dev/Boomark/Boomark-0.7.2.dmg",
     },
     iconFullBleed: true,
   },
