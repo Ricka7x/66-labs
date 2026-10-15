@@ -48,6 +48,8 @@ export interface App {
     /** DMG / store link. Until it's set, the page shows a "download soon" state instead of a button. */
     download?: string;
     purchase?: string;
+    /** Browser extension store listings. Rendered as small links when any are set. */
+    extensions?: { chrome?: string; firefox?: string; safari?: string };
   };
   /**
    * The real app icon lives at /public/apps/<slug>.png (1024px, exported from the
@@ -206,7 +208,12 @@ export const apps: App[] = [
       },
     },
     links: {
-      download: "https://dl.66labs.dev/Boomark/Boomark-0.7.2.dmg",
+      download: "https://dl.66labs.dev/Boomark/Boomark-0.7.3.dmg",
+      extensions: {
+        chrome: "https://chromewebstore.google.com/detail/boomark/idfahjjcbcfpbgiddaficfokghfkcjcd",
+        firefox: "https://addons.mozilla.org/es-MX/firefox/addon/boomark/",
+        safari: "https://dl.66labs.dev/Boomark/Boomark-Safari-Extension-1.0.zip",
+      },
     },
     iconFullBleed: true,
   },
