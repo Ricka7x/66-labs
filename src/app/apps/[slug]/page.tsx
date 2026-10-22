@@ -102,6 +102,25 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                 <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(243,245,249,0.5)]">
                   {app.requires} · {app.pricing.free}
                 </p>
+                {app.links.extensions && (
+                  <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(243,245,249,0.5)]">
+                    {app.links.extensions.chrome && (
+                      <a href={app.links.extensions.chrome} className="underline decoration-line-invert underline-offset-4 hover:text-paper">
+                        Chrome extension
+                      </a>
+                    )}
+                    {app.links.extensions.firefox && (
+                      <a href={app.links.extensions.firefox} className="underline decoration-line-invert underline-offset-4 hover:text-paper">
+                        Firefox extension
+                      </a>
+                    )}
+                    {app.links.extensions.safari && (
+                      <a href={app.links.extensions.safari} className="underline decoration-line-invert underline-offset-4 hover:text-paper">
+                        Safari extension
+                      </a>
+                    )}
+                  </p>
+                )}
               </div>
 
               <TiltBox className="mx-auto flex aspect-square w-full max-w-90 items-center justify-center rounded-[32px] border border-line-invert bg-[rgba(243,245,249,0.04)] md:max-w-105">

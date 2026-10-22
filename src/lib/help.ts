@@ -255,6 +255,29 @@ export const appHelp: Record<App["slug"], HelpSection[]> = {
       ],
     },
     {
+      id: "extensions",
+      title: "Browser extensions",
+      items: [
+        {
+          q: "I installed the extension, why doesn't it save anything yet?",
+          a: "One pairing step first: open Boomark → Settings → General → Browser Extension and copy the token, then click the Boomark icon in your browser's toolbar → Extension settings → paste the token → Test Connection. Boomark also needs to be open in the background, the extension talks to it locally.",
+        },
+        {
+          q: "“Add to Chrome” (or Firefox) isn't installing the extension",
+          a: "Make sure your browser is up to date, that's the most common fix. On a work or school computer, IT policy can block installing extensions entirely, try a personal browser or ask your admin to allowlist Boomark.",
+        },
+        {
+          q: "Arc says “User cancelled install” from the Chrome Web Store",
+          a: "That's a bug in Arc's own install dialog, not a Boomark permission issue. Try, in order: fully quit and relaunch Arc, update Arc to the latest version, close any Little Arc or split-view windows first, or just use Chrome instead.",
+        },
+        {
+          q: "Is there a Safari extension?",
+          a: "Yes, as its own small helper app since Boomark isn't distributed through the Mac App Store. Download it, open it once (macOS will warn it's from the internet, click Open), then enable it in Safari → Settings → Extensions.",
+          link: { href: "https://dl.66labs.dev/Boomark/Boomark-Safari-Extension-1.0.zip", label: "Download the Safari extension" },
+        },
+      ],
+    },
+    {
       id: "organizing",
       title: "Organizing bookmarks",
       items: [
