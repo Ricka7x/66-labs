@@ -82,8 +82,14 @@ export default function PrivacyPage() {
           body: (
             <ul>
               <li>
-                Your clipboard history is stored in a local database on your Mac. Peggo doesn&apos;t send it, or
-                anything else, anywhere.
+                Your clipboard history is stored in a local database on your Mac. Peggo never sends it, or anything
+                you copy, anywhere.
+              </li>
+              <li>
+                Peggo sends one <strong>anonymous usage signal</strong> when the app launches, through{" "}
+                <a href="https://telemetrydeck.com">TelemetryDeck</a>, so we know roughly how many people use it.
+                The signal carries no clipboard content, no personal data and no IP address. See{" "}
+                <a href="https://telemetrydeck.com/privacy">TelemetryDeck&apos;s privacy policy</a>.
               </li>
               <li>
                 It uses the macOS Accessibility permission only to paste clips into the app you&apos;re using, when
@@ -108,6 +114,12 @@ export default function PrivacyPage() {
                 With Pro, bookmarks sync between your devices through <strong>your own iCloud account</strong>{" "}
                 (Apple CloudKit). They&apos;re stored by Apple under your Apple Account, they never pass through
                 our servers and we can&apos;t see them. Apple&apos;s privacy policy applies to iCloud.
+              </li>
+              <li>
+                Boomark sends one <strong>anonymous usage signal</strong> when the app launches, through{" "}
+                <a href="https://telemetrydeck.com">TelemetryDeck</a>, so we know roughly how many people use it.
+                The signal carries no bookmarks, no URLs, no personal data and no IP address. See{" "}
+                <a href="https://telemetrydeck.com/privacy">TelemetryDeck&apos;s privacy policy</a>.
               </li>
               <li>It checks our update feed to see whether a new version is available.</li>
               <li>If you buy Pro, your license is checked with Lemon Squeezy (see “Purchases” below).</li>
