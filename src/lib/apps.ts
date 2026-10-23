@@ -154,13 +154,49 @@ export const apps: App[] = [
     accent: "#0f9d8a",
     glow: ["#0f9d8a", "#0b63e5"],
     features: [
-      { title: "Your whole clipboard, one hotkey", body: "Hit the shortcut and everything you've copied is right there. Find it, pick it, paste it." },
-      { title: "Not just text", body: "Images, video and audio clips get remembered too. Yes, even that screenshot from an hour ago." },
-      { title: "Actually pastes", body: "Pick a clip and it lands straight in the app you're using. No copy-switch-⌘V dance." },
-      { title: "Cleans up after itself", body: "An automatic retention sweep keeps storage lean. No settings safari required." },
-      { title: "Stays on your Mac", body: "A local database, on your machine. Nothing you copy goes anywhere else." },
+      {
+        title: "Your whole clipboard, one hotkey",
+        body: "Hit the shortcut and everything you've copied is right there. Find it, pick it, paste it.",
+        image: { src: "/apps/peggo/features/clipboard.webp", alt: "Peggo's history panel listing links, code, an email address, a color and an image, with the color previewed", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Not just text",
+        body: "Text, code, links, images, files, even video and audio. Peggo tells them apart and keeps every one.",
+        image: { src: "/apps/peggo/features/images.webp", alt: "Peggo filtered to images, previewing a screenshot", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Pin what you'll need again",
+        body: "Pin anything to keep it at the top, tagged Pinned so it never scrolls away with the rest.",
+        image: { src: "/apps/peggo/features/pinned.webp", alt: "Pinned clips held at the top of Peggo's history, with pin icons and shortcuts", aspect: "1732 / 1154" },
+      },
+      {
+        title: "⌘1–⌘9, straight back out",
+        body: "Every visible clip gets a number. Press it and it lands exactly where your cursor is.",
+        image: { src: "/apps/peggo/features/quick-paste.webp", alt: "Peggo's Quick Paste setting, where a modifier plus 1 to 9 pastes a clip", aspect: "1732 / 1154" },
+      },
+      {
+        title: "20 themes, and bring your own",
+        body: "Catppuccin, Dracula, Nord and 17 more, picked in Appearance settings. Or import one of your own.",
+        image: { src: "/apps/peggo/features/themes.webp", alt: "Peggo's Themes settings, a grid of themes with an Import Theme button", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Stays on your Mac",
+        body: "A local database, on your machine. Peggo ignores its own clipboard writes and anything from apps you exclude.",
+        image: { src: "/apps/peggo/features/privacy.webp", alt: "Peggo's Privacy settings, listing apps whose clipboard changes are never recorded", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Cleans up after itself",
+        body: "An automatic retention sweep keeps storage lean. No settings safari required.",
+        image: { src: "/apps/peggo/features/cleanup.webp", alt: "Peggo's History settings with a history limit, retention and clear history", aspect: "1732 / 1154" },
+      },
     ],
     tech: ["Swift", "SwiftUI", "SQLite", "Accessibility API"],
+    video: {
+      src: "/apps/peggo/demo",
+      title: "Copy anything. Paste it back in a second.",
+      caption: "One hotkey opens your whole clipboard. Filter by kind, search it, and paste any clip straight back.",
+      aspect: "1512 / 942",
+    },
     pricing: {
       free: "Free to download",
       pro: {
@@ -192,14 +228,49 @@ export const apps: App[] = [
     accent: "#e5890b",
     glow: ["#e5890b", "#0b63e5"],
     features: [
-      { title: "A palette, not a folder graveyard", body: "Search, add, open, pin, tag and delete, all from one keyboard-first palette." },
-      { title: "Grab the tab you're on", body: "One shortcut saves the frontmost tab from Safari, Chrome, Arc, Brave or Edge, free, no Pro required. No window switching." },
-      { title: "Bring your old bookmarks", body: "One-time import from Safari and Chromium browsers. Your folders become tags." },
-      { title: "Tags that don't multiply", body: "Case-insensitive with autocomplete, so “Work” and “work” never become two tags." },
-      { title: "⌘1–⌘9 quick-open", body: "Your top results, one keystroke each. Faster than typing the URL." },
-      { title: "Dress it up", body: "Preset themes with vibrancy, in light and dark." },
+      {
+        title: "A palette, not a folder graveyard",
+        body: "Search, add, open, pin, tag and delete, all from one keyboard-first palette.",
+        image: { src: "/apps/boomark/features/palette.webp", alt: "Boomark's palette with pinned and recent bookmarks and a preview of the selected one", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Grab the tab you're on",
+        body: "One shortcut saves the frontmost tab from Safari, Chrome, Arc, Brave or Edge, free, no Pro required. No window switching.",
+        image: { src: "/apps/boomark/features/grab-tab.webp", alt: "Boomark's shortcut settings, with Save Current Tab on its own global shortcut", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Save from the browser toolbar too",
+        body: "A free browser extension for Chrome, Firefox, Edge, Arc, Brave and Safari saves without leaving the tab.",
+        image: { src: "/apps/boomark/features/toolbar.webp", alt: "The Boomark browser extension popup, connected, with a page saved and two tags", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Bring your old bookmarks",
+        body: "One-time import from Safari and Chromium browsers. Your folders become tags.",
+        image: { src: "/apps/boomark/features/import.webp", alt: "Boomark's import settings, with one-click import from Safari, Arc, Brave and Edge", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Tags that don't multiply",
+        body: "Case-insensitive with autocomplete, so “Work” and “work” never become two tags.",
+        image: { src: "/apps/boomark/features/tags.webp", alt: "Tag autocomplete in Boomark suggesting an existing tag as you type", aspect: "1732 / 1154" },
+      },
+      {
+        title: "⌘1–⌘9 quick-open",
+        body: "Your top results, one keystroke each. Faster than typing the URL.",
+        image: { src: "/apps/boomark/features/quick-open.webp", alt: "Boomark's bookmark list with a numbered shortcut beside each result", aspect: "1732 / 1154" },
+      },
+      {
+        title: "Dress it up",
+        body: "Preset themes with vibrancy, light and dark, or bring your own.",
+        image: { src: "/apps/boomark/features/themes.webp", alt: "Boomark's Themes settings, a grid of preset themes with an Import Theme button", aspect: "1732 / 1154" },
+      },
     ],
     tech: ["Swift", "SwiftUI", "CloudKit", "Sparkle", "Expo"],
+    video: {
+      src: "/apps/boomark/demo",
+      title: "Save it once. Find it in three keystrokes.",
+      caption: "Save a page from the browser toolbar, tag it, then open the palette and it's right there.",
+      aspect: "1512 / 942",
+    },
     pricing: {
       free: "Free to download, browser extension included",
       pro: {
