@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { RollText } from "@/components/micro";
+import { CookieSettingsButton } from "@/components/analytics-consent";
 
 const LINKS = [
   { href: "/apps", label: "Apps" },
@@ -7,6 +8,8 @@ const LINKS = [
   { href: "/help", label: "Help" },
   { href: "/terms", label: "Terms" },
   { href: "/privacy", label: "Privacy" },
+  { href: "/cookies", label: "Cookies" },
+  { href: "/refunds", label: "Refunds" },
 ];
 
 export function SiteFooter() {
@@ -19,6 +22,7 @@ export function SiteFooter() {
               <RollText>{l.label}</RollText>
             </Link>
           ))}
+          <CookieSettingsButton className="uppercase hover:text-paper" />
         </nav>
         <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 md:justify-end">
           <span>© {new Date().getFullYear()} 66 labs. Independently run.</span>

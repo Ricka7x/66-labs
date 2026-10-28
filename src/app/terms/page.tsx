@@ -13,7 +13,7 @@ export default function TermsPage() {
     <LegalPage
       eyebrow="Legal"
       title="Terms & _conditions._"
-      updated="September 26, 2026"
+      updated="October 28, 2026"
       summary={[
         { label: "In short", text: "Use our apps on your own devices. Don't resell or redistribute them." },
         { label: "Paying", text: "Paid licenses run through Lemon Squeezy, who handles checkout and receipts." },
@@ -25,6 +25,10 @@ export default function TermsPage() {
           title: "About these terms",
           body: (
             <>
+              <p>
+                66 labs is an independent studio. You can reach us at{" "}
+                <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
+              </p>
               <p>
                 These Terms &amp; Conditions (“Terms”) cover every app made by 66 labs (“we”, “us”), including
                 the ones listed on our <Link href="/apps">apps page</Link>, and this website, 66labs.dev. By
@@ -51,6 +55,10 @@ export default function TermsPage() {
                 <li>Don&apos;t reverse engineer, decompile or modify the apps, except where the law allows it.</li>
                 <li>Don&apos;t remove or bypass license checks or other technical protections.</li>
               </ul>
+              <p>
+                We keep all rights in our apps, names, logos and website content that we don&apos;t expressly give
+                you. Some parts of our apps may include open source software under its own license.
+              </p>
             </>
           ),
         },
@@ -75,8 +83,16 @@ export default function TermsPage() {
                 doesn&apos;t expire.
               </p>
               <p>
-                Something wrong with an order? Email us at{" "}
-                <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
+                A license is personal to you and can&apos;t be shared, resold or posted publicly. If a key is shared
+                or used on more devices than it allows, we may deactivate it.
+              </p>
+              <p>
+                Prices may change for future purchases but never for a license you already own. Taxes such as VAT
+                or sales tax are added at checkout where they apply.
+              </p>
+              <p>
+                Refunds are covered by our <Link href="/refunds">Refund Policy</Link>. Something wrong with an order?
+                Email us at <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
               </p>
             </>
           ),
@@ -110,7 +126,9 @@ export default function TermsPage() {
             <>
               <p>
                 We may update our apps, adding, changing or removing features, and some apps check for updates
-                automatically. We may also update these Terms. When we do, we&apos;ll change the date at the top of
+                automatically. We aim to keep each app working on current versions of macOS or iOS, but we may stop
+                supporting old versions, and we&apos;ll say so on the app&apos;s page. A free app may be changed or
+                discontinued, and paid features you bought will keep working on the versions they support. We may also update these Terms. When we do, we&apos;ll change the date at the top of
                 this page. Continuing to use our apps after a change means you accept the updated Terms.
               </p>
             </>
@@ -135,11 +153,35 @@ export default function TermsPage() {
           ),
         },
         {
-          id: "privacy",
-          title: "Privacy",
+          id: "termination",
+          title: "Ending your license",
           body: (
             <p>
-              How our apps and this website handle data is covered in our <Link href="/privacy">Privacy Policy</Link>.
+              You can stop using our apps at any time by deleting them. We may end your license if you seriously or
+              repeatedly break these Terms, for example by sharing license keys or bypassing license checks. If we
+              do that for a paid license and you haven&apos;t broken the Terms, we&apos;ll refund you.
+            </p>
+          ),
+        },
+        {
+          id: "law",
+          title: "Governing law",
+          body: (
+            <p>
+              These Terms are governed by the laws of the place where 66 labs is established, without regard to its
+              conflict-of-law rules. If you&apos;re a consumer, you keep the protection of the mandatory consumer laws of
+              the country where you live, and you may bring a claim in its courts. Please email us first: most problems
+              can be solved without lawyers.
+            </p>
+          ),
+        },
+        {
+          id: "privacy",
+          title: "Privacy & cookies",
+          body: (
+            <p>
+              How our apps and this website handle data is covered in our <Link href="/privacy">Privacy Policy</Link>{" "}
+              and <Link href="/cookies">Cookie Policy</Link>.
             </p>
           ),
         },

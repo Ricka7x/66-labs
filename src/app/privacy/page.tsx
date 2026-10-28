@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = {
@@ -13,10 +14,10 @@ export default function PrivacyPage() {
     <LegalPage
       eyebrow="Legal"
       title="Privacy, _plainly._"
-      updated="September 26, 2026"
+      updated="October 28, 2026"
       summary={[
         { label: "Our apps", text: "Your data stays on your device unless you flip on a feature that syncs it." },
-        { label: "This website", text: "No analytics, no ads, no tracking cookies. We're not watching." },
+        { label: "This website", text: "No ads. Analytics cookies only if you accept them, and you can change that any time." },
         { label: "Never", text: "We don't sell your data or feed it to advertisers." },
       ]}
       sections={[
@@ -26,9 +27,10 @@ export default function PrivacyPage() {
           body: (
             <>
               <p>
-                66 labs (“we”, “us”) makes small apps for the Mac and iPhone. This policy explains what our apps
-                and this website (66labs.dev) collect, why, and who else is involved. The short version: as little
-                as possible.
+                66 labs (“we”, “us”) is an independent studio that makes small apps for the Mac and
+                iPhone. We are the data controller for what this policy describes. This policy explains what our
+                apps and this website (66labs.dev) collect, why, and who else is involved. The short version: as
+                little as possible.
               </p>
               <p>
                 Each app works a little differently, so there&apos;s a section for each one below. If an app
@@ -41,15 +43,29 @@ export default function PrivacyPage() {
           id: "website",
           title: "This website",
           body: (
-            <ul>
-              <li>We don&apos;t use analytics, advertising or tracking cookies on 66labs.dev.</li>
-              <li>Fonts are served from this site, so loading a page doesn&apos;t ping a third-party font service.</li>
-              <li>
-                The site stores one small flag in your browser&apos;s session storage so the intro animation only
-                plays once per visit. It never leaves your browser and is cleared when you close the tab.
-              </li>
-              <li>Like any web server, our hosting provider may keep standard, short-lived request logs.</li>
-            </ul>
+            <>
+              <ul>
+                <li>We don&apos;t use advertising cookies or sell data from this site.</li>
+                <li>
+                  With your consent, we use <strong>Google Analytics</strong> (Google LLC) to count visits and see
+                  which pages are read, and <strong>Microsoft Clarity</strong> (Microsoft) to see anonymised clicks,
+                  scrolling, heatmaps and session replays. Both set cookies and send data to Google and Microsoft,
+                  which may process it outside your country. <strong>Neither loads until you accept</strong> in the
+                  banner; declining, or sending a Global Privacy Control signal, keeps them off. You can change your
+                  choice any time with “Cookie settings” in the footer. Details are in our{" "}
+                  <Link href="/cookies">Cookie Policy</Link>.
+                </li>
+                <li>Fonts are served from this site, so loading a page doesn&apos;t ping a third-party font service.</li>
+                <li>
+                  The site also stores your cookie choice, and a small flag in session storage so the intro animation
+                  only plays once per visit. They never leave your browser.
+                </li>
+                <li>
+                  Like any web server, our hosting provider (GitHub Pages) may keep standard request logs, including
+                  your IP address, under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub&apos;s privacy statement</a>.
+                </li>
+              </ul>
+            </>
           ),
         },
         {
@@ -68,7 +84,10 @@ export default function PrivacyPage() {
                 It keeps local log files for troubleshooting. They stay on your Mac unless you choose to send them
                 to us with a support request.
               </li>
-              <li>It checks our update feed to see whether a new version is available.</li>
+              <li>
+                It checks our update feed to see whether a new version is available. Like any web request, this
+                reveals your IP address and app version to our hosting provider.
+              </li>
               <li>
                 If you buy Pro, your license key is stored in the macOS Keychain and checked with Lemon Squeezy (see
                 “Purchases” below).
@@ -164,13 +183,81 @@ export default function PrivacyPage() {
           ),
         },
         {
-          id: "rights",
-          title: "Your choices",
+          id: "basis",
+          title: "Why we may process data",
+          body: (
+            <ul>
+              <li>
+                <strong>Consent</strong> for website analytics and session replay. You can withdraw it any time
+                from the footer.
+              </li>
+              <li>
+                <strong>Contract</strong> for processing your order and checking your license.
+              </li>
+              <li>
+                <strong>Legitimate interest</strong> in counting anonymous app launches, keeping our apps secure and
+                answering your emails.
+              </li>
+              <li>
+                <strong>Legal obligation</strong> for tax and accounting records of purchases.
+              </li>
+            </ul>
+          ),
+        },
+        {
+          id: "retention",
+          title: "How long we keep it",
+          body: (
+            <ul>
+              <li>Support emails: up to 2 years after the conversation ends.</li>
+              <li>Order and license records: as long as tax and accounting law requires, usually several years.</li>
+              <li>
+                Analytics: set by Google and Microsoft. Their cookies last up to 2 years and 1 year, and the data
+                they collect follows their own retention settings.
+              </li>
+            </ul>
+          ),
+        },
+        {
+          id: "transfers",
+          title: "Where data goes",
           body: (
             <p>
-              Because almost everything stays on your device, deleting an app and its data removes it. For anything
-              we or our payment provider hold about you, like order records or support emails, email us and
-              we&apos;ll help you see or delete it, subject to what we&apos;re legally required to keep.
+              The services above (Lemon Squeezy, Google, Microsoft, TelemetryDeck,
+              GitHub, Apple) operate worldwide. Your data may therefore be processed in countries other than yours,
+              including the United States. Where the law requires it, those providers rely on safeguards such as
+              standard contractual clauses.
+            </p>
+          ),
+        },
+        {
+          id: "rights",
+          title: "Your rights",
+          body: (
+            <>
+              <p>
+                Because almost everything stays on your device, deleting an app and its data removes it. For
+                anything we or our payment provider hold about you, like order records or support emails, you can
+                ask us to give you a copy, correct it, delete it, restrict or object to how we use it, or move it to
+                another service. You can withdraw consent at any time. Email{" "}
+                <a href="mailto:hello@66labs.dev">hello@66labs.dev</a> and we&apos;ll reply within 30 days, subject
+                to what we&apos;re legally required to keep.
+              </p>
+              <p>
+                If you live in the EU, UK or a US state with a privacy law (such as California), these rights are
+                protected by law, and you can complain to your local data protection authority. We don&apos;t sell
+                or share personal information for advertising. Wherever you live, you can exercise these rights by emailing us.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "children",
+          title: "Children",
+          body: (
+            <p>
+              Our apps and site aren&apos;t directed at children under 13, and we don&apos;t knowingly collect their
+              personal data. If you think a child has sent us data, email us and we&apos;ll delete it.
             </p>
           ),
         },
