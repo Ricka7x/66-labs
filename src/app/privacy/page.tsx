@@ -75,9 +75,10 @@ export default function PrivacyPage() {
             <ul>
               <li>Your workspaces, layouts and settings are stored on your Mac.</li>
               <li>
-                Snapback sends <strong>anonymous usage signals</strong> (such as the app launching, or a workspace
-                being saved) through <a href="https://telemetrydeck.com">TelemetryDeck</a>, so we know roughly how
-                many people use which features. These signals contain no personal data or IP addresses. See{" "}
+                Snapback sends <strong>anonymous usage signals</strong> (such as the app launching) through{" "}
+                <a href="https://telemetrydeck.com">TelemetryDeck</a>, so we know roughly how many people use
+                Snapback. These signals contain no personal data or IP addresses. You can turn
+                this off at any time in Snapback under Settings &gt; General. See{" "}
                 <a href="https://telemetrydeck.com/privacy">TelemetryDeck&apos;s privacy policy</a>.
               </li>
               <li>
