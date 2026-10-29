@@ -82,6 +82,10 @@ export default function PrivacyPage() {
                 <a href="https://telemetrydeck.com/privacy">TelemetryDeck&apos;s privacy policy</a>.
               </li>
               <li>
+                The app keeps a short list of its own errors on your Mac, with no window titles, links, file paths or
+                commands. It stays on your Mac and is only shared if you choose to send it with a feedback email.
+              </li>
+              <li>
                 It keeps local log files for troubleshooting. They stay on your Mac unless you choose to send them
                 to us with a support request.
               </li>
