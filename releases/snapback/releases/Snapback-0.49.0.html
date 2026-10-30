@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+
+<h3>What's new in v0.49.0</h3>
+
+<h4>New</h4>
+<ul>
+  <li>Optional confirmation for the Quit shortcut. Turn on "Confirm before quitting with the shortcut" in Settings, under Snaps, and Snapback asks before it quits. It is off by default, so nothing changes unless you turn it on.</li>
+</ul>
+
+<h4>Improvements</h4>
+<ul>
+  <li>Tiled windows stay lined up when you drag the divider between them, even when the two apps have different minimum sizes.</li>
+  <li>When a restore has to skip saved commands and links because Snapback Pro is not active, the message now says how many were skipped.</li>
+  <li>A restore that cannot find one of an app's windows now reports it in the final message, instead of a separate red message that hid the result.</li>
+  <li>Saved links are matched to windows by the whole site name. A link to x.com no longer picks a dropbox.com window.</li>
+  <li>Layout Lock now ends when you switch Spaces or change your displays, so it never works from a layout that no longer applies.</li>
+</ul>
+
+<h4>Fixes</h4>
+<ul>
+  <li>Fixed a possible crash when an app answered a window position or size request in an unexpected way.</li>
+  <li>Layout Lock now recovers if macOS turns off its mouse watcher, instead of silently stopping.</li>
+  <li>A frozen app can no longer hold up Layout Lock for several seconds.</li>
+  <li>Fixed a case where checking a terminal for a running session could hang Snapback.</li>
+  <li>Changing workspaces while you hold the cycle shortcut no longer cancels the cycle.</li>
+</ul>
+
+</body>
+</html>
