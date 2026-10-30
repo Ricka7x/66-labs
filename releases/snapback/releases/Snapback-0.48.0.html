@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<h3>What's new in 0.48.0</h3>
+<h4>New Features</h4>
+<ul>
+  <li>Restoring a workspace opens extra windows more reliably. Snapback learns what works for each app, and shows a "Set it up" banner when one can't open another window.</li>
+  <li>Pages and folders in a restored workspace open in the window they belong to, including two windows on the same site, and browsers and terminals are handled one at a time so a changing focus cannot send something to the wrong window.</li>
+  <li>A restore no longer types commands into a terminal that is running a program. It skips that terminal and the final message says how many were skipped.</li>
+  <li>A new switch in Settings, General, lets you turn off the anonymous count of how many people use Snapback. Nothing about your windows or workspaces is ever sent.</li>
+  <li>Your workspaces backup now keeps seven daily copies.</li>
+  <li>Send Feedback now includes more information about your Mac, your Snapback settings and the recent problems Snapback ran into, to help find problems faster. It never includes window titles, links, folder paths, commands or names, and you see everything in the email before you send it.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+  <li>Drag to snap works on a second display, and resizing a window by its left or top edge no longer offers a snap.</li>
+  <li>Importing settings takes effect right away, without restarting Snapback.</li>
+  <li>A restore no longer waits forever for an app that never finishes launching, and a restore after waking your Mac no longer waits 10 seconds for an app that has no window.</li>
+  <li>After a wake or a display change, a restore no longer types saved commands into terminals.</li>
+  <li>A missing window no longer makes Snapback reopen the app, which some apps answered with an extra window.</li>
+  <li>Windows that are fullscreen on a second display are saved correctly, and window numbers above 9 are ordered correctly.</li>
+  <li>Workspace and Space cycling commits when you let go of its own modifier keys, and a quick tap still works.</li>
+  <li>Snapping an app that cannot reach the size you asked for now finishes quietly instead of reporting a failure.</li>
+  <li>Cloning a workspace from the command palette keeps its folder and settings and never reuses a name, and palette search ignores accents.</li>
+  <li>An excluded app no longer excludes other apps whose name merely starts with the same letters.</li>
+  <li>Importing workspaces that open smb, ssh or vnc links now warns you first, the same way it does for terminal commands.</li>
+  <li>If your Smart Spaces or custom layouts cannot be fully read, Snapback now keeps a copy of the original instead of replacing it, and one unreadable item no longer drops the others.</li>
+  <li>Imported themes that cannot be read at startup are no longer forgotten when you import another one.</li>
+  <li>If some workspaces cannot be loaded when Snapback starts, you are told once and where the original data was kept.</li>
+  <li>Workspaces saved by older versions restore their links for apps that are not terminals.</li>
+  <li>The Excluded Apps list no longer scrolls inside another scroll area, and Calculator is now treated as a quick, reliable native app.</li>
+</ul>
+</body>
+</html>
