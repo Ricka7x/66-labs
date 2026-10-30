@@ -83,36 +83,37 @@ export const apps: App[] = [
       {
         title: "Every layout, one shortcut away",
         body: "Halves, thirds, quarters, two-thirds, fullscreen, almost-maximize. Pick one, press the keys, done.",
-        image: { src: "/apps/snapback/features/layouts.webp", alt: "Snapback's predefined window layouts", aspect: "1732 / 1154" },
+        image: { src: "/apps/snapback/features/layouts.webp", alt: "Snapback's Layouts settings, a grid of preset window layouts", aspect: "1732 / 1154" },
       },
       {
         title: "Your shortcuts, your rules",
         body: "Every snap gets a global shortcut, and every shortcut can be rebound. Bring your muscle memory.",
-        image: { src: "/apps/snapback/features/snaps.webp", alt: "Snapback's Snaps settings with a shortcut for each layout", aspect: "1732 / 1154" },
+        image: { src: "/apps/snapback/features/snaps.webp", alt: "Snapback's Snaps settings with a rebindable shortcut beside every snap", aspect: "1732 / 1154" },
       },
       {
         title: "Drag to snap",
         body: "Hold ⌘, fling a window at an edge, and watch it land exactly where the preview said it would.",
-        image: { src: "/apps/snapback/features/drag-snap.webp", alt: "A window being dragged to snap with a live preview", aspect: "1724 / 1150" },
+        image: { src: "/apps/snapback/features/drag-snap.webp", alt: "A window being dragged toward a screen corner with the snap target shown", aspect: "1732 / 1154" },
       },
       {
         title: "More screens, less chaos",
         body: "Built for multi-monitor desks. Windows move between displays like they know where they're going.",
-        image: { src: "/apps/snapback/features/save.webp", alt: "A workspace preview spanning the main display and an external monitor", aspect: "1726 / 1150" },
+        image: { src: "/apps/snapback/features/save.webp", alt: "A restored workspace filling both the laptop display and an external monitor", aspect: "1732 / 1154" },
       },
       {
         title: "Save the whole desk",
         body: "Positions, apps, monitors, even fullscreen state. Save it once, bring it all back with one shortcut.",
-        image: { src: "/apps/snapback/features/workspaces.webp", alt: "Saved Snapback workspaces", aspect: "1732 / 1154" },
+        image: { src: "/apps/snapback/features/workspaces.webp", alt: "Snapback's Workspaces settings listing Design, Writing and Developer, each with a shortcut", aspect: "1732 / 1154" },
       },
       {
         title: "Right there in the menu bar",
         body: "Every snap one click away, with its shortcut printed next to it for when you're ready to go keyboard-only.",
-        image: { src: "/apps/snapback/features/menu.webp", alt: "Snapback's menu bar menu listing snaps and shortcuts", aspect: "792 / 476" },
+        image: { src: "/apps/snapback/features/menu.webp", alt: "Snapback's menu bar menu listing every snap and workspace with its shortcut", aspect: "1732 / 1154" },
       },
       {
         title: "No mystery moves",
         body: "Small, quiet toasts tell you what just happened to your windows and workspaces.",
+        image: { src: "/apps/snapback/features/toast.webp", alt: "A small toast reading Design restored, above the restored windows", aspect: "1732 / 1154" },
       },
     ],
     tech: ["Swift", "SwiftUI", "Accessibility API", "Sparkle"],
@@ -120,7 +121,7 @@ export const apps: App[] = [
       src: "/apps/snapback/restore",
       title: "Save once. Restore everything.",
       caption: "One shortcut and every app, window and display snaps back to exactly where it was.",
-      aspect: "3024 / 1964",
+      aspect: "1920 / 1080",
     },
     pricing: {
       free: "Free to download",
@@ -136,7 +137,7 @@ export const apps: App[] = [
       },
     },
     links: {
-      download: "https://dl.66labs.dev/Snapback/Snapback-0.47.0.dmg",
+      download: "https://dl.66labs.dev/Snapback/Snapback-0.48.0.dmg",
       purchase: "https://store.66labs.dev/checkout/buy/83715b0a-448b-4e25-80d2-b2e6203c713e",
     },
   },
