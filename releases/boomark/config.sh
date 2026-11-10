@@ -103,7 +103,7 @@ CODE_SIGN_IDENTITY="Developer ID Application: Ricardo Ramirez (6WA4QS23C4)"
 # Developer ID, bound to the com.66labs.Boomark App ID. Installed at
 # ~/Library/MobileDevice/Provisioning Profiles/<uuid>.provisionprofile.
 BUNDLE_IDENTIFIER="com.66labs.Boomark"
-PROVISIONING_PROFILE_UUID="9956fc57-db63-4aa5-9c87-69dcde9fe09b"
+PROVISIONING_PROFILE_UUID="8e177834-2cc2-4c3d-9869-6014b71f1760"
 
 # Export options plist (created dynamically if not present)
 EXPORT_OPTIONS_PLIST="$BUILD_DIR/ExportOptions.plist"
