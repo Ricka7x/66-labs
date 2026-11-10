@@ -280,7 +280,7 @@ export const apps: App[] = [
       },
     },
     links: {
-      download: "https://dl.66labs.dev/Boomark/Boomark-0.9.1.dmg",
+      download: "https://dl.66labs.dev/Boomark/Boomark-0.9.2.dmg",
       extensions: {
         chrome: "https://chromewebstore.google.com/detail/boomark/idfahjjcbcfpbgiddaficfokghfkcjcd",
         firefox: "https://addons.mozilla.org/es-MX/firefox/addon/boomark/",
