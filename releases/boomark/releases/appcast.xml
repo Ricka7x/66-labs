@@ -3,6 +3,21 @@
     <channel>
         <title>Boomark</title>
         <item>
+            <title>0.9.7</title>
+            <pubDate>Sun, 22 Nov 2026 09:43:51 -0600</pubDate>
+            <link>https://66labs.dev/apps/boomark</link>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>0.9.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://dl.66labs.dev/Boomark/Boomark-0.9.7.html</sparkle:releaseNotesLink>
+            <enclosure url="https://dl.66labs.dev/Boomark/Boomark-0.9.7.dmg" length="3140922" type="application/octet-stream" sparkle:edSignature="kGIKSEUK0be8d1DJpcvBi8loKxQ7mrUHhuWwUQoiA9BqkE+RQjiD1fnQHCrCjIUZiiL6i2SxpfwdLTONo6NxDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://dl.66labs.dev/Boomark/Boomark26-25.delta" sparkle:deltaFrom="25" length="15370" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="JEvW0GNwcejKpf2upsPvTEW0gyKBWvGI1++UvKoPx6JxPRcxQaM+SnkuazihjSTXwac1BN7Epq75kacXxaLhCg=="/>
+                <enclosure url="https://dl.66labs.dev/Boomark/Boomark26-24.delta" sparkle:deltaFrom="24" length="285326" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HfP8s2asTUcTzuc6T7nwU8iwe+zEqPrlaIq+5Gj3WB68EGLdBn2h4BSEBbT6c/iZ1yr7Rlal5KFi8rxKWQ2NCA=="/>
+                <enclosure url="https://dl.66labs.dev/Boomark/Boomark26-23.delta" sparkle:deltaFrom="23" length="300858" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1btGEstgjHLCVVeLE0mBdVS9ytw/yc98rZ5ua1UTpigbenNX/HlIaFbgA8WtvoOi5BAH82lFVDvChzPcS525Aw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.9.6</title>
             <pubDate>Tue, 10 Nov 2026 19:23:01 -0600</pubDate>
             <link>https://66labs.dev/apps/boomark</link>
@@ -11,11 +26,6 @@
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://dl.66labs.dev/Boomark/Boomark-0.9.6.html</sparkle:releaseNotesLink>
             <enclosure url="https://dl.66labs.dev/Boomark/Boomark-0.9.6.dmg" length="3141025" type="application/octet-stream" sparkle:edSignature="q725/SCGMvVVLULUv/fSYDyPlzioP59Ect1D9RaMMwBedNyglJ6cfh30Ans85+UnvPV0P66df6pNwFq728BwCA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://dl.66labs.dev/Boomark/Boomark25-24.delta" sparkle:deltaFrom="24" length="285006" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="4CD/mytpxXBFlgVps7QHMl4JjYqFLV6qFX/e2CIs0MDgoaH+FkdBtG6x/0iuWL3jxWjvxuw2PKruDMLF+1rrBQ=="/>
-                <enclosure url="https://dl.66labs.dev/Boomark/Boomark25-23.delta" sparkle:deltaFrom="23" length="302246" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="I0miH0/8n48ijig9hRuEZf4GjAK0QlzEQH6VkV9ciM1Hse2tFAfriqMm1kZ0+Ue9MuZnpC+dO4CHYSaAnLE3Cw=="/>
-                <enclosure url="https://dl.66labs.dev/Boomark/Boomark25-22.delta" sparkle:deltaFrom="22" length="363850" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kqp83x6Z4hjvcrj+H8pkmSmOMFN/0Zmrw7XAlLaXySrS5rKAzlUCUcexmYNpL5G3mdu/z9GkniyN+dJdcFZbAw=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.9.5</title>
@@ -26,16 +36,6 @@
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://dl.66labs.dev/Boomark/Boomark-0.9.5.html</sparkle:releaseNotesLink>
             <enclosure url="https://dl.66labs.dev/Boomark/Boomark-0.9.5.dmg" length="3114564" type="application/octet-stream" sparkle:edSignature="MeXcoyERFhhLvfYiFbSk9oceHndjx+UsxuTUCYF4wsJIf6oWa46haYjRGgaLFPMlFQPNgOX6smC9gQfxsxkBAg=="/>
-        </item>
-        <item>
-            <title>0.9.4</title>
-            <pubDate>Tue, 10 Nov 2026 17:29:13 -0600</pubDate>
-            <link>https://66labs.dev/apps/boomark</link>
-            <sparkle:version>23</sparkle:version>
-            <sparkle:shortVersionString>0.9.4</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://dl.66labs.dev/Boomark/Boomark-0.9.4.html</sparkle:releaseNotesLink>
-            <enclosure url="https://dl.66labs.dev/Boomark/Boomark-0.9.4.dmg" length="3111277" type="application/octet-stream" sparkle:edSignature="LNEFGl6WkWl2m7qm+ii0Wo2DXt0GZ78irxLEYv1KeaAiTtdh22JSHCv0sQHajCdxYKmz0p1DKqbpKQvJKMVSDA=="/>
         </item>
         <item>
             <title>1.0</title>
