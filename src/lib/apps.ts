@@ -201,7 +201,7 @@ export const apps: App[] = [
     pricing: {
       free: "Free to download",
       pro: {
-        price: "$6.00",
+        price: "$5.00",
         note: "one-time",
         perks: [
           "Unlimited clipboard history and retention",
@@ -275,6 +275,7 @@ export const apps: App[] = [
     pricing: {
       free: "Free to download, browser extension included",
       pro: {
+        price: "$5.00",
         note: "one-time license",
         perks: ["iCloud sync with Boomark on iPhone", "Every theme beyond Default"],
       },
