@@ -43,7 +43,7 @@ export default function RefundsPage() {
           body: (
             <>
               <p>
-                Email <a href="mailto:hello@66labs.dev">hello@66labs.dev</a> from the address you bought with, and
+                Email <a href="mailto:support@66labs.dev">support@66labs.dev</a> from the address you bought with, and
                 include your order number or license key. Your receipt from Kelviq or Lemon Squeezy has the order number.
               </p>
               <p>
@@ -100,7 +100,7 @@ export default function RefundsPage() {
           title: "Contact",
           body: (
             <p>
-              Questions? Email <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>. See also our{" "}
+              Questions? Email <a href="mailto:support@66labs.dev">support@66labs.dev</a>. See also our{" "}
               <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>.
             </p>
           ),

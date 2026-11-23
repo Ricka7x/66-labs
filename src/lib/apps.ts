@@ -138,7 +138,8 @@ export const apps: App[] = [
     },
     links: {
       download: "https://dl.66labs.dev/Snapback/Snapback-0.50.0.dmg",
-      purchase: "https://store.66labs.dev/checkout/buy/83715b0a-448b-4e25-80d2-b2e6203c713e",
+      purchase:
+        "https://www.kelviq.com/buy/aea51331-90c3-4e6c-bd67-354f97f0d45c/?enabled=snapback-pro-upgrade&plan_identifier=snapback-pro-upgrade&charge_period=ONE_TIME",
     },
   },
   {

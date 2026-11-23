@@ -290,7 +290,7 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                 {app.name} help →
               </Link>
               <a
-                href={`mailto:hello@66labs.dev?subject=${encodeURIComponent(app.name)}`}
+                href={`mailto:support@66labs.dev?subject=${encodeURIComponent(app.name)}`}
                 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-soft hover:text-ink"
               >
                 Questions? Ask us

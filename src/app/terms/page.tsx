@@ -93,7 +93,7 @@ export default function TermsPage() {
               </p>
               <p>
                 Refunds are covered by our <Link href="/refunds">Refund Policy</Link>. Something wrong with an order?
-                Email us at <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
+                Email us at <a href="mailto:support@66labs.dev">support@66labs.dev</a>.
               </p>
             </>
           ),

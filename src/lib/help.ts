@@ -331,7 +331,7 @@ export const labHelp: HelpSection = {
   items: [
     {
       q: "How do I get support?",
-      a: "Email hello@66labs.dev. Tell us which app, your macOS version and what happened, screenshots help. It's a small lab, so replies come from the people who build the apps.",
+      a: "Email support@66labs.dev. Tell us which app, your macOS version and what happened, screenshots help. It's a small lab, so replies come from the people who build the apps.",
     },
     {
       q: "Who handles payments?",
