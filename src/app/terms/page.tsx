@@ -16,7 +16,7 @@ export default function TermsPage() {
       updated="November 22, 2026"
       summary={[
         { label: "In short", text: "Use our apps on your own devices. Don't resell or redistribute them." },
-        { label: "Paying", text: "Paid licenses run through Kelviq (Lemon Squeezy for Snapback), who handle checkout and receipts." },
+        { label: "Paying", text: "Paid licenses run through Kelviq (Lemon Squeezy for older Snapback orders), who handle checkout and receipts." },
         { label: "Fine print", text: "The apps come as they are. We sweat the details, but can't promise perfection." },
       ]}
       sections={[
@@ -72,11 +72,11 @@ export default function TermsPage() {
                 included are shown on each app&apos;s page at the time you buy.
               </p>
               <p>
-                Payments are processed by <a href="https://www.kelviq.com">Kelviq</a> (Peggo and Boomark) and{" "}
-                <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a> (Snapback, until it moves to Kelviq). The
-                provider acts as the reseller and merchant of record for the order. Their terms apply to the
-                checkout itself, and they send your license key, receipt and invoice. Past Lemon Squeezy orders are
-                at app.lemonsqueezy.com/my-orders.
+                Payments are processed by <a href="https://www.kelviq.com">Kelviq</a>. Snapback orders placed before
+                the move were processed by <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>. The provider acts
+                as the reseller and merchant of record for the order. Their terms apply to the checkout itself, and
+                they send your license key, receipt and invoice. Past Lemon Squeezy orders are at
+                app.lemonsqueezy.com/my-orders until it closes on March 31, 2027.
               </p>
               <p>
                 A license key may be limited to a number of devices; each app&apos;s help page explains how to move

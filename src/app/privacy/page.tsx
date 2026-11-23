@@ -155,10 +155,12 @@ export default function PrivacyPage() {
           title: "Purchases",
           body: (
             <p>
-              Paid licenses are sold through <a href="https://www.kelviq.com">Kelviq</a> (Peggo and Boomark) and{" "}
-              <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a> (Snapback, until it moves to Kelviq), our
-              payment providers and merchants of record. They collect what&apos;s needed to process your order, such
-              as your name, email, billing country and payment details, under their privacy policies (
+              Paid licenses are sold through <a href="https://www.kelviq.com">Kelviq</a>, our payment provider and
+              merchant of record. Earlier Snapback orders were sold through{" "}
+              <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>, which is closing down, so the order and license
+              records of those purchases were copied from Lemon Squeezy to Kelviq to keep the licenses working. The
+              provider collects what&apos;s needed to process your order, such as your name, email, billing country and
+              payment details, under their privacy policies (
               <a href="https://www.kelviq.com/privacy">Kelviq</a>,{" "}
               <a href="https://www.lemonsqueezy.com/privacy">Lemon Squeezy</a>). We receive your order details
               and license key so we can support you; we never see your full card details. When you activate a

@@ -167,15 +167,15 @@ export const appHelp: Record<App["slug"], HelpSection[]> = {
         },
         {
           q: "I lost my license key. How do I get it back?",
-          a: "It's in the order confirmation email from Lemon Squeezy, our payment provider. You can also sign in at app.lemonsqueezy.com/my-orders with the email you bought with. If a license is already active, the License tab has a Copy button next to your key.",
+          a: "It's in the order confirmation email from Kelviq, our payment provider (from Lemon Squeezy if you bought before the move). If you bought on Lemon Squeezy you can also sign in at app.lemonsqueezy.com/my-orders with the email you bought with, until it closes on March 31, 2027. If a license is already active, the License tab has a Copy button next to your key.",
         },
         {
           q: "How do I move my license to a new Mac?",
-          a: "Click Deactivate in the License tab on your old Mac to free the seat, then activate the same key on the new one. No access to the old Mac? Deactivate it from your Lemon Squeezy order page instead.",
+          a: "Click Deactivate in the License tab on your old Mac to free the seat, then activate the same key on the new one. No access to the old Mac? Email support@66labs.dev and we'll free it for you.",
         },
         {
           q: "I get an “activation limit reached” error",
-          a: "Your key is active on the maximum number of Macs. Deactivate it on one you no longer use, from that Mac's License tab or from app.lemonsqueezy.com/my-orders, then try again.",
+          a: "Your key is active on the maximum number of Macs. Deactivate it on one you no longer use, from that Mac's License tab, then try again. Can't reach that Mac? Email support@66labs.dev and we'll free it for you.",
         },
         {
           q: "macOS asked me to let Snapback access the Keychain. What's that?",
@@ -186,8 +186,12 @@ export const appHelp: Record<App["slug"], HelpSection[]> = {
           a: "No. Snapback Pro is a one-time purchase and the license doesn't expire.",
         },
         {
+          q: "Lemon Squeezy is closing. Do I need to do anything?",
+          a: "Update Snapback to the latest version and that is all. Your license keeps working, your key stays the same, and you do not need to buy anything again. The first time the new version opens, it moves your license to Kelviq, our new payment provider, by itself. If you do not update, Pro keeps working for a while but stops verifying after Lemon Squeezy closes on March 31, 2027.",
+        },
+        {
           q: "Where's my invoice or receipt?",
-          a: "On your Lemon Squeezy order page at app.lemonsqueezy.com/my-orders. The License tab in Snapback links there under Order & Receipts.",
+          a: "Kelviq emails your receipt when you buy. Orders placed on Lemon Squeezy are at app.lemonsqueezy.com/my-orders until it closes on March 31, 2027.",
         },
       ],
     },
@@ -335,7 +339,7 @@ export const labHelp: HelpSection = {
     },
     {
       q: "Who handles payments?",
-      a: "Paid licenses are sold through Kelviq (Peggo and Boomark) and Lemon Squeezy (Snapback, until it moves to Kelviq). The provider processes the payment and emails you your key and receipt. Snapback order history is at app.lemonsqueezy.com/my-orders.",
+      a: "Paid licenses are sold through Kelviq. Earlier Snapback orders were placed through Lemon Squeezy, which is closing down on March 31, 2027, and their licenses were moved to Kelviq. The provider processes the payment and emails you your key and receipt.",
     },
     {
       q: "Do I need a 66 labs account?",
