@@ -13,10 +13,10 @@ export default function RefundsPage() {
     <LegalPage
       eyebrow="Legal"
       title="Refunds, _plainly._"
-      updated="October 28, 2026"
+      updated="November 22, 2026"
       summary={[
         { label: "The window", text: "Ask within 14 days of buying and you get your money back." },
-        { label: "How", text: "Email us with your order number. We handle it through Lemon Squeezy." },
+        { label: "How", text: "Email us with your order number. We handle it through the payment provider on your receipt, Kelviq or Lemon Squeezy." },
         { label: "Free apps", text: "Nothing to refund. Try before you buy." },
       ]}
       sections={[
@@ -44,11 +44,12 @@ export default function RefundsPage() {
             <>
               <p>
                 Email <a href="mailto:hello@66labs.dev">hello@66labs.dev</a> from the address you bought with, and
-                include your order number or license key. Your receipt from Lemon Squeezy has the order number.
+                include your order number or license key. Your receipt from Kelviq or Lemon Squeezy has the order number.
               </p>
               <p>
-                <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a> is the merchant of record for our orders,
-                so the refund is issued by them to your original payment method. Banks usually take 5 to 10
+                <a href="https://www.kelviq.com">Kelviq</a> (Peggo and Boomark) or{" "}
+                <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a> (Snapback) is the merchant of record for
+                our orders, so the refund is issued by them to your original payment method. Banks usually take 5 to 10
                 business days to show it. When a refund is issued, the license key is deactivated.
               </p>
             </>

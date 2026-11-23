@@ -313,7 +313,7 @@ export const appHelp: Record<App["slug"], HelpSection[]> = {
         },
         {
           q: "How do I activate Pro?",
-          a: "Open Settings → License and paste the key from your Lemon Squeezy confirmation email.",
+          a: "Open Settings → License and paste the key from your Kelviq confirmation email.",
         },
         {
           q: "Without Pro, where do my bookmarks live?",
@@ -335,7 +335,7 @@ export const labHelp: HelpSection = {
     },
     {
       q: "Who handles payments?",
-      a: "Paid licenses are sold through Lemon Squeezy, which processes the payment and emails you your key and receipt. Your order history is at app.lemonsqueezy.com/my-orders.",
+      a: "Paid licenses are sold through Kelviq (Peggo and Boomark) and Lemon Squeezy (Snapback, until it moves to Kelviq). The provider processes the payment and emails you your key and receipt. Snapback order history is at app.lemonsqueezy.com/my-orders.",
     },
     {
       q: "Do I need a 66 labs account?",

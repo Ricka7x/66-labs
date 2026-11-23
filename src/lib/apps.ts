@@ -211,7 +211,8 @@ export const apps: App[] = [
     },
     links: {
       download: "https://dl.66labs.dev/Peggo/Peggo-0.7.0.dmg",
-      purchase: "https://store.66labs.dev/checkout/buy/bedb74bc-98d8-4dae-9724-8a94f9852aee",
+      purchase:
+        "https://www.kelviq.com/buy/84cbd1b8-4cfc-4aec-9dea-a9bb23d67a64/?enabled=peggo-pro&plan_identifier=peggo-pro&charge_period=ONE_TIME",
     },
     iconFullBleed: true,
   },
@@ -282,6 +283,8 @@ export const apps: App[] = [
     },
     links: {
       download: "https://dl.66labs.dev/Boomark/Boomark-0.10.0.dmg",
+      purchase:
+        "https://www.kelviq.com/buy/acc6cfb8-811f-48f7-a749-91be2dcb8d0f/?enabled=boomark-pro&plan_identifier=boomark-pro&charge_period=ONE_TIME",
       extensions: {
         chrome: "https://chromewebstore.google.com/detail/boomark/idfahjjcbcfpbgiddaficfokghfkcjcd",
         firefox: "https://addons.mozilla.org/es-MX/firefox/addon/boomark/",

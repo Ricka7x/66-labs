@@ -14,7 +14,7 @@ export default function PrivacyPage() {
     <LegalPage
       eyebrow="Legal"
       title="Privacy, _plainly._"
-      updated="October 28, 2026"
+      updated="November 22, 2026"
       summary={[
         { label: "Our apps", text: "Your data stays on your device unless you flip on a feature that syncs it." },
         { label: "This website", text: "No ads. Analytics cookies only if you accept them, and you can change that any time." },
@@ -94,8 +94,8 @@ export default function PrivacyPage() {
                 reveals your IP address and app version to our hosting provider.
               </li>
               <li>
-                If you buy Pro, your license key is stored in the macOS Keychain and checked with Lemon Squeezy (see
-                “Purchases” below).
+                If you buy Pro, your license key is stored in the macOS Keychain and checked with Kelviq or Lemon Squeezy
+                (see “Purchases” below).
               </li>
             </ul>
           ),
@@ -120,7 +120,7 @@ export default function PrivacyPage() {
                 you ask it to.
               </li>
               <li>It checks our update feed to see whether a new version is available.</li>
-              <li>If you buy Pro, your license is checked with Lemon Squeezy (see “Purchases” below).</li>
+              <li>If you buy Pro, your license is checked with Kelviq or Lemon Squeezy (see “Purchases” below).</li>
             </ul>
           ),
         },
@@ -146,7 +146,7 @@ export default function PrivacyPage() {
                 <a href="https://telemetrydeck.com/privacy">TelemetryDeck&apos;s privacy policy</a>.
               </li>
               <li>It checks our update feed to see whether a new version is available.</li>
-              <li>If you buy Pro, your license is checked with Lemon Squeezy (see “Purchases” below).</li>
+              <li>If you buy Pro, your license is checked with Kelviq or Lemon Squeezy (see “Purchases” below).</li>
             </ul>
           ),
         },
@@ -155,12 +155,14 @@ export default function PrivacyPage() {
           title: "Purchases",
           body: (
             <p>
-              Paid licenses are sold through <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>, our payment
-              provider and merchant of record. They collect what&apos;s needed to process your order, such as your
-              name, email, billing country and payment details, under{" "}
-              <a href="https://www.lemonsqueezy.com/privacy">their privacy policy</a>. We receive your order details
+              Paid licenses are sold through <a href="https://www.kelviq.com">Kelviq</a> (Peggo and Boomark) and{" "}
+              <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a> (Snapback, until it moves to Kelviq), our
+              payment providers and merchants of record. They collect what&apos;s needed to process your order, such
+              as your name, email, billing country and payment details, under their privacy policies (
+              <a href="https://www.kelviq.com/privacy">Kelviq</a>,{" "}
+              <a href="https://www.lemonsqueezy.com/privacy">Lemon Squeezy</a>). We receive your order details
               and license key so we can support you; we never see your full card details. When you activate a
-              license, the app sends Lemon Squeezy the key and your Mac&apos;s name (as set in System Settings) so
+              license, the app sends the provider the key and your Mac&apos;s name (as set in System Settings) so
               you can tell your activated devices apart; later checks send the key and that activation&apos;s ID.
             </p>
           ),
@@ -228,7 +230,7 @@ export default function PrivacyPage() {
           title: "Where data goes",
           body: (
             <p>
-              The services above (Lemon Squeezy, Google, Microsoft, TelemetryDeck,
+              The services above (Kelviq, Lemon Squeezy, Google, Microsoft, TelemetryDeck,
               GitHub, Apple) operate worldwide. Your data may therefore be processed in countries other than yours,
               including the United States. Where the law requires it, those providers rely on safeguards such as
               standard contractual clauses.
