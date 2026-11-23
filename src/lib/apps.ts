@@ -137,7 +137,7 @@ export const apps: App[] = [
       },
     },
     links: {
-      download: "https://dl.66labs.dev/Snapback/Snapback-0.50.0.dmg",
+      download: "https://dl.66labs.dev/Snapback/Snapback-0.50.1.dmg",
       purchase:
         "https://www.kelviq.com/buy/aea51331-90c3-4e6c-bd67-354f97f0d45c/?enabled=snapback-pro-upgrade&plan_identifier=snapback-pro-upgrade&charge_period=ONE_TIME",
     },
