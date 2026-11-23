@@ -3,6 +3,21 @@
     <channel>
         <title>Peggo</title>
         <item>
+            <title>0.7.0</title>
+            <pubDate>Mon, 23 Nov 2026 09:08:50 -0600</pubDate>
+            <link>https://66labs.dev/apps/peggo</link>
+            <sparkle:version>16</sparkle:version>
+            <sparkle:shortVersionString>0.7.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://dl.66labs.dev/Peggo/Peggo-0.7.0.html</sparkle:releaseNotesLink>
+            <enclosure url="https://dl.66labs.dev/Peggo/Peggo-0.7.0.dmg" length="5206659" type="application/octet-stream" sparkle:edSignature="STCkzvHLqMd1De9W34ch8DarFFgdRJS9V9ScFGYEqtA/xtvQj18L+vNylYzT0xOLhxHvQlHPlEjU7ZKyGaOrAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://dl.66labs.dev/Peggo/Peggo16-15.delta" sparkle:deltaFrom="15" length="408146" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tkngsvBAWXERQkztjcBnseZqUmEv9zFyss1X2bUmkID1DuLwQqgVhY/RiglWv1xUYGBVVTafn+1XStNEosKLDg=="/>
+                <enclosure url="https://dl.66labs.dev/Peggo/Peggo16-14.delta" sparkle:deltaFrom="14" length="408058" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="S+KX8YH0Cav6ejq3s45AZ9cWRlmHQH+Xu86CLsY4pUnxYDL57GTNg/fJwFqYAAIfjZSv1YCHvxeRlA00v/kQDA=="/>
+                <enclosure url="https://dl.66labs.dev/Peggo/Peggo16-13.delta" sparkle:deltaFrom="13" length="418346" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="4jjWjgxDA7XR6M2WkT/7B58SkpMC0EVOgFK30vFKQjUP+4qNTgVRwrC1F4a3sggv89zZc1QoDupeZaCG65LDAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.6.2</title>
             <pubDate>Sun, 22 Nov 2026 09:41:50 -0600</pubDate>
             <link>https://66labs.dev/apps/peggo</link>
@@ -11,11 +26,6 @@
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://dl.66labs.dev/Peggo/Peggo-0.6.2.html</sparkle:releaseNotesLink>
             <enclosure url="https://dl.66labs.dev/Peggo/Peggo-0.6.2.dmg" length="5207696" type="application/octet-stream" sparkle:edSignature="htYCyh3sOCN6a5UhmLqoTutTuzzL3GfmpNtt7aQR0b5Q1f54Qs8FUBHiKHbdu5BzlnZ0FM11F7XS2jb8boLFCw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://dl.66labs.dev/Peggo/Peggo15-14.delta" sparkle:deltaFrom="14" length="16930" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KmL1d1/YxTH9rFnQFM2u26lCl+dk3DNrlVpCFPVsuFdcB2GsqnH8athleCFZbp2YT9KxXdHGP2/1K8NHFqU6BQ=="/>
-                <enclosure url="https://dl.66labs.dev/Peggo/Peggo15-13.delta" sparkle:deltaFrom="13" length="335150" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zpasAlGS5GY9g8aEFiMxNNEH51LbiOVdCyErO9oEJvpo6wbcZqRV9b007dYoamG9gp7/zZAg66W4lqJDlr7DBQ=="/>
-                <enclosure url="https://dl.66labs.dev/Peggo/Peggo15-12.delta" sparkle:deltaFrom="12" length="635270" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976432" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uwzpMbGJOePietSN858TlTcOaNOdaFeF+nsVQXTg50YkvJN5zk376torMTJN3ZBM05YQCvercqERoP/9Ldc4AA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.6.1</title>
@@ -26,16 +36,6 @@
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://dl.66labs.dev/Peggo/Peggo-0.6.1.html</sparkle:releaseNotesLink>
             <enclosure url="https://dl.66labs.dev/Peggo/Peggo-0.6.1.dmg" length="5207223" type="application/octet-stream" sparkle:edSignature="mqLwl2XmHo5j3y1Y+Yp/0o41zwquWHKqnE6zW5YL+BpDJxbVAhWpKzt0eEAgDOhvdVAieYZEgVLfBTEMyixyCA=="/>
-        </item>
-        <item>
-            <title>0.6.0</title>
-            <pubDate>Fri, 06 Nov 2026 11:03:24 -0600</pubDate>
-            <link>https://66labs.dev/apps/peggo</link>
-            <sparkle:version>13</sparkle:version>
-            <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://dl.66labs.dev/Peggo/Peggo-0.6.0.html</sparkle:releaseNotesLink>
-            <enclosure url="https://dl.66labs.dev/Peggo/Peggo-0.6.0.dmg" length="5204064" type="application/octet-stream" sparkle:edSignature="mw38CCJH1s8pa1BcO+gdtQkCZrGoRxWI7FIVq1mlQU/7NkQnsxGGMBxi8NxrnbY2h+JlOtf9FKZzbC2dr3LaCQ=="/>
         </item>
     </channel>
 </rss>
