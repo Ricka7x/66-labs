@@ -75,6 +75,7 @@ export default async function Image() {
         {STICKERS.map((s) => (
           <img
             key={s.slug}
+            alt=""
             src={iconDataUri(s.slug)}
             width={s.size}
             height={s.size}

@@ -97,7 +97,7 @@ export default function HomePage() {
                 We&apos;re a small lab with a long list of things that drive us up the wall, and the stubbornness to fix them _properly._ Every app starts as one of our own annoyances, and we price them fairly, so anyone with the same itch can have the fix.
               </SplitReveal>
               <ScrubText className="mt-6 max-w-150 text-base text-ink-soft md:text-lg">
-                Our philosophy: one-time payment, cheap, useful. No subscriptions, no dark patterns, no renting software you already paid for. Pay once, own it, get updates. If it's not worth a one-time price, we don't ship it.
+                Our philosophy: one-time payment, cheap, useful. No subscriptions, no dark patterns, no renting software you already paid for. Pay once, own it, get updates. If it&apos;s not worth a one-time price, we don&apos;t ship it.
               </ScrubText>
               <div
                 data-scrub-group
