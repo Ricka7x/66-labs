@@ -9,6 +9,7 @@ import { CustomCursor } from "@/components/custom-cursor";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { IntroLoader } from "@/components/intro-loader";
 import { AnalyticsConsent } from "@/components/analytics-consent";
+import { OfferPill } from "@/components/black-friday";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <CustomCursor />
         <SiteHeader />
         <AnalyticsConsent />
+        <OfferPill />
         {children}
         <SiteFooter />
       </body>

@@ -16,6 +16,7 @@ import { IconSwap } from "@/components/icon-swap";
 import { STATUS_LABEL, apps, getApp, getNextApp, type App } from "@/lib/apps";
 import { getPostsForApp } from "@/lib/posts";
 import { LatestPosts } from "@/components/latest-posts";
+import { OfferNote, ProPrice, PurchaseLink } from "@/components/black-friday";
 
 export const dynamicParams = false;
 
@@ -91,12 +92,14 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                     <PrimaryAction app={app} />
                   </MagneticButton>
                   {app.pricing.pro && app.links.purchase && (
-                    <a
+                    <PurchaseLink
                       href={app.links.purchase}
+                      offer={app.offer}
+                      price={app.pricing.pro.price}
                       className="font-mono text-xs uppercase tracking-[0.08em] text-[rgba(243,245,249,0.7)] underline decoration-line-invert underline-offset-4 hover:text-paper"
                     >
-                      Get Pro{app.pricing.pro.price ? `: ${app.pricing.pro.price}` : ""}
-                    </a>
+                      Get Pro
+                    </PurchaseLink>
                   )}
                 </div>
                 <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(243,245,249,0.5)]">
@@ -231,13 +234,18 @@ export default async function AppPage({ params }: PageProps<"/apps/[slug]">) {
                       Pro
                     </span>
                     <p className="mt-3 font-display text-5xl font-extrabold tracking-tight">
-                      {app.pricing.pro.price ?? <em className="text-4xl">soon</em>}
+                      {app.pricing.pro.price ? (
+                        <ProPrice price={app.pricing.pro.price} offer={app.offer} />
+                      ) : (
+                        <em className="text-4xl">soon</em>
+                      )}
                       {app.pricing.pro.note && (
                         <span className="ml-2 font-mono text-xs font-normal uppercase tracking-[0.08em] text-[rgba(243,245,249,0.6)]">
                           {app.pricing.pro.note}
                         </span>
                       )}
                     </p>
+                    <OfferNote offer={app.offer} />
                     <ul className="mt-5 flex flex-col gap-2.5">
                       {app.pricing.pro.perks.map((p) => (
                         <li key={p} className="flex items-start gap-3 text-[15px] text-[rgba(243,245,249,0.86)]">

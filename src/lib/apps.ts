@@ -23,6 +23,25 @@ export interface AppFeature {
   image?: { src: string; alt: string; aspect: string };
 }
 
+/**
+ * A time-limited discount on an app's Pro. Everything that shows it (the site-wide pill, the
+ * counter and note on the app page, the buy links) switches itself off at `endsAt`, so it never
+ * needs removing by hand. Keep `endsAt` in step with the discount's end date in Kelviq.
+ */
+export interface AppOffer {
+  /** Name shown to visitors, e.g. "Black Friday" */
+  name: string;
+  /** Discount code, pre-applied on the checkout link */
+  code: string;
+  percentOff: number;
+  /** The price checkout shows once the code is applied, e.g. "$5.99" */
+  salePrice: string;
+  /** ISO 8601 end time */
+  endsAt: string;
+  /** Short date for the pill, e.g. "Nov 30" */
+  endsOn: string;
+}
+
 export interface App {
   slug: string;
   name: string;
@@ -59,6 +78,16 @@ export interface App {
   iconFullBleed?: boolean;
   /** The app page's demo video. Without one, the page shows a "demo on the way" frame. */
   video?: AppVideo;
+  /** Time-limited Pro discount, if one is running. */
+  offer?: AppOffer;
+}
+
+/** The checkout link with the offer's code pre-applied. */
+export function offerPurchaseUrl(purchase: string, offer: AppOffer): string {
+  const url = new URL(purchase);
+  url.searchParams.set("discounts_enabled", "true");
+  url.searchParams.set("discount_code", offer.code);
+  return url.toString();
 }
 
 /**
@@ -140,6 +169,15 @@ export const apps: App[] = [
       download: "https://dl.66labs.dev/Snapback/Snapback-0.50.1.dmg",
       purchase:
         "https://www.kelviq.com/buy/aea51331-90c3-4e6c-bd67-354f97f0d45c/?enabled=snapback-pro-upgrade&plan_identifier=snapback-pro-upgrade&charge_period=ONE_TIME",
+    },
+    // Black Friday 2026, ends Mon Nov 30 at 11:59 pm Central.
+    offer: {
+      name: "Black Friday",
+      code: "BF2026",
+      percentOff: 40,
+      salePrice: "$5.99",
+      endsAt: "2026-12-01T05:59:59Z",
+      endsOn: "Nov 30",
     },
   },
   {
