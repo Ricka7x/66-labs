@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>66 labs: Notes from the workbench</title>
+    <link>https://66labs.dev/blog</link>
+    <description>Guides, updates and behind-the-scenes on the apps from 66 labs.</description>
+    <language>en</language>
+    <atom:link href="https://66labs.dev/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Control Your Mac Window Layout With Snapback Pro's Command Palette</title>
+      <link>https://66labs.dev/blog/snapback-command-palette</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/snapback-command-palette</guid>
+      <description>Snapback Pro adds a command palette that runs any workspace, layout, or app command from one shortcut. Type to switch contexts instead of memorizing hotkeys.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Restore Your Mac Window Layout After Closing or Unplugging Your Laptop</title>
+      <link>https://66labs.dev/blog/restore-mac-window-layout</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/restore-mac-window-layout</guid>
+      <description>Your dev layout survives a laptop close, a restart, or a monitor disconnect. Save it once and restore every window and display position with one shortcut.</description>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Why macOS Rearranges My Windows (And How to Stop It)</title>
+      <link>https://66labs.dev/blog/stop-macos-rearranging-windows</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/stop-macos-rearranging-windows</guid>
+      <description>macOS moves, resizes, and scatters your windows when you close your laptop, restart, or unplug a monitor. Here is why it happens and how to make your layout stick.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>10 Must-Have Mac Apps in 2026</title>
+      <link>https://66labs.dev/blog/must-have-mac-apps</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/must-have-mac-apps</guid>
+      <description>The 10 must-have Mac apps I install on every new Mac: launchers, window management, screen recording, menu bar cleanup, and other small essentials.</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>General</category>
+    </item>
+    <item>
+      <title>How to Manage Multiple Monitors on Mac</title>
+      <link>https://66labs.dev/blog/manage-multiple-monitors-on-mac</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/manage-multiple-monitors-on-mac</guid>
+      <description>Everything you need to know about using multiple monitors with your Mac: display setup, window management across screens, and common problems solved.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Mac Window Snapping Keyboard Shortcuts: The Full List (2026)</title>
+      <link>https://66labs.dev/blog/mac-window-snapping-shortcuts-guide</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/mac-window-snapping-shortcuts-guide</guid>
+      <description>Every keyboard shortcut for snapping windows on Mac in 2026: built-in macOS tiling, Rectangle, Magnet, and Snapback shortcuts for halves, thirds, quarters, and custom setups.</description>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Restore Mac Windows After Unplugging a Monitor</title>
+      <link>https://66labs.dev/blog/restore-mac-window-layout-disconnecting-monitor</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/restore-mac-window-layout-disconnecting-monitor</guid>
+      <description>Disconnecting a monitor scrambles your Mac window layout. Here is why it happens and how to get your windows back to the right displays automatically.</description>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Organize Mac Windows for Software Development</title>
+      <link>https://66labs.dev/blog/organize-mac-windows-for-development</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/organize-mac-windows-for-development</guid>
+      <description>A practical guide to organizing your Mac windows for software development: IDE placement, terminal positioning, multi-monitor setups, and more.</description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Snapback vs Rectangle: What Is the Difference?</title>
+      <link>https://66labs.dev/blog/snapback-vs-rectangle</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/snapback-vs-rectangle</guid>
+      <description>Rectangle snaps windows. Snapback remembers them. A detailed comparison covering features, workflows, and when to use each for Mac window management.</description>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Best Mac Window Managers in 2026, Compared</title>
+      <link>https://66labs.dev/blog/best-mac-window-managers</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/best-mac-window-managers</guid>
+      <description>A hands-on comparison of the top Mac window managers: Rectangle, Magnet, BetterTouchTool, Amethyst, AeroSpace, yabai, and Snapback. Which one fits your workflow?</description>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Why Snapback Has a Free and a Pro Version</title>
+      <link>https://66labs.dev/blog/free-vs-pro</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/free-vs-pro</guid>
+      <description>Snapback's core window management is free, always. Here is what Pro adds, why the split exists, and how to pick the right version for you.</description>
+      <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+    <item>
+      <title>Introducing Snapback: Manage Windows on Mac</title>
+      <link>https://66labs.dev/blog/introducing-snapback</link>
+      <guid isPermaLink="true">https://66labs.dev/blog/introducing-snapback</guid>
+      <description>Snapback is a free macOS window manager that saves and restores your entire workspace layout with one keystroke. Multi-display support. No account needed.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>Snapback</category>
+    </item>
+  </channel>
+</rss>
